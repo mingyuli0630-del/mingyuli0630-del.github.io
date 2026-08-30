@@ -2,274 +2,765 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>李明諭｜數學教師・教學作品集</title>
-<meta name="description" content="李明諭的數學教師個人網站：自傳、教學履歷、教學理念、作品、成果與教學札記。">
-<meta name="theme-color" content="#f4f0e7">
-<meta property="og:title" content="李明諭｜數學教師・教學作品集">
-<meta property="og:description" content="Teaching · Learning · Mathematics">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>李明諭｜Mathematics · Education · Teaching</title>
+<meta name="description" content="李明諭的個人網站：數學、教育、教學作品、專業成長與履歷。">
 <style>
 :root{
-  --paper:#f4f0e7; --paper2:#fbf9f4; --ink:#1f2522; --muted:#65706a;
-  --sage:#52675b; --sage2:#36483f; --line:#d8d4ca; --warm:#9b674b;
+  --paper:#f4f0e7; --paper2:#fbf9f4; --ink:#1f2522; --muted:#68706b;
+  --sage:#52675b; --sage2:#36483f; --line:#d9d4ca; --warm:#9a694f;
   --serif:"Iowan Old Style","Palatino Linotype","Noto Serif TC","Songti TC",serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
   --max:1180px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.78;letter-spacing:.01em}
-a{color:inherit;text-decoration:none} button{font:inherit}
-.wrap{max-width:var(--max);margin:auto;padding-left:24px;padding-right:24px}
-header{position:sticky;top:0;z-index:30;background:rgba(244,240,231,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(216,212,202,.9)}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+header{position:sticky;top:0;z-index:50;background:rgba(244,240,231,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,212,202,.9)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;gap:11px}
 .brandmark{width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px}
-.brand strong,.brand small{display:block}.brand strong{font-size:14px;letter-spacing:.08em}.brand small{font-family:var(--serif);font-size:11px;color:var(--muted)}
-nav{display:flex;gap:22px;font-size:13px}
-nav a{padding:6px 0;border-bottom:1px solid transparent} nav a:hover{border-color:var(--ink)}
-.menu{display:none;background:none;border:0;width:42px;height:42px;font-size:24px}
+.brand strong{display:block;font-size:14px;letter-spacing:.08em}
+.brand small{display:block;font-family:var(--serif);font-size:11px;color:var(--muted)}
+nav{display:flex;align-items:center;gap:18px;font-size:13px}
+nav a{padding:6px 0;border-bottom:1px solid transparent}
+nav a:hover{border-color:var(--ink)}
+.navbtn{border:1px solid var(--ink);border-radius:999px;padding:7px 12px;background:transparent;cursor:pointer;font-size:12px;font-weight:650}
 section{padding:108px 0}
-.eyebrow{font-size:11px;letter-spacing:.23em;color:var(--sage);font-weight:700;margin:0 0 10px}
-.heading{margin-bottom:45px;max-width:760px}
-.heading h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:500;letter-spacing:-.03em;line-height:1.12;margin:0 0 14px}
-.heading p{margin:0;color:var(--muted)}
-.hero{min-height:calc(100svh - 68px);display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px;padding-top:56px;padding-bottom:56px}
-.hero h1{font-family:var(--serif);font-size:clamp(72px,10vw,122px);line-height:.92;letter-spacing:-.065em;font-weight:500;margin:5px 0 16px}
-.hero-en{font-family:var(--serif);font-size:clamp(18px,2vw,27px);color:var(--sage);margin:0 0 28px}
-.lead{font-size:clamp(19px,2vw,24px);max-width:580px;margin:0 0 34px}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ink);border-radius:99px;min-height:48px;padding:10px 18px;font-weight:650;font-size:14px}
-.btn.primary{background:var(--ink);color:var(--paper)}.btn.primary:hover{background:var(--sage2)}.btn:hover{background:var(--paper2)}
-.facts{display:flex;gap:30px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
-.fact small{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em}.fact strong{font-size:14px}
-.photo-shell{position:relative;background:var(--paper2);border:1px solid var(--line);padding:16px 16px 72px;box-shadow:0 16px 44px rgba(31,37,34,.07)}
-.photo-shell:before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid rgba(82,103,91,.18);z-index:-1}
-.photo-shell img{display:block;width:100%;height:590px;object-fit:cover;object-position:center 22%;filter:saturate(.9) contrast(.99)}
-.photo-caption{position:absolute;left:34px;right:34px;bottom:20px;border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;gap:15px}
-.photo-caption span{font-size:10px;letter-spacing:.14em;color:var(--muted)}.photo-caption strong{font-family:var(--serif);font-size:12px;font-weight:500}
 .border-top{border-top:1px solid var(--line)}
-.about-layout{display:grid;grid-template-columns:.36fr 1fr;gap:70px}
-.about-title{position:sticky;top:100px;align-self:start}
-.autobio-intro{font-family:var(--serif);font-size:clamp(27px,3.4vw,43px);line-height:1.55;margin:0 0 36px}
-.autobio-intro em{font-style:normal;color:var(--sage2)}
-.autobio{display:grid;grid-template-columns:1fr 1fr;gap:8px 34px;border-top:1px solid var(--line);padding-top:10px}
-.autobio p{color:#4e5853;margin:18px 0 0}
-.values{display:grid;grid-template-columns:repeat(3,1fr);margin-top:42px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
-.value{padding:20px 18px 20px 0;border-right:1px solid var(--line)}
-.value:not(:first-child){padding-left:18px}.value:last-child{border-right:0}
-.value span,.value strong,.value small{display:block}.value span{font-family:var(--serif);font-size:12px;color:var(--sage);margin-bottom:18px}.value strong{font-family:var(--serif);font-size:22px;font-weight:500}.value small{color:var(--muted)}
-.resume-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:60px}
+.eyebrow{font-size:11px;letter-spacing:.23em;color:var(--sage);font-weight:700;margin:0 0 10px}
+.heading{max-width:790px;margin-bottom:44px}
+.heading h2{font-family:var(--serif);font-size:clamp(38px,5vw,62px);font-weight:500;letter-spacing:-.035em;line-height:1.12;margin:0 0 14px}
+.heading p{margin:0;color:var(--muted)}
+
+.hero{min-height:calc(100svh - 68px);display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center;padding-top:58px;padding-bottom:58px}
+.hero h1{font-family:var(--serif);font-size:clamp(72px,10vw,120px);font-weight:500;line-height:.92;letter-spacing:-.065em;margin:5px 0 16px}
+.hero-en{font-family:var(--serif);font-size:clamp(20px,2.2vw,28px);color:var(--sage);margin:0 0 27px}
+.lead{font-size:clamp(19px,2vw,24px);max-width:650px;margin:0 0 30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:12px;color:var(--muted);background:rgba(255,255,255,.22)}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;border:1px solid var(--ink);border-radius:999px;padding:9px 17px;font-size:14px;font-weight:650;background:transparent;cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--paper2)}
+.btn.primary:hover{background:var(--sage2)}
+
+.portrait{position:relative;background:var(--paper2);border:1px solid var(--line);padding:16px 16px 70px;box-shadow:0 18px 50px rgba(31,37,34,.07);min-height:590px}
+.portrait:before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid rgba(82,103,91,.18);z-index:-1}
+.portrait .photo{height:500px;background:
+radial-gradient(circle at 50% 34%,rgba(82,103,91,.18) 0 80px,transparent 81px),
+linear-gradient(145deg,#e6e1d7,#faf7f1);
+display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-size:76px}
+.portrait .caption{position:absolute;left:34px;right:34px;bottom:19px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:15px}
+.caption span{font-size:10px;letter-spacing:.14em;color:var(--muted)}
+.caption strong{font-family:var(--serif);font-size:12px;font-weight:500}
+
+.about-grid{display:grid;grid-template-columns:.38fr 1fr;gap:70px}
+.sticky{position:sticky;top:100px;align-self:start}
+.about-intro{font-family:var(--serif);font-size:clamp(28px,3.4vw,43px);line-height:1.55;margin:0 0 34px}
+.about-copy{columns:2;column-gap:34px;color:#4d5752}
+.about-copy p{break-inside:avoid;margin:0 0 20px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:38px}
+.metric{padding:18px 18px 18px 0;border-right:1px solid var(--line)}
+.metric:not(:first-child){padding-left:18px}
+.metric:last-child{border-right:0}
+.metric strong{display:block;font-family:var(--serif);font-size:23px;font-weight:500}
+.metric small{color:var(--muted)}
+
+.dark{background:var(--ink);color:var(--paper)}
+.dark .eyebrow{color:#b5c4bb}
+.dark .heading p{color:#cbd1cd}
+.framework{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.24)}
+.framework article{min-height:260px;padding:26px 24px 18px 0;border-right:1px solid rgba(255,255,255,.17)}
+.framework article:not(:first-child){padding-left:24px}
+.framework article:last-child{border-right:0}
+.framework span{font-family:var(--serif);color:#aec0b5}
+.framework h3{font-family:var(--serif);font-size:27px;font-weight:500;margin:44px 0 10px}
+.framework p{margin:0;color:#c9cfcb}
+
+.resume-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:54px}
 .timeline{border-top:1px solid var(--ink)}
-.item{display:grid;grid-template-columns:120px 1fr;gap:26px;padding:26px 0;border-bottom:1px solid var(--line)}
-.item .k{font-family:var(--serif);font-size:13px;color:var(--sage)}.item h3{margin:0 0 7px;font-size:19px}.item p{margin:0;color:var(--muted)}
-.sidecard{background:var(--sage2);color:var(--paper);padding:32px;align-self:start;position:sticky;top:100px}
-.sidecard .eyebrow{color:#cbd4ce}.sidecard h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:0 0 20px}
-.sidecard ul{list-style:none;padding:0;margin:0}.sidecard li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.17)}
-.philosophy{background:var(--ink);color:var(--paper)}
-.philosophy .wrap>.heading{max-width:920px}.philosophy .eyebrow{color:#afbeb5}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.25)}
-.step{min-height:270px;padding:26px 26px 12px 0;border-right:1px solid rgba(255,255,255,.17)}.step:not(:first-child){padding-left:26px}.step:last-child{border-right:0}
-.step span{font-family:var(--serif);color:#afbeb5}.step h3{font-family:var(--serif);font-size:26px;font-weight:500;margin:48px 0 10px}.step p{margin:0;color:#c9ceca}
-.split{display:flex;align-items:end;justify-content:space-between;gap:36px;max-width:none}.split>p{max-width:430px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
-.filter{border:1px solid var(--line);background:transparent;border-radius:99px;padding:8px 14px;color:var(--muted);cursor:pointer}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.card{background:var(--paper2);border:1px solid var(--line);padding:22px;min-height:292px;display:flex;flex-direction:column;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#a9afa9}
-.cardtop{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:.1em}.symbol{font-family:var(--serif);font-size:43px;color:var(--sage);margin:32px 0 13px}
-.card h3{font-family:var(--serif);font-size:25px;line-height:1.3;font-weight:500;margin:0 0 10px}.card p{color:var(--muted);margin:0}.more{margin-top:auto;padding-top:18px;font-size:12px;font-weight:700}
-.results{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.result{border-top:2px solid var(--sage);padding-top:22px}.result small{letter-spacing:.1em;color:var(--muted)}.result h3{font-family:var(--serif);font-size:29px;line-height:1.35;font-weight:500;margin:10px 0}.result p{color:var(--muted)}
-.disclaimer{font-size:11px;color:var(--muted);margin-top:36px;padding-top:17px;border-top:1px solid var(--line)}
-.notes-bg{background:var(--paper2)}.notes{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
-.note{padding:27px 28px 27px 0;border-bottom:1px solid var(--line);cursor:pointer}.note:nth-child(odd){border-right:1px solid var(--line)}.note:nth-child(even){padding-left:28px}
-.note small{color:var(--sage);letter-spacing:.1em}.note h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.35;margin:10px 0}.note p{color:var(--muted);margin:0}.note:hover h3{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:235px;gap:13px}.g{border:1px solid var(--line);position:relative;overflow:hidden;background:var(--paper2)}.g.tall{grid-row:span 2}.g.wide{grid-column:span 2}
-.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease}.g:hover img{transform:scale(1.025)}
-.g::after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(to bottom,transparent,rgba(20,26,23,.66));pointer-events:none}
-.g label{position:absolute;z-index:2;left:17px;right:17px;bottom:15px;border-top:1px solid rgba(255,255,255,.55);padding-top:10px;display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.28)}
-.g label span{font-weight:600;letter-spacing:.04em}.g label strong{font-weight:500;letter-spacing:.12em;opacity:.84}
-.g.focus-top img{object-position:center 28%}.g.focus-left img{object-position:38% center}.g.focus-right img{object-position:66% center}
-.contactbox{background:var(--sage2);color:var(--paper);max-width:940px;margin:auto;padding:70px;text-align:center}.contactbox .eyebrow{color:#cad4ce}.contactbox h2{font-family:var(--serif);font-size:clamp(38px,5vw,62px);line-height:1.18;font-weight:500;margin:7px auto 15px}.contactbox p{color:#d8ded9}.contactbox .btn{color:var(--paper);border-color:#83958a;opacity:.7;margin-top:14px;pointer-events:none}
-footer{border-top:1px solid var(--line);padding:27px 0 42px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between}
-dialog{width:min(700px,calc(100vw - 30px));max-height:85vh;border:0;padding:0;background:var(--paper2);color:var(--ink);box-shadow:0 30px 90px rgba(0,0,0,.28)}dialog::backdrop{background:rgba(22,27,24,.58);backdrop-filter:blur(4px)}
-.modal{padding:52px}.close{position:absolute;right:13px;top:9px;border:0;background:none;font-size:29px;cursor:pointer}.modal small{color:var(--sage);letter-spacing:.12em}.modal h2{font-family:var(--serif);font-size:40px;line-height:1.2;font-weight:500;margin:8px 0 18px}.modal p,.modal li{color:var(--muted)}
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
+.timeline article{display:grid;grid-template-columns:132px 1fr;gap:25px;padding:25px 0;border-bottom:1px solid var(--line)}
+.timeline .k{font-family:var(--serif);font-size:13px;color:var(--sage)}
+.timeline h3{margin:0 0 7px;font-size:19px}
+.timeline p{margin:0;color:var(--muted)}
+.sidecard{background:var(--sage2);color:var(--paper);padding:30px;align-self:start}
+.sidecard h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:0 0 18px}
+.sidecard ul{list-style:none;padding:0;margin:0}
+.sidecard li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;background:var(--paper2);border:1px solid var(--line);margin-bottom:16px}
+.featurecopy{padding:38px}
+.featurecopy h3{font-family:var(--serif);font-size:38px;line-height:1.2;font-weight:500;margin:9px 0 14px}
+.featurecopy p{color:var(--muted)}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0}
+.tag{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px;color:var(--muted)}
+.preview{min-height:355px;background:
+repeating-linear-gradient(0deg,transparent 0 29px,rgba(82,103,91,.12) 30px 31px),
+radial-gradient(circle at 66% 34%,transparent 0 64px,rgba(82,103,91,.22) 65px 67px,transparent 68px),
+linear-gradient(135deg,#ece7dd,#faf7f1);
+display:flex;align-items:flex-end;padding:20px}
+.preview span{font-family:var(--serif);font-size:13px;background:rgba(251,249,244,.9);padding:8px 10px;color:var(--sage)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--paper2);border:1px solid var(--line);padding:24px;min-height:240px}
+.card small{color:var(--sage);letter-spacing:.1em}
+.card h3{font-family:var(--serif);font-size:27px;line-height:1.3;font-weight:500;margin:16px 0 10px}
+.card p{color:var(--muted);margin:0}
+
+.gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-auto-rows:230px;gap:12px}
+.g{position:relative;border:1px solid var(--line);overflow:hidden;background:linear-gradient(145deg,#e7e3da,#faf7f1)}
+.g.big{grid-row:span 2}
+.g .p{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:56px;color:rgba(82,103,91,.36)}
+.g:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(20,25,22,.58))}
+.g label{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;padding-top:9px;border-top:1px solid rgba(255,255,255,.62);display:flex;justify-content:space-between;color:#fff;font-size:11px}
+
+.growth{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grow{border-top:2px solid var(--sage);padding-top:20px}
+.grow h3{font-family:var(--serif);font-size:27px;line-height:1.35;font-weight:500;margin:8px 0}
+.grow p{color:var(--muted)}
+
+.notes{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.note{padding:26px 28px 26px 0;border-bottom:1px solid var(--line)}
+.note:nth-child(odd){border-right:1px solid var(--line)}
+.note:nth-child(even){padding-left:28px}
+.note small{color:var(--sage);letter-spacing:.1em}
+.note h3{font-family:var(--serif);font-size:27px;font-weight:500;line-height:1.35;margin:9px 0}
+.note p{color:var(--muted);margin:0}
+
+.cvpromo{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:36px;border:1px solid var(--line);background:var(--paper2)}
+.cvpromo h3{font-family:var(--serif);font-size:34px;font-weight:500;margin:0 0 8px}
+.cvpromo p{margin:0;color:var(--muted);max-width:700px}
+
+.contact{background:var(--sage2);color:var(--paper);padding:66px;text-align:center}
+.contact h2{font-family:var(--serif);font-size:clamp(40px,5vw,62px);font-weight:500;line-height:1.2;margin:7px auto 14px}
+.contact p{color:#d5ddd8}
+footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:11px}
+footer .wrap{display:flex;justify-content:space-between}
+
+
+/* Courses & Tuition */
+.course-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}
+.course-intro{position:sticky;top:96px}
+.course-intro .price-lead{font-family:var(--serif);font-size:34px;line-height:1.35;margin:7px 0 16px}
+.course-intro p{color:var(--muted)}
+.course-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.course-badge{border:1px solid var(--line);border-radius:99px;padding:7px 10px;background:var(--paper2);font-size:11px;color:var(--muted)}
+.pricebox{background:var(--paper2);border:1px solid var(--line);padding:26px}
+.pricebox h3{font-family:var(--serif);font-size:28px;font-weight:500;margin:0 0 16px}
+.price-table-wrap{overflow-x:auto}
+.price-table{width:100%;border-collapse:collapse;min-width:610px}
+.price-table th,.price-table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:12px;vertical-align:top}
+.price-table th{font-size:10px;letter-spacing:.1em;color:var(--muted);font-weight:700}
+.price-table td strong{font-family:var(--serif);font-size:17px;font-weight:500}
+.price-note{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+.course-types{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.course-group{background:var(--paper2);border:1px solid var(--line);padding:22px}
+.course-group>small{color:var(--sage);letter-spacing:.12em}
+.course-group h3{font-family:var(--serif);font-size:26px;font-weight:500;margin:7px 0 15px}
+.course-group details{border-top:1px solid var(--line)}
+.course-group summary{cursor:pointer;padding:12px 0;font-size:13px;font-weight:650;list-style:none}
+.course-group summary::-webkit-details-marker{display:none}
+.course-group summary:after{content:"＋";float:right;color:var(--sage)}
+.course-group details[open] summary:after{content:"－"}
+.course-group details p{font-size:12px;color:var(--muted);margin:0 0 12px}
+.course-info{display:grid;grid-template-columns:repeat(4,1fr);margin-top:17px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.course-info div{padding:16px;border-right:1px solid var(--line)}
+.course-info div:first-child{padding-left:0}.course-info div:last-child{border-right:0}
+.course-info strong{display:block;font-family:var(--serif);font-size:18px;font-weight:500}
+.course-info small{color:var(--muted)}
+
+/* Resume builder */
+.resume-layer{position:fixed;inset:0;background:rgba(24,28,26,.62);backdrop-filter:blur(5px);z-index:100;display:none;overflow:auto;padding:24px}
+.resume-layer.open{display:block}
+.builder{max-width:1180px;margin:auto;display:grid;grid-template-columns:310px 1fr;gap:16px}
+.controls{background:var(--paper);padding:24px;position:sticky;top:0;align-self:start;max-height:calc(100vh - 48px);overflow:auto}
+.controls h3{font-family:var(--serif);font-size:28px;font-weight:500;margin:0 0 8px}
+.controls p{font-size:12px;color:var(--muted)}
+.controlrow{padding:12px 0;border-top:1px solid var(--line)}
+.controlrow label{display:flex;align-items:center;gap:9px;font-size:13px;cursor:pointer}
+.ctrl-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.resume-paper{background:#fff;color:#1c211e;min-height:1123px;padding:58px 66px;box-shadow:0 20px 70px rgba(0,0,0,.22)}
+.r-head{display:grid;grid-template-columns:1fr auto;gap:20px;border-bottom:1.5px solid #222;padding-bottom:20px;margin-bottom:24px}
+.r-head h1{font-family:var(--serif);font-size:38px;font-weight:500;margin:0}
+.r-head .sub{font-size:14px;color:#555;margin-top:4px}
+.r-contact{text-align:right;font-size:11px;color:#555}
+.r-section{margin:23px 0}
+.r-section.hidden{display:none}
+.r-section h2{font-size:11px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid #bbb;padding-bottom:5px;margin:0 0 12px}
+.r-item{display:grid;grid-template-columns:125px 1fr;gap:16px;margin:11px 0}
+.r-date{font-size:11px;color:#666}
+.r-item h3{font-size:14px;margin:0 0 3px}
+.r-item p{font-size:12px;line-height:1.5;color:#444;margin:0}
+.r-list{margin:0;padding-left:18px;font-size:12px;color:#444}
+.r-note{font-size:10px;color:#777;margin-top:18px}
+
+/* language */
+.en-only{display:none}
+body.resume-en .zh-only{display:none!important}
+body.resume-en .en-only{display:block!important}
+
 @media(max-width:920px){
- nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);padding:18px 24px 26px;flex-direction:column;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}
- .hero{grid-template-columns:1fr;min-height:auto;gap:46px}.photo-shell img{height:min(760px,105vw)}.about-layout,.resume-grid{grid-template-columns:1fr}.about-title,.sidecard{position:static}.steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.cards{grid-template-columns:1fr 1fr}.results{grid-template-columns:1fr}.split{display:block}
+  nav a{display:none}
+  .hero,.about-grid,.resume-grid,.feature{grid-template-columns:1fr}
+  .hero{min-height:auto}
+  .sticky{position:static}
+  .metrics{grid-template-columns:1fr 1fr}
+  .framework{grid-template-columns:1fr 1fr}
+  .framework article:nth-child(2){border-right:0}
+  .cards,.growth{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .g.big{grid-row:auto;grid-column:span 2}
+  .builder{grid-template-columns:1fr}
+  .controls{position:static;max-height:none}
+  .course-shell{grid-template-columns:1fr}.course-intro{position:static}.course-types{grid-template-columns:1fr 1fr}.course-info{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
- .wrap{padding-left:18px;padding-right:18px}section{padding:80px 0}.brand small{display:none}.hero h1{font-size:72px}.facts{gap:16px;justify-content:space-between}.photo-shell{padding:11px 11px 66px}.photo-shell img{height:115vw;max-height:620px}.photo-caption{left:28px;right:28px;display:block}.photo-caption strong{display:block;margin-top:3px}
- .autobio{grid-template-columns:1fr}.values{grid-template-columns:1fr}.value,.value:not(:first-child){padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}.item{grid-template-columns:1fr;gap:5px}.steps{grid-template-columns:1fr}.step,.step:not(:first-child){min-height:auto;padding:23px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}.step h3{margin-top:20px}.cards{grid-template-columns:1fr}.notes{grid-template-columns:1fr}.note,.note:nth-child(even),.note:nth-child(odd){padding:24px 0;border-right:0}.gallery{grid-template-columns:1fr;grid-auto-rows:250px}.g.tall,.g.wide{grid-row:auto;grid-column:auto}.contactbox{padding:46px 22px}.modal{padding:46px 22px 30px}.foot{display:block}.foot a{display:inline-block;margin-top:8px}
+  .wrap{padding:0 18px}
+  section{padding:80px 0}
+  .hero h1{font-size:70px}
+  .portrait{min-height:470px}
+  .portrait .photo{height:385px}
+  .about-copy{columns:1}
+  .metrics,.framework,.cards,.growth,.notes,.gallery{grid-template-columns:1fr}
+  .metric,.metric:not(:first-child){padding:14px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .framework article,.framework article:not(:first-child){min-height:auto;padding:22px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}
+  .timeline article{grid-template-columns:1fr;gap:5px}
+  .note,.note:nth-child(even),.note:nth-child(odd){padding:23px 0;border-right:0}
+  .g.big{grid-column:auto}
+  .cvpromo{grid-template-columns:1fr}
+  .contact{padding:46px 22px}
+  footer .wrap{display:block}
+  .resume-layer{padding:0}
+  .controls{padding:18px}
+  .resume-paper{padding:34px 24px;min-height:auto}
+  .r-head{grid-template-columns:1fr}
+  .r-contact{text-align:left}
+  .r-item{grid-template-columns:1fr;gap:2px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+@media print{
+  body{background:#fff}
+  header,main,footer,.controls{display:none!important}
+  .resume-layer{display:block!important;position:static;background:none;padding:0}
+  .builder{display:block;max-width:none}
+  .resume-paper{box-shadow:none;min-height:auto;padding:0;margin:0}
+  @page{size:A4;margin:14mm}
+}
 </style>
 </head>
 <body>
+
 <header>
- <div class="wrap nav">
-  <a class="brand" href="#home"><span class="brandmark">M</span><span><strong>李明諭</strong><small>Mathematics Education</small></span></a>
-  <button class="menu" aria-label="開啟導覽" aria-expanded="false">☰</button>
-  <nav>
-   <a href="#about">自傳</a><a href="#resume">履歷</a><a href="#philosophy">教學理念</a><a href="#portfolio">作品</a><a href="#notes">札記</a><a href="#moments">課堂紀錄</a><a href="#contact">聯絡</a>
-  </nav>
- </div>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="brandmark">M</span><span><strong>李明諭</strong><small>Mathematics · Education · Teaching</small></span></a>
+    <nav>
+      <a href="#about">關於</a>
+      <a href="#teaching">教學</a>
+      <a href="#portfolio">作品</a>
+      <a href="#growth">成長</a>
+      <a href="#courses">課程</a>
+      <a href="#notes">札記</a>
+      <button class="navbtn" onclick="openResume()">CV / Resume</button>
+    </nav>
+  </div>
 </header>
 
 <main>
 <section id="home">
- <div class="wrap hero">
-  <div class="reveal">
-   <p class="eyebrow">MATHEMATICS EDUCATOR</p>
-   <h1>李明諭</h1>
-   <p class="hero-en">Teaching · Learning · Mathematics</p>
-   <p class="lead">用簡單的語言理解數學，從概念建立到解題能力，陪學生建立完整的學習脈絡。</p>
-   <div class="actions"><a class="btn primary" href="#portfolio">查看教學作品</a><a class="btn" href="#about">閱讀自傳</a></div>
-   <div class="facts">
-    <div class="fact"><small>BACKGROUND</small><strong>臺大數學</strong></div>
-    <div class="fact"><small>TEACHING</small><strong>家教約 5 年</strong></div>
-    <div class="fact"><small>LEVEL</small><strong>國小至高中</strong></div>
-   </div>
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">MATHEMATICS EDUCATOR</p>
+      <h1>李明諭</h1>
+      <p class="hero-en">Mathematics · Education · Teaching</p>
+      <p class="lead">用簡單的語言理解數學，從概念建立到解題能力，陪學生建立完整的學習脈絡。</p>
+      <div class="chips">
+        <span class="chip">Mathematics</span>
+        <span class="chip">Teaching</span>
+        <span class="chip">Learning Design</span>
+        <span class="chip">Digital Education</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#portfolio">查看教學作品</a>
+        <a class="btn" href="#about">關於我</a>
+        <button class="btn" onclick="openResume()">產生履歷 / CV</button>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="photo">M</div>
+      <div class="caption"><span>PROFILE PHOTO</span><strong>Replace with profile.jpg</strong></div>
+    </div>
   </div>
-  <div class="photo-shell reveal">
-   <img src="profile.jpg" alt="李明諭畢業袍個人照">
-   <div class="photo-caption"><span>PROFILE</span><strong>Mathematics · Education · Teaching</strong></div>
-  </div>
- </div>
 </section>
 
 <section id="about" class="border-top">
- <div class="wrap about-layout">
-  <div class="about-title heading reveal"><p class="eyebrow">AUTOBIOGRAPHY</p><h2>自傳</h2><p>沿用過往履歷的核心內容，改寫為適合網頁閱讀的版本。</p></div>
-  <div class="reveal">
-   <p class="autobio-intro">我希望學生學到的不只是某一題的做法，而是能真正理解觀念，並把抽象內容整理成<em>可理解、可練習、也可再次運用的系統。</em></p>
-   <div class="autobio">
-    <p>我以數學專業作為學習與教學的核心，並持續投入中等教育師資培育與教學實務。從自己的數學學習經驗中，我逐漸發現，我真正感興趣的不只是把答案算出來，而是理解一個概念如何被建立、不同知識之間如何連結，以及如何用更清楚的方式把這些想法說給別人理解。這也成為我持續投入數學教學與教材設計的重要原因。</p>
-    <p>過去的教學經驗涵蓋家教、補習班個別指導與團體班，以及高中教學實務，接觸的學生從國小到高中都有。不同學生遇到的困難往往不同：有些學生需要重新建立計算習慣，有些是前置概念出現斷層，也有些學生其實具備能力，卻尚未形成適合自己的思考與整理方式。因此，我會先找出學生真正卡住的位置，再決定要從計算、圖像、概念或題目切入。</p>
-    <p>我的課堂通常會從故事、情境或問題出發，先建立核心概念，再將觀念帶入解題；完成題目之後，會重新整理這一類問題背後的想法、公式與解法之間的關係。我希望學生逐漸知道「為什麼這樣做」，而不是只記住「老師剛才怎麼做」。對我而言，真正重要的是學生能在下一次遇到陌生問題時，仍有方法重新找到可以前進的方向。</p>
-    <p>教學對我而言也是持續學習的過程。除了數學內容本身，我也持續整理講義、設計題目與評量，並思考板書、簡報、數位筆跡與多媒體如何更貼近實際課堂節奏。我希望自己成為一位兼顧數學專業、學生理解與互動的教師，也透過這個網站留下教學作品、反思與專業成長的紀錄。</p>
-   </div>
-   <div class="values">
-    <div class="value"><span>01</span><strong>核心觀念</strong><small>Concept first</small></div>
-    <div class="value"><span>02</span><strong>解題邏輯</strong><small>Reasoning</small></div>
-    <div class="value"><span>03</span><strong>系統整理</strong><small>Structure</small></div>
-   </div>
+  <div class="wrap about-grid">
+    <div class="heading sticky">
+      <p class="eyebrow">ABOUT</p>
+      <h2>關於我</h2>
+      <p>網站主體保留個人敘事，不因特定申請用途而改變。</p>
+    </div>
+    <div>
+      <p class="about-intro">我希望學生學到的不只是某一題的做法，而是能真正理解觀念，並把抽象內容整理成可理解、可練習、也可再次運用的系統。</p>
+      <div class="about-copy">
+        <p>我以數學專業作為學習與教學的核心，並持續投入中等教育、教材設計與教學實務。對我而言，真正有趣的不只是把答案算出來，而是理解一個概念如何被建立、不同知識如何連結，以及如何用更清楚的方式說明這些想法。</p>
+        <p>不同學生遇到的困難往往不同：有些需要重新建立計算習慣，有些是前置概念出現斷層，也有些其實具備能力，卻尚未形成適合自己的思考方式。因此，我會先找出真正卡住的位置，再決定從計算、圖像、概念或題目切入。</p>
+        <p>我的課堂通常從故事、情境或問題出發，先建立核心概念，再將觀念帶入解題；完成題目後，再重新整理公式、方法與想法之間的關係。</p>
+      </div>
+      <div class="metrics">
+        <div class="metric"><strong>數學</strong><small>Academic foundation</small></div>
+        <div class="metric"><strong>教育</strong><small>Teacher education</small></div>
+        <div class="metric"><strong>教學</strong><small>Classroom practice</small></div>
+        <div class="metric"><strong>設計</strong><small>Materials & digital tools</small></div>
+      </div>
+    </div>
   </div>
- </div>
 </section>
 
-<section id="resume" class="border-top">
- <div class="wrap">
-  <div class="heading reveal"><p class="eyebrow">RESUME</p><h2>教學履歷</h2><p>將學歷、師資培育與不同教學場域分開呈現，方便家長、學校或合作單位快速閱讀。</p></div>
-  <div class="resume-grid">
-   <div class="timeline reveal">
-    <article class="item"><div class="k">Education</div><div><h3>國立臺灣大學・數學系</h3><p>以數學專業訓練為基礎，並投入中等教育師資培育與教學實務。</p></div></article>
-    <article class="item"><div class="k">Teacher Education</div><div><h3>中等教育師資培育・高中教學實習</h3><p>累積教案設計、課堂觀察、教材準備、教學演示與班級互動經驗。</p></div></article>
-    <article class="item"><div class="k">Tutoring</div><div><h3>家教教學約 5 年</h3><p>年級涵蓋國小至高中，內容包括校內進度、段考、會考、學測、分科與數學能力建立。</p></div></article>
-    <article class="item"><div class="k">Institute</div><div><h3>補習班個別指導與團體班</h3><p>具有個別指導與團班授課經驗，也接觸升學複習、科學班與程度差異較大的學生。</p></div></article>
-    <article class="item"><div class="k">Additional</div><div><h3>多元教學經驗</h3><p>曾接觸特教扶弱與數理資優相關教學情境，持續累積不同學生需求的教學經驗。</p></div></article>
-   </div>
-   <aside class="sidecard reveal">
-    <p class="eyebrow">FOCUS</p><h3>目前教學重點</h3>
-    <ul><li>國高中數學核心概念</li><li>會考・學測・分科複習</li><li>數理資優／科學班延伸</li><li>教材與評量設計</li><li>iPad・數位筆跡教學</li></ul>
-   </aside>
+<section id="teaching" class="dark">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">TEACHING FRAMEWORK</p>
+      <h2>從情境到結構的學習歷程</h2>
+      <p>把你的教學特色做成網站最有辨識度的一段。</p>
+    </div>
+    <div class="framework">
+      <article><span>01 · CONTEXT</span><h3>故事／情境</h3><p>先理解為什麼需要這個數學概念，而不是一開始只看到公式。</p></article>
+      <article><span>02 · CONCEPT</span><h3>建立觀念</h3><p>用圖像、例子與簡單語言把抽象內容具體化。</p></article>
+      <article><span>03 · REASONING</span><h3>觀念解題</h3><p>由基本題進入變化題，練習選擇方法，而不是模仿固定步驟。</p></article>
+      <article><span>04 · STRUCTURE</span><h3>重點整理</h3><p>把公式、題型與想法重新接起來，形成可以再次取用的學習脈絡。</p></article>
+    </div>
   </div>
- </div>
-</section>
-
-<section id="philosophy" class="philosophy">
- <div class="wrap">
-  <div class="heading reveal"><p class="eyebrow">TEACHING PHILOSOPHY</p><h2>情境引入，建立概念；用概念解題，再回頭整理成知識結構。</h2></div>
-  <div class="steps">
-   <article class="step reveal"><span>01</span><h3>故事／情境</h3><p>先讓學生理解為什麼會需要這個數學概念，而不是一開始只看到公式。</p></article>
-   <article class="step reveal"><span>02</span><h3>建立觀念</h3><p>用圖像、例子與簡單的語言把抽象概念具體化。</p></article>
-   <article class="step reveal"><span>03</span><h3>觀念解題</h3><p>由基本題進入變化題，練習選擇方法，而不是模仿固定步驟。</p></article>
-   <article class="step reveal"><span>04</span><h3>重點整理</h3><p>把公式、題型與想法重新接起來，形成之後能再次取用的學習脈絡。</p></article>
-  </div>
- </div>
-</section>
-
-<section id="portfolio">
- <div class="wrap">
-  <div class="heading split reveal"><div><p class="eyebrow">PORTFOLIO</p><h2>教學作品</h2></div><p>目前先以課程主題呈現；之後可逐步加入講義 PDF、教案、考卷與示範影片。</p></div>
-  <div class="filters reveal"><button class="filter active" data-f="all">全部</button><button class="filter" data-f="junior">國中</button><button class="filter" data-f="senior">高中</button><button class="filter" data-f="exam">升學・科學班</button><button class="filter" data-f="digital">數位教學</button></div>
-  <div id="cards" class="cards"></div>
- </div>
 </section>
 
 <section class="border-top">
- <div class="wrap">
-  <div class="heading reveal"><p class="eyebrow">TEACHING RESULTS</p><h2>過往教學成果紀錄</h2><p>採客觀方式記錄學生學習成果，不以成果作為保證式宣傳。</p></div>
-  <div class="results">
-   <article class="result reveal"><small>國三升高中</small><h3>武陵高中・中壢高中・政大附中</h3><p>曾協助國三學生進行數學加強與升學準備，學生錄取上述學校。</p></article>
-   <article class="result reveal"><small>學測數學</small><h3>由較弱基礎逐步提升至均標</h3><p>曾由高一內容重新複習，協助學生補強核心概念、建立複習順序與考試策略。</p></article>
-   <article class="result reveal"><small>分科測驗</small><h3>錄取臺大材料相關科系</h3><p>曾協助學生進行分科數學複習與觀念補強，完成升學目標。</p></article>
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">EXPERIENCE</p>
+      <h2>教學與專業經歷</h2>
+      <p>網站用較敘事的方式呈現；同一批資料會同步提供給履歷產生器。</p>
+    </div>
+    <div class="resume-grid">
+      <div class="timeline" id="siteExperience"></div>
+      <aside class="sidecard">
+        <p class="eyebrow" style="color:#cbd4ce">FOCUS</p>
+        <h3>目前關注</h3>
+        <ul>
+          <li>國高中數學核心概念</li>
+          <li>會考・學測・分科複習</li>
+          <li>科學班與進階數學</li>
+          <li>教材與評量設計</li>
+          <li>數位筆跡與多媒體教學</li>
+        </ul>
+      </aside>
+    </div>
   </div>
-  <p class="disclaimer reveal">學習成果受學生原有程度、投入時間與學習狀況等因素影響，以上僅作為過往教學經驗紀錄。</p>
- </div>
 </section>
 
-<section id="notes" class="notes-bg">
- <div class="wrap">
-  <div class="heading split reveal"><div><p class="eyebrow">TEACHING NOTES</p><h2>教學札記</h2></div><p>未來可以把教學心得、數學文章、研習心得與數位教學紀錄放在這裡。</p></div>
-  <div id="notesgrid" class="notes"></div>
- </div>
+<section id="portfolio" class="border-top">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2>精選教學作品</h2>
+      <p>不再把所有主題排成一樣大小的卡片，而是突出一個完整案例，再搭配其他作品。</p>
+    </div>
+    <article class="feature">
+      <div class="featurecopy">
+        <p class="eyebrow">FEATURED CASE STUDY</p>
+        <h3>幾何與科學班課程設計</h3>
+        <p>以課程目標、內容排序、評量設計、教材與課後反思構成一個完整教學案例。未來申請學校或工作時，可以直接把這個案例作為 portfolio 證據。</p>
+        <div class="tags"><span class="tag">Geometry</span><span class="tag">Curriculum</span><span class="tag">Assessment</span><span class="tag">Reflection</span></div>
+        <a class="btn" href="#">查看案例 →</a>
+      </div>
+      <div class="preview"><span>教材／考卷預覽區</span></div>
+    </article>
+    <div class="cards">
+      <article class="card"><small>ASSESSMENT</small><h3>數學評量與試題設計</h3><p>展示考卷、題型設計、資訊量控制與難度調整的思考。</p></article>
+      <article class="card"><small>DIGITAL TEACHING</small><h3>筆跡式數位教學</h3><p>探索板書、筆跡動畫、即時註記與課堂節奏。</p></article>
+      <article class="card"><small>LEARNING DESIGN</small><h3>概念導向教材</h3><p>從情境、圖像到代數表示，呈現不同年級的學習鷹架。</p></article>
+    </div>
+  </div>
 </section>
 
 <section id="moments">
- <div class="wrap">
-  <div class="heading reveal"><p class="eyebrow">TEACHING MOMENTS</p><h2>課堂紀錄</h2><p>從全班講解、巡迴指導到小組討論，記錄實際課堂中與學生共同思考、釐清問題的過程。</p></div>
-  <div class="gallery">
-   <figure class="g wide reveal"><img src="teaching-01.jpg" alt="數學課堂板書與全班講解" loading="lazy"><label><span>板書講解與全班授課</span><strong>CLASSROOM</strong></label></figure>
-   <figure class="g tall focus-top reveal"><img src="teaching-02.jpg" alt="課堂活動中的巡迴引導" loading="lazy"><label><span>課堂活動中的引導</span><strong>GUIDANCE</strong></label></figure>
-   <figure class="g focus-right reveal"><img src="teaching-03.jpg" alt="小組學習中的個別回饋" loading="lazy"><label><span>小組學習與個別回饋</span><strong>DISCUSSION</strong></label></figure>
-   <figure class="g focus-right reveal"><img src="teaching-04.jpg" alt="學生小組討論與教師引導" loading="lazy"><label><span>小組討論與即時引導</span><strong>INTERACTION</strong></label></figure>
-   <figure class="g wide focus-left reveal"><img src="teaching-05.jpg" alt="數位工具搭配課堂討論" loading="lazy"><label><span>數位工具搭配課堂討論</span><strong>DIGITAL</strong></label></figure>
-   <figure class="g focus-left reveal"><img src="teaching-06.jpg" alt="課堂巡視與個別指導" loading="lazy"><label><span>巡堂與個別指導</span><strong>FEEDBACK</strong></label></figure>
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">TEACHING MOMENTS</p>
+      <h2>課堂紀錄</h2>
+      <p>這裡之後直接換成你的真實課堂照片，搭配一句教學情境，而不是單純相簿。</p>
+    </div>
+    <div class="gallery">
+      <div class="g big"><div class="p">01</div><label><span>板書與全班講解</span><strong>CLASSROOM</strong></label></div>
+      <div class="g"><div class="p">02</div><label><span>巡迴引導</span><strong>GUIDANCE</strong></label></div>
+      <div class="g"><div class="p">03</div><label><span>小組討論</span><strong>DISCUSSION</strong></label></div>
+      <div class="g"><div class="p">04</div><label><span>數位工具</span><strong>DIGITAL</strong></label></div>
+      <div class="g"><div class="p">05</div><label><span>個別回饋</span><strong>FEEDBACK</strong></label></div>
+    </div>
   </div>
- </div>
+</section>
+
+<section id="growth" class="border-top">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">PROFESSIONAL GROWTH</p>
+      <h2>專業成長</h2>
+      <p>研習、認證、課程、教學實驗與未來進修，都放在這裡持續累積。</p>
+    </div>
+    <div class="growth">
+      <article class="grow"><small>TRAINING</small><h3>教師研習與課程</h3><p>記錄參與過的教育、特教、課輔與數位教學研習。</p></article>
+      <article class="grow"><small>CERTIFICATION</small><h3>認證與專業資格</h3><p>未來完成認證後，可直接新增到網站資料。</p></article>
+      <article class="grow"><small>EXPLORATION</small><h3>持續探索</h3><p>數學教育、學習科學、教育科技與教材設計。</p></article>
+    </div>
+  </div>
+</section>
+
+
+<section id="courses" class="border-top">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">COURSES & TUITION</p>
+      <h2>課程與收費</h2>
+      <p>課程依學生程度、學校版本與目標考試規劃；網站公開統一收費原則，實際上課內容再依需求調整。</p>
+    </div>
+
+    <div class="course-shell">
+      <div class="course-intro">
+        <p class="eyebrow">TUITION POLICY</p>
+        <div class="price-lead">同一套收費標準，<br>依上課人數調整。</div>
+        <p>所有課程不因年級或課程名稱另外加價。多人班適合程度、版本、進度與學習目標接近的學生。</p>
+        <div class="course-badges">
+          <span class="course-badge">試教＝正式課程費用</span>
+          <span class="course-badge">線上每人每小時 − NT$100</span>
+          <span class="course-badge">自編講義／學習單</span>
+          <span class="course-badge">1–6 人固定公式</span>
+        </div>
+      </div>
+
+      <div class="pricebox">
+        <h3>每位學生每小時收費</h3>
+        <div class="price-table-wrap">
+          <table class="price-table">
+            <thead><tr><th>上課人數</th><th>每位／小時</th><th>每位 3 小時</th><th>適合形式</th></tr></thead>
+            <tbody>
+              <tr><td><strong>1 人</strong></td><td>NT$1,200</td><td>NT$3,600</td><td>一對一完整客製</td></tr>
+              <tr><td><strong>2 人</strong></td><td>NT$750</td><td>NT$2,250</td><td>雙人共學</td></tr>
+              <tr><td><strong>3 人</strong></td><td>NT$600</td><td>NT$1,800</td><td>小型共學</td></tr>
+              <tr><td><strong>4 人</strong></td><td>NT$525</td><td>NT$1,575</td><td>精緻小班</td></tr>
+              <tr><td><strong>5 人</strong></td><td>NT$480</td><td>NT$1,440</td><td>小班制</td></tr>
+              <tr><td><strong>6 人</strong></td><td>NT$450</td><td>NT$1,350</td><td>共同目標課程</td></tr>
+              <tr><td><strong>7 人以上</strong></td><td>另行討論</td><td>另行討論</td><td>依課程與班級安排確認</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="price-note">1–6 人班級總時薪＝NT$1,200＋NT$300×（上課人數－1）；每位每小時費用＝班級總時薪÷上課人數。線上課程每位每小時再減 NT$100。</div>
+      </div>
+    </div>
+
+    <div class="course-types">
+      <article class="course-group">
+        <small>ELEMENTARY</small>
+        <h3>國小課程</h3>
+        <details open><summary>課內進度與學習輔導</summary><p>小三～小六。基礎觀念、計算能力、課內進度、作業檢討與段考準備。</p></details>
+        <details><summary>升私中數學準備</summary><p>小五～小六。依目標學校題型強化計算、應用題、邏輯推理、答題速度與模擬測驗。</p></details>
+        <details><summary>升國中銜接與先修</summary><p>小六。分數、比例、數線、代數運算與基礎幾何，建立國中數學先備能力。</p></details>
+        <details><summary>資優數學與思考訓練</summary><p>小四～小六。數感、邏輯推理、圖形思考、計數與非例行問題。</p></details>
+      </article>
+
+      <article class="course-group">
+        <small>JUNIOR HIGH</small>
+        <h3>國中課程</h3>
+        <details open><summary>課程進度與學習輔導</summary><p>國一～國三。課內觀念、例題演練、作業檢討、段考準備與學習方法。</p></details>
+        <details><summary>國三會考總複習</summary><p>全範圍觀念統整、歷屆題型、模考檢討、答題策略與錯題追蹤。</p></details>
+        <details><summary>數理資優與科學班甄選</summary><p>代數、幾何、計數、數論、跨單元整合、非例行問題、解題表達與模擬訓練。</p></details>
+      </article>
+
+      <article class="course-group">
+        <small>SENIOR HIGH</small>
+        <h3>高中課程</h3>
+        <details open><summary>高中數學課程進度</summary><p>高一～高二。課內觀念、段考準備、題型整理、跨章節統整與高三先備。</p></details>
+        <details><summary>高三學測數學總複習</summary><p>數學 A／B 全範圍觀念統整、歷屆題、模考檢討、時間配置與錯題追蹤。</p></details>
+        <details><summary>分科測驗總複習</summary><p>依數學甲／乙規劃高三進度、全範圍統整、歷屆題與模考檢討。</p></details>
+        <details><summary>資優、競賽與專題訓練</summary><p>代數、幾何、數論、組合、機率統計、微積分先備、證明與專題探究。</p></details>
+      </article>
+    </div>
+
+    <div class="course-info">
+      <div><strong>1.5–2 hr</strong><small>一般進度課程建議</small></div>
+      <div><strong>2–3 hr</strong><small>考試／資優／競賽建議</small></div>
+      <div><strong>同價試教</strong><small>試教後再確認長期安排</small></div>
+      <div><strong>教材彈性</strong><small>自編講義、歷屆題、模擬題、錯題整理</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">NOTES</p>
+      <h2>教學札記</h2>
+      <p>讓網站不是一次做完的履歷，而是會持續累積的個人專業紀錄。</p>
+    </div>
+    <div class="notes">
+      <article class="note"><small>教學反思</small><h3>為什麼學生會卡在配方法？</h3><p>從「補成完全平方」背後的概念重新理解學生常見困難。</p></article>
+      <article class="note"><small>數位教學</small><h3>從板書到數位筆跡</h3><p>思考投影片、板書與筆跡動畫之間的課堂節奏。</p></article>
+      <article class="note"><small>數學文章</small><h3>第一次學二次函數，真正重要的是什麼？</h3><p>比起一次記完公式，更重要的是圖形與參數之間的關係。</p></article>
+      <article class="note"><small>教師成長</small><h3>解題之後，為什麼還要重新整理？</h3><p>一題做對不代表知識已經成形；整理決定下次能不能重新找到方法。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="cvpromo">
+      <div>
+        <p class="eyebrow">CV / RESUME GENERATOR</p>
+        <h3>同一份網站資料，直接輸出不同履歷。</h3>
+        <p>中文履歷、英文 Academic CV、教師應徵版或申請用版本，都不需要重新打一次資料。</p>
+      </div>
+      <button class="btn primary" onclick="openResume()">開啟履歷產生器</button>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
- <div class="wrap"><div class="contactbox reveal"><p class="eyebrow">CONTACT</p><h2>一起談談數學、教學與學習。</h2><p>若想討論教學、課程合作或數學教育相關議題，歡迎聯絡。</p><span class="btn">聯絡方式公開前補上</span></div></div>
+  <div class="wrap">
+    <div class="contact">
+      <p class="eyebrow" style="color:#cad5cf">CONTACT</p>
+      <h2>數學、教育與學習。</h2>
+      <p>未來可放公開 Email、LinkedIn、GitHub，或學術／教學合作聯絡方式。</p>
+      <span class="btn" style="color:#fff;border-color:#8fa197;margin-top:12px">Contact</span>
+    </div>
+  </div>
 </section>
 </main>
 
-<footer><div class="wrap foot"><span>© 李明諭 · Mathematics Education</span><a href="#home">回到頁首 ↑</a></div></footer>
-<dialog id="dialog"><button class="close" aria-label="關閉">×</button><div class="modal" id="modal"></div></dialog>
+<footer><div class="wrap"><span>© 李明諭 · Personal Teaching Portfolio</span><span>Built from one shared profile dataset</span></div></footer>
+
+<!-- Resume Builder -->
+<div class="resume-layer" id="resumeLayer">
+  <div class="builder">
+    <aside class="controls">
+      <h3>履歷產生器</h3>
+      <p>選擇語言與要輸出的區塊。列印時只會輸出右側 A4 履歷。</p>
+
+      <div class="controlrow">
+        <strong style="font-size:12px">語言</strong>
+        <div class="ctrl-actions">
+          <button class="navbtn" onclick="setResumeLang('zh')">中文</button>
+          <button class="navbtn" onclick="setResumeLang('en')">English</button>
+        </div>
+      </div>
+
+      <div class="controlrow">
+        <strong style="font-size:12px">用途快速設定</strong>
+        <div class="preset-grid">
+          <button class="preset" onclick="applyPreset('general')">一般中文履歷</button>
+          <button class="preset" onclick="applyPreset('abroad')">國外申請 CV</button>
+          <button class="preset" onclick="applyPreset('teacher')">教師應徵版</button>
+          <button class="preset" onclick="applyPreset('tutoring')">家教／課程合作</button>
+        </div>
+      </div>
+
+      <div class="controlrow"><label><input type="checkbox" checked data-toggle="education"> 學歷 Education</label></div>
+      <div class="controlrow"><label><input type="checkbox" checked data-toggle="teaching"> 教學經歷 Teaching</label></div>
+      <div class="controlrow"><label><input type="checkbox" checked data-toggle="projects"> 精選作品 Projects</label></div>
+      <div class="controlrow"><label><input type="checkbox" checked data-toggle="growth"> 專業成長 Growth</label></div>
+      <div class="controlrow"><label><input type="checkbox" checked data-toggle="skills"> 專長 Skills</label></div>
+<div class="controlrow"><label><input type="checkbox" data-toggle="services"> 課程服務 Teaching Services</label></div>
+
+      <div class="ctrl-actions">
+        <button class="btn primary" onclick="window.print()">列印 / 儲存 PDF</button>
+        <button class="btn" onclick="closeResume()">關閉</button>
+      </div>
+      <p style="margin-top:16px">iPhone：列印 → 預覽頁雙指放大 → 分享 → 儲存到「檔案」，即可得到 PDF。</p>
+    </aside>
+
+    <article class="resume-paper" id="resumePaper">
+      <div class="r-head">
+        <div>
+          <h1 class="zh-only">李明諭</h1>
+          <h1 class="en-only">Ming-Yu Li</h1>
+          <div class="sub zh-only">數學 · 教育 · 教學設計</div>
+          <div class="sub en-only">Mathematics · Education · Teaching & Learning Design</div>
+        </div>
+        <div class="r-contact">
+          <div>Email: your-email@example.com</div>
+          <div>Website: your-domain.com</div>
+          <div>GitHub: mingyuli0630-del</div>
+        </div>
+      </div>
+
+      <section class="r-section" data-section="education">
+        <h2 class="zh-only">學歷</h2><h2 class="en-only">Education</h2>
+        <div class="r-item">
+          <div class="r-date">Education</div>
+          <div>
+            <h3 class="zh-only">國立臺灣大學 · 數學系</h3>
+            <h3 class="en-only">National Taiwan University · Department of Mathematics</h3>
+            <p class="zh-only">數學專業訓練，並投入中等教育師資培育與教學實務。</p>
+            <p class="en-only">Mathematics training with continued engagement in secondary teacher education and classroom practice.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section" data-section="teaching">
+        <h2 class="zh-only">教學經歷</h2><h2 class="en-only">Teaching Experience</h2>
+        <div id="resumeTeaching"></div>
+      </section>
+
+      <section class="r-section" data-section="projects">
+        <h2 class="zh-only">精選作品</h2><h2 class="en-only">Selected Projects</h2>
+        <div class="r-item"><div class="r-date">Curriculum</div><div><h3 class="zh-only">幾何與科學班課程設計</h3><h3 class="en-only">Geometry & Advanced Mathematics Curriculum</h3><p class="zh-only">整合課程目標、教材、評量與教學反思。</p><p class="en-only">Integrated curriculum goals, instructional materials, assessment, and reflective practice.</p></div></div>
+        <div class="r-item"><div class="r-date">Digital</div><div><h3 class="zh-only">筆跡式數位教學</h3><h3 class="en-only">Digital Ink Teaching</h3><p class="zh-only">探索筆跡重現、即時註記與彈性課堂流程。</p><p class="en-only">Exploration of handwriting playback, live annotation, and flexible classroom sequencing.</p></div></div>
+      </section>
+
+      <section class="r-section" data-section="growth">
+        <h2 class="zh-only">專業成長</h2><h2 class="en-only">Professional Development</h2>
+        <ul class="r-list zh-only">
+          <li>教師研習、課輔認證與教學專業課程</li>
+          <li>數位教學、特教知能與學習設計持續進修</li>
+        </ul>
+        <ul class="r-list en-only">
+          <li>Teacher workshops, tutoring certification, and professional coursework</li>
+          <li>Continued development in digital teaching, special education, and learning design</li>
+        </ul>
+      </section>
+
+      <section class="r-section" data-section="skills">
+        <h2 class="zh-only">專長</h2><h2 class="en-only">Skills & Interests</h2>
+        <ul class="r-list zh-only">
+          <li>國高中數學教學與升學複習</li>
+          <li>教材、考卷與課程設計</li>
+          <li>數位筆跡與 iPad 教學</li>
+          <li>數學教育與學習設計</li>
+        </ul>
+        <ul class="r-list en-only">
+          <li>Secondary mathematics teaching and exam preparation</li>
+          <li>Curriculum, worksheet, and assessment design</li>
+          <li>Digital ink and iPad-supported instruction</li>
+          <li>Mathematics education and learning design</li>
+        </ul>
+      </section>
+
+      
+      <section class="r-section hidden" data-section="services">
+        <h2 class="zh-only">課程服務</h2><h2 class="en-only">Teaching Services</h2>
+        <ul class="r-list zh-only">
+          <li>國小至高中數學；一對一與 2–6 人小班</li>
+          <li>課內進度、段考、會考、學測、分科、資優／科學班與進階課程</li>
+          <li>一對一 NT$1,200／小時；線上每位每小時減 NT$100；多人班依人數統一計價</li>
+        </ul>
+        <ul class="r-list en-only">
+          <li>Mathematics instruction from elementary through senior high school; one-on-one and small-group formats</li>
+          <li>School curriculum, major examinations, advanced mathematics, and enrichment programs</li>
+          <li>One-on-one: NT$1,200/hour; online lessons receive a NT$100/hour discount per student</li>
+        </ul>
+      </section>
+
+      <p class="r-note zh-only">此履歷由個人網站資料自動產生；正式申請時可依用途調整內容與順序。</p>
+      <p class="r-note en-only">This CV is generated from the same profile data used by the personal website and can be tailored for specific applications.</p>
+    </article>
+  </div>
+</div>
 
 <script>
-const projects=[
-["乘法公式與多項式","junior","國中數學","國二","(a+b)²","從公式展開走向結構辨識與靈活運用。","不只練習展開，也加入逆推、比較與混合運算，讓學生在不同形式中辨認相同結構。"],
-["一元二次方程式","junior","國中數學","國三","ax²+bx+c","把方程式、根與情境放進同一個脈絡。","重視從文字條件建立方程式，並比較不同解法的適用時機。"],
-["二次函數","senior","高中數學","高一","y=a(x-h)²+k","在一般式、頂點式與因式式之間切換觀點。","以圖形觀察為入口，再逐步抽象成代數表示，讓不同形式各自提供有用資訊。"],
-["幾何與科學班訓練","exam","升學・科學班","國三進階","△ ○ ⟂","整合畢氏、餘弦、面積與幾何推理。","由基本定理逐步進入複合題型，訓練資訊較少時自行建立輔助線與解題策略。"],
-["矩陣","senior","高中數學","高中","[ a  b ]","用轉換的觀點理解矩陣，而不只做乘法。","以座標與圖形轉換驗證旋轉、鏡射等矩陣效果。"],
-["微分與切線","senior","高中數學","高二・高三","f′(x)","從變化率連回斜率，再進入切線與最值。","從割線逼近切線，搭配圖形與代數互相驗證。"],
-["二維數據分析","senior","高中數學","高一","r · R²","理解相關、擬合與模型解釋。","用資料情境閱讀散佈圖，區分相關與因果，並討論模型限制。"],
-["學測／分科複習","exam","升學・科學班","高三","∑ → ?","整合核心概念、題型辨識與時間策略。","依學生程度調整複習順序，搭配模擬題修正作答時間與優先順序。"],
-["筆跡式數位簡報","digital","數位教學","跨年級","✎ ▶","讓公式與推導按照課堂節奏逐步出現。","以 iPad 與手寫筆為主要操作情境，兼顧筆跡重現、即時註記與彈性播放。"]
-];
-const notes=[
-["教學反思","為什麼學生會卡在配方法？","配方法的困難往往不只是計算，而是學生沒有看見「補成完全平方」到底在做什麼。"],
-["數學文章","第一次學二次函數，真正重要的是什麼？","比起一開始記住所有公式，我更在意學生是否能說出圖形和參數之間的關係。"],
-["數位教學","從板書到數位筆跡：我如何思考課堂節奏","投影片太快、板書太慢時，筆跡動畫可能提供一個中間選項。"],
-["教師成長","解題之後，為什麼還要重新整理？","一題做對不代表知識已經成形；最後的整理，決定這個方法下次能不能被重新找到。"]
-];
-const cardbox=document.querySelector("#cards");
-function render(f="all"){let a=f==="all"?projects:projects.filter(x=>x[1]===f);cardbox.innerHTML=a.map((x)=>`<article class="card reveal visible" tabindex="0" data-title="${x[0]}"><div class="cardtop"><span>${x[2]}</span><span>${x[3]}</span></div><div class="symbol">${x[4]}</div><h3>${x[0]}</h3><p>${x[5]}</p><span class="more">查看設計重點 →</span></article>`).join("")}
-render();
-document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.f)});
-document.querySelector("#notesgrid").innerHTML=notes.map(x=>`<article class="note reveal visible" tabindex="0" data-note="${x[1]}"><small>${x[0]}</small><h3>${x[1]}</h3><p>${x[2]}</p></article>`).join("");
-const dlg=document.querySelector("#dialog"),modal=document.querySelector("#modal");
-document.addEventListener("click",e=>{
- let c=e.target.closest("[data-title]"); if(c){let x=projects.find(p=>p[0]===c.dataset.title);modal.innerHTML=`<small>${x[2]} · ${x[3]}</small><h2>${x[0]}</h2><p>${x[5]}</p><h4>設計重點</h4><p>${x[6]}</p><h4>後續可加入</h4><p>講義 PDF、教案、學生工作紙、課後反思或示範影片。</p>`;dlg.showModal()}
- let n=e.target.closest("[data-note]"); if(n){let x=notes.find(p=>p[1]===n.dataset.note);modal.innerHTML=`<small>${x[0]}</small><h2>${x[1]}</h2><p>${x[2]}</p><h4>文章狀態</h4><p>目前先建立文章入口，之後可逐篇加入完整內容與日期。</p>`;dlg.showModal()}
+/*
+  核心概念：
+  未來只維護 profileData。
+  網站與履歷都從同一份資料生成。
+*/
+const profileData = {
+  experience: [
+    {
+      type:"Teacher Education",
+      zhTitle:"中等教育師資培育與高中教學實務",
+      enTitle:"Secondary Teacher Education & Classroom Practice",
+      zh:"累積教案設計、課堂觀察、教材準備、教學演示與班級互動經驗。",
+      en:"Experience in lesson planning, classroom observation, instructional materials, teaching demonstrations, and student interaction."
+    },
+    {
+      type:"Tutoring",
+      zhTitle:"家教教學約 5 年",
+      enTitle:"Private Mathematics Tutoring",
+      zh:"涵蓋國小至高中，包含校內進度、段考、會考、學測、分科與數學能力建立。",
+      en:"Mathematics tutoring across elementary to high school levels, including school curriculum, examinations, and conceptual development."
+    },
+    {
+      type:"Institute",
+      zhTitle:"補習班個別指導與團體班",
+      enTitle:"Individual & Group Instruction",
+      zh:"具有個別指導與團班授課經驗，接觸升學複習、科學班與不同程度學生。",
+      en:"Experience in both one-on-one and group instruction, including exam preparation and advanced mathematics."
+    },
+    {
+      type:"Learning Support",
+      zhTitle:"多元教學經驗",
+      enTitle:"Diverse Learning Contexts",
+      zh:"曾接觸扶弱與數理資優相關教學情境，持續累積不同學生需求的教學經驗。",
+      en:"Exposure to learning support and advanced mathematics contexts, with attention to diverse student needs."
+    }
+  ]
+};
+
+const siteExperience=document.querySelector("#siteExperience");
+siteExperience.innerHTML=profileData.experience.map(x=>`
+  <article>
+    <div class="k">${x.type}</div>
+    <div><h3>${x.zhTitle}</h3><p>${x.zh}</p></div>
+  </article>
+`).join("");
+
+const resumeTeaching=document.querySelector("#resumeTeaching");
+resumeTeaching.innerHTML=profileData.experience.map(x=>`
+  <div class="r-item">
+    <div class="r-date">${x.type}</div>
+    <div>
+      <h3 class="zh-only">${x.zhTitle}</h3>
+      <h3 class="en-only">${x.enTitle}</h3>
+      <p class="zh-only">${x.zh}</p>
+      <p class="en-only">${x.en}</p>
+    </div>
+  </div>
+`).join("");
+
+function openResume(){
+  document.getElementById("resumeLayer").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeResume(){
+  document.getElementById("resumeLayer").classList.remove("open");
+  document.body.style.overflow="";
+}
+function setResumeLang(lang){
+  document.body.classList.toggle("resume-en",lang==="en");
+}
+
+function applyPreset(type){
+  const presets={
+    general:{lang:"zh",sections:["education","teaching","projects","growth","skills"]},
+    abroad:{lang:"en",sections:["education","teaching","projects","growth","skills"]},
+    teacher:{lang:"zh",sections:["education","teaching","projects","growth","skills"]},
+    tutoring:{lang:"zh",sections:["education","teaching","projects","skills","services"]}
+  };
+  const p=presets[type];
+  if(!p) return;
+  setResumeLang(p.lang);
+  document.querySelectorAll("[data-toggle]").forEach(cb=>{
+    cb.checked=p.sections.includes(cb.dataset.toggle);
+    const section=document.querySelector(`[data-section="${cb.dataset.toggle}"]`);
+    if(section) section.classList.toggle("hidden",!cb.checked);
+  });
+}
+document.querySelectorAll("[data-toggle]").forEach(cb=>{
+  cb.addEventListener("change",()=>{
+    const section=document.querySelector(`[data-section="${cb.dataset.toggle}"]`);
+    section.classList.toggle("hidden",!cb.checked);
+  });
 });
-document.querySelector(".close").onclick=()=>dlg.close();
-const menu=document.querySelector(".menu"),nav=document.querySelector("nav");menu.onclick=()=>{nav.classList.toggle("open");menu.setAttribute("aria-expanded",nav.classList.contains("open"))};nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
+document.getElementById("resumeLayer").addEventListener("click",e=>{
+  if(e.target.id==="resumeLayer") closeResume();
+});
 </script>
 </body>
 </html>

@@ -84,9 +84,12 @@ section{padding:108px 0}
 .notes-bg{background:var(--paper2)}.notes{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
 .note{padding:27px 28px 27px 0;border-bottom:1px solid var(--line);cursor:pointer}.note:nth-child(odd){border-right:1px solid var(--line)}.note:nth-child(even){padding-left:28px}
 .note small{color:var(--sage);letter-spacing:.1em}.note h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.35;margin:10px 0}.note p{color:var(--muted);margin:0}.note:hover h3{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:13px}.g{border:1px solid var(--line);position:relative;overflow:hidden;background:var(--paper2)}.g.tall{grid-row:span 2}.g.wide{grid-column:span 2}
-.art{position:absolute;inset:0}.a1{background:radial-gradient(circle at 65% 30%,transparent 0 65px,#52675b25 66px 68px,transparent 69px),linear-gradient(120deg,transparent 47%,#52675b30 47% 47.5%,transparent 47.5%),#efebe3}.a2{background:repeating-linear-gradient(0deg,transparent 0 25px,#52675b1f 26px 27px),repeating-linear-gradient(90deg,transparent 0 25px,#52675b1f 26px 27px),#faf7f1}.a3{background:linear-gradient(90deg,transparent 49%,#52675b44 49% 49.5%,transparent 49.5%),linear-gradient(0deg,transparent 56%,#52675b44 56% 56.5%,transparent 56.5%),radial-gradient(circle at 50% 56%,#9b674b 0 4px,transparent 5px),#ece9e1}.a4{background:conic-gradient(from 110deg at 35% 50%,transparent 0 20%,#52675b24 20% 21%,transparent 21% 61%,#9b674b27 61% 62%,transparent 62%),#eeeae2}
-.g label{position:absolute;left:17px;right:17px;bottom:15px;border-top:1px solid rgba(31,37,34,.22);padding-top:10px;display:flex;justify-content:space-between;font-size:11px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:235px;gap:13px}.g{border:1px solid var(--line);position:relative;overflow:hidden;background:var(--paper2)}.g.tall{grid-row:span 2}.g.wide{grid-column:span 2}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease}.g:hover img{transform:scale(1.025)}
+.g::after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(to bottom,transparent,rgba(20,26,23,.66));pointer-events:none}
+.g label{position:absolute;z-index:2;left:17px;right:17px;bottom:15px;border-top:1px solid rgba(255,255,255,.55);padding-top:10px;display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.28)}
+.g label span{font-weight:600;letter-spacing:.04em}.g label strong{font-weight:500;letter-spacing:.12em;opacity:.84}
+.g.focus-top img{object-position:center 28%}.g.focus-left img{object-position:38% center}.g.focus-right img{object-position:66% center}
 .contactbox{background:var(--sage2);color:var(--paper);max-width:940px;margin:auto;padding:70px;text-align:center}.contactbox .eyebrow{color:#cad4ce}.contactbox h2{font-family:var(--serif);font-size:clamp(38px,5vw,62px);line-height:1.18;font-weight:500;margin:7px auto 15px}.contactbox p{color:#d8ded9}.contactbox .btn{color:var(--paper);border-color:#83958a;opacity:.7;margin-top:14px;pointer-events:none}
 footer{border-top:1px solid var(--line);padding:27px 0 42px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between}
 dialog{width:min(700px,calc(100vw - 30px));max-height:85vh;border:0;padding:0;background:var(--paper2);color:var(--ink);box-shadow:0 30px 90px rgba(0,0,0,.28)}dialog::backdrop{background:rgba(22,27,24,.58);backdrop-filter:blur(4px)}
@@ -109,7 +112,7 @@ dialog{width:min(700px,calc(100vw - 30px));max-height:85vh;border:0;padding:0;ba
   <a class="brand" href="#home"><span class="brandmark">M</span><span><strong>李明諭</strong><small>Mathematics Education</small></span></a>
   <button class="menu" aria-label="開啟導覽" aria-expanded="false">☰</button>
   <nav>
-   <a href="#about">自傳</a><a href="#resume">履歷</a><a href="#philosophy">教學理念</a><a href="#portfolio">作品</a><a href="#notes">札記</a><a href="#contact">聯絡</a>
+   <a href="#about">自傳</a><a href="#resume">履歷</a><a href="#philosophy">教學理念</a><a href="#portfolio">作品</a><a href="#notes">札記</a><a href="#moments">課堂紀錄</a><a href="#contact">聯絡</a>
   </nav>
  </div>
 </header>
@@ -214,14 +217,16 @@ dialog{width:min(700px,calc(100vw - 30px));max-height:85vh;border:0;padding:0;ba
  </div>
 </section>
 
-<section>
+<section id="moments">
  <div class="wrap">
-  <div class="heading reveal"><p class="eyebrow">MOMENTS</p><h2>照片與教學紀錄</h2><p>目前先保留版位，未來放入教學現場、板書、教材、研習或教學演示照片。</p></div>
+  <div class="heading reveal"><p class="eyebrow">TEACHING MOMENTS</p><h2>課堂紀錄</h2><p>從全班講解、巡迴指導到小組討論，記錄實際課堂中與學生共同思考、釐清問題的過程。</p></div>
   <div class="gallery">
-   <div class="g tall reveal"><div class="art a1"></div><label><span>教學現場</span><strong>PHOTO</strong></label></div>
-   <div class="g reveal"><div class="art a2"></div><label><span>板書</span><strong>PHOTO</strong></label></div>
-   <div class="g reveal"><div class="art a3"></div><label><span>教材</span><strong>PHOTO</strong></label></div>
-   <div class="g wide reveal"><div class="art a4"></div><label><span>研習／教學演示</span><strong>PHOTO</strong></label></div>
+   <figure class="g wide reveal"><img src="teaching-01.jpg" alt="數學課堂板書與全班講解" loading="lazy"><label><span>板書講解與全班授課</span><strong>CLASSROOM</strong></label></figure>
+   <figure class="g tall focus-top reveal"><img src="teaching-02.jpg" alt="課堂活動中的巡迴引導" loading="lazy"><label><span>課堂活動中的引導</span><strong>GUIDANCE</strong></label></figure>
+   <figure class="g focus-right reveal"><img src="teaching-03.jpg" alt="小組學習中的個別回饋" loading="lazy"><label><span>小組學習與個別回饋</span><strong>DISCUSSION</strong></label></figure>
+   <figure class="g focus-right reveal"><img src="teaching-04.jpg" alt="學生小組討論與教師引導" loading="lazy"><label><span>小組討論與即時引導</span><strong>INTERACTION</strong></label></figure>
+   <figure class="g wide focus-left reveal"><img src="teaching-05.jpg" alt="數位工具搭配課堂討論" loading="lazy"><label><span>數位工具搭配課堂討論</span><strong>DIGITAL</strong></label></figure>
+   <figure class="g focus-left reveal"><img src="teaching-06.jpg" alt="課堂巡視與個別指導" loading="lazy"><label><span>巡堂與個別指導</span><strong>FEEDBACK</strong></label></figure>
   </div>
  </div>
 </section>

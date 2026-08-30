@@ -54,6 +54,7 @@ section{padding:108px 0}
 radial-gradient(circle at 50% 34%,rgba(82,103,91,.18) 0 80px,transparent 81px),
 linear-gradient(145deg,#e6e1d7,#faf7f1);
 display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-size:76px}
+.portrait .photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .portrait .caption{position:absolute;left:34px;right:34px;bottom:19px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:15px}
 .caption span{font-size:10px;letter-spacing:.14em;color:var(--muted)}
 .caption strong{font-family:var(--serif);font-size:12px;font-weight:500}
@@ -113,6 +114,10 @@ display:flex;align-items:flex-end;padding:20px}
 .gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-auto-rows:230px;gap:12px}
 .g{position:relative;border:1px solid var(--line);overflow:hidden;background:linear-gradient(145deg,#e7e3da,#faf7f1)}
 .g.big{grid-row:span 2}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.g:hover img{transform:scale(1.025)}
+.g.focus-top img{object-position:center 28%}
+.g.focus-right img{object-position:66% center}
 .g .p{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:56px;color:rgba(82,103,91,.36)}
 .g:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(20,25,22,.58))}
 .g label{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;padding-top:9px;border-top:1px solid rgba(255,255,255,.62);display:flex;justify-content:space-between;color:#fff;font-size:11px}
@@ -288,8 +293,8 @@ body.resume-en .en-only{display:block!important}
       </div>
     </div>
     <div class="portrait">
-      <div class="photo">M</div>
-      <div class="caption"><span>PROFILE PHOTO</span><strong>Replace with profile.jpg</strong></div>
+      <div class="photo"><img src="profile.jpg" alt="李明諭個人照" loading="eager"></div>
+      <div class="caption"><span>PROFILE</span><strong>Mathematics · Education · Teaching</strong></div>
     </div>
   </div>
 </section>
@@ -390,12 +395,31 @@ body.resume-en .en-only{display:block!important}
       <h2>課堂紀錄</h2>
       <p>這裡之後直接換成你的真實課堂照片，搭配一句教學情境，而不是單純相簿。</p>
     </div>
-    <div class="gallery">
-      <div class="g big"><div class="p">01</div><label><span>板書與全班講解</span><strong>CLASSROOM</strong></label></div>
-      <div class="g"><div class="p">02</div><label><span>巡迴引導</span><strong>GUIDANCE</strong></label></div>
-      <div class="g"><div class="p">03</div><label><span>小組討論</span><strong>DISCUSSION</strong></label></div>
-      <div class="g"><div class="p">04</div><label><span>數位工具</span><strong>DIGITAL</strong></label></div>
-      <div class="g"><div class="p">05</div><label><span>個別回饋</span><strong>FEEDBACK</strong></label></div>
+    <div class="gallery teaching-gallery">
+      <figure class="g big">
+        <img src="teaching-01.jpg" alt="數學課堂板書與全班講解" loading="lazy">
+        <label><span>板書講解與全班授課</span><strong>CLASSROOM</strong></label>
+      </figure>
+      <figure class="g focus-top">
+        <img src="teaching-02.jpg" alt="課堂活動中的巡迴引導" loading="lazy">
+        <label><span>課堂活動中的引導</span><strong>GUIDANCE</strong></label>
+      </figure>
+      <figure class="g focus-right">
+        <img src="teaching-03.jpg" alt="小組學習中的個別回饋" loading="lazy">
+        <label><span>小組學習與個別回饋</span><strong>DISCUSSION</strong></label>
+      </figure>
+      <figure class="g focus-right">
+        <img src="teaching-04.jpg" alt="學生小組討論與教師引導" loading="lazy">
+        <label><span>小組討論與即時引導</span><strong>INTERACTION</strong></label>
+      </figure>
+      <figure class="g">
+        <img src="teaching-05.jpg" alt="數位工具搭配課堂討論" loading="lazy">
+        <label><span>數位工具搭配課堂討論</span><strong>DIGITAL</strong></label>
+      </figure>
+      <figure class="g">
+        <img src="teaching-06.jpg" alt="課堂巡視與個別指導" loading="lazy">
+        <label><span>巡堂與個別指導</span><strong>FEEDBACK</strong></label>
+      </figure>
     </div>
   </div>
 </section>

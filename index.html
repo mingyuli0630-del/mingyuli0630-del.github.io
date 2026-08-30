@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>李明諭｜數學教師・教學作品集</title>
+<meta name="description" content="李明諭的數學教師個人網站：自傳、教學履歷、教學理念、作品、成果與教學札記。">
+<meta name="theme-color" content="#f4f0e7">
+<meta property="og:title" content="李明諭｜數學教師・教學作品集">
+<meta property="og:description" content="Teaching · Learning · Mathematics">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --paper:#f4f0e7; --paper2:#fbf9f4; --ink:#1f2522; --muted:#65706a;
+  --sage:#52675b; --sage2:#36483f; --line:#d8d4ca; --warm:#9b674b;
+  --serif:"Iowan Old Style","Palatino Linotype","Noto Serif TC","Songti TC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.78;letter-spacing:.01em}
+a{color:inherit;text-decoration:none} button{font:inherit}
+.wrap{max-width:var(--max);margin:auto;padding-left:24px;padding-right:24px}
+header{position:sticky;top:0;z-index:30;background:rgba(244,240,231,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(216,212,202,.9)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.brandmark{width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px}
+.brand strong,.brand small{display:block}.brand strong{font-size:14px;letter-spacing:.08em}.brand small{font-family:var(--serif);font-size:11px;color:var(--muted)}
+nav{display:flex;gap:22px;font-size:13px}
+nav a{padding:6px 0;border-bottom:1px solid transparent} nav a:hover{border-color:var(--ink)}
+.menu{display:none;background:none;border:0;width:42px;height:42px;font-size:24px}
+section{padding:108px 0}
+.eyebrow{font-size:11px;letter-spacing:.23em;color:var(--sage);font-weight:700;margin:0 0 10px}
+.heading{margin-bottom:45px;max-width:760px}
+.heading h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:500;letter-spacing:-.03em;line-height:1.12;margin:0 0 14px}
+.heading p{margin:0;color:var(--muted)}
+.hero{min-height:calc(100svh - 68px);display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px;padding-top:56px;padding-bottom:56px}
+.hero h1{font-family:var(--serif);font-size:clamp(72px,10vw,122px);line-height:.92;letter-spacing:-.065em;font-weight:500;margin:5px 0 16px}
+.hero-en{font-family:var(--serif);font-size:clamp(18px,2vw,27px);color:var(--sage);margin:0 0 28px}
+.lead{font-size:clamp(19px,2vw,24px);max-width:580px;margin:0 0 34px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ink);border-radius:99px;min-height:48px;padding:10px 18px;font-weight:650;font-size:14px}
+.btn.primary{background:var(--ink);color:var(--paper)}.btn.primary:hover{background:var(--sage2)}.btn:hover{background:var(--paper2)}
+.facts{display:flex;gap:30px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.fact small{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em}.fact strong{font-size:14px}
+.photo-shell{position:relative;background:var(--paper2);border:1px solid var(--line);padding:16px 16px 72px;box-shadow:0 16px 44px rgba(31,37,34,.07)}
+.photo-shell:before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid rgba(82,103,91,.18);z-index:-1}
+.photo-shell img{display:block;width:100%;height:590px;object-fit:cover;object-position:center 22%;filter:saturate(.9) contrast(.99)}
+.photo-caption{position:absolute;left:34px;right:34px;bottom:20px;border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;gap:15px}
+.photo-caption span{font-size:10px;letter-spacing:.14em;color:var(--muted)}.photo-caption strong{font-family:var(--serif);font-size:12px;font-weight:500}
+.border-top{border-top:1px solid var(--line)}
+.about-layout{display:grid;grid-template-columns:.36fr 1fr;gap:70px}
+.about-title{position:sticky;top:100px;align-self:start}
+.autobio-intro{font-family:var(--serif);font-size:clamp(27px,3.4vw,43px);line-height:1.55;margin:0 0 36px}
+.autobio-intro em{font-style:normal;color:var(--sage2)}
+.autobio{display:grid;grid-template-columns:1fr 1fr;gap:8px 34px;border-top:1px solid var(--line);padding-top:10px}
+.autobio p{color:#4e5853;margin:18px 0 0}
+.values{display:grid;grid-template-columns:repeat(3,1fr);margin-top:42px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.value{padding:20px 18px 20px 0;border-right:1px solid var(--line)}
+.value:not(:first-child){padding-left:18px}.value:last-child{border-right:0}
+.value span,.value strong,.value small{display:block}.value span{font-family:var(--serif);font-size:12px;color:var(--sage);margin-bottom:18px}.value strong{font-family:var(--serif);font-size:22px;font-weight:500}.value small{color:var(--muted)}
+.resume-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:60px}
+.timeline{border-top:1px solid var(--ink)}
+.item{display:grid;grid-template-columns:120px 1fr;gap:26px;padding:26px 0;border-bottom:1px solid var(--line)}
+.item .k{font-family:var(--serif);font-size:13px;color:var(--sage)}.item h3{margin:0 0 7px;font-size:19px}.item p{margin:0;color:var(--muted)}
+.sidecard{background:var(--sage2);color:var(--paper);padding:32px;align-self:start;position:sticky;top:100px}
+.sidecard .eyebrow{color:#cbd4ce}.sidecard h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:0 0 20px}
+.sidecard ul{list-style:none;padding:0;margin:0}.sidecard li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.17)}
+.philosophy{background:var(--ink);color:var(--paper)}
+.philosophy .wrap>.heading{max-width:920px}.philosophy .eyebrow{color:#afbeb5}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.25)}
+.step{min-height:270px;padding:26px 26px 12px 0;border-right:1px solid rgba(255,255,255,.17)}.step:not(:first-child){padding-left:26px}.step:last-child{border-right:0}
+.step span{font-family:var(--serif);color:#afbeb5}.step h3{font-family:var(--serif);font-size:26px;font-weight:500;margin:48px 0 10px}.step p{margin:0;color:#c9ceca}
+.split{display:flex;align-items:end;justify-content:space-between;gap:36px;max-width:none}.split>p{max-width:430px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filter{border:1px solid var(--line);background:transparent;border-radius:99px;padding:8px 14px;color:var(--muted);cursor:pointer}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{background:var(--paper2);border:1px solid var(--line);padding:22px;min-height:292px;display:flex;flex-direction:column;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#a9afa9}
+.cardtop{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:.1em}.symbol{font-family:var(--serif);font-size:43px;color:var(--sage);margin:32px 0 13px}
+.card h3{font-family:var(--serif);font-size:25px;line-height:1.3;font-weight:500;margin:0 0 10px}.card p{color:var(--muted);margin:0}.more{margin-top:auto;padding-top:18px;font-size:12px;font-weight:700}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.result{border-top:2px solid var(--sage);padding-top:22px}.result small{letter-spacing:.1em;color:var(--muted)}.result h3{font-family:var(--serif);font-size:29px;line-height:1.35;font-weight:500;margin:10px 0}.result p{color:var(--muted)}
+.disclaimer{font-size:11px;color:var(--muted);margin-top:36px;padding-top:17px;border-top:1px solid var(--line)}
+.notes-bg{background:var(--paper2)}.notes{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.note{padding:27px 28px 27px 0;border-bottom:1px solid var(--line);cursor:pointer}.note:nth-child(odd){border-right:1px solid var(--line)}.note:nth-child(even){padding-left:28px}
+.note small{color:var(--sage);letter-spacing:.1em}.note h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.35;margin:10px 0}.note p{color:var(--muted);margin:0}.note:hover h3{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:13px}.g{border:1px solid var(--line);position:relative;overflow:hidden;background:var(--paper2)}.g.tall{grid-row:span 2}.g.wide{grid-column:span 2}
+.art{position:absolute;inset:0}.a1{background:radial-gradient(circle at 65% 30%,transparent 0 65px,#52675b25 66px 68px,transparent 69px),linear-gradient(120deg,transparent 47%,#52675b30 47% 47.5%,transparent 47.5%),#efebe3}.a2{background:repeating-linear-gradient(0deg,transparent 0 25px,#52675b1f 26px 27px),repeating-linear-gradient(90deg,transparent 0 25px,#52675b1f 26px 27px),#faf7f1}.a3{background:linear-gradient(90deg,transparent 49%,#52675b44 49% 49.5%,transparent 49.5%),linear-gradient(0deg,transparent 56%,#52675b44 56% 56.5%,transparent 56.5%),radial-gradient(circle at 50% 56%,#9b674b 0 4px,transparent 5px),#ece9e1}.a4{background:conic-gradient(from 110deg at 35% 50%,transparent 0 20%,#52675b24 20% 21%,transparent 21% 61%,#9b674b27 61% 62%,transparent 62%),#eeeae2}
+.g label{position:absolute;left:17px;right:17px;bottom:15px;border-top:1px solid rgba(31,37,34,.22);padding-top:10px;display:flex;justify-content:space-between;font-size:11px}
+.contactbox{background:var(--sage2);color:var(--paper);max-width:940px;margin:auto;padding:70px;text-align:center}.contactbox .eyebrow{color:#cad4ce}.contactbox h2{font-family:var(--serif);font-size:clamp(38px,5vw,62px);line-height:1.18;font-weight:500;margin:7px auto 15px}.contactbox p{color:#d8ded9}.contactbox .btn{color:var(--paper);border-color:#83958a;opacity:.7;margin-top:14px;pointer-events:none}
+footer{border-top:1px solid var(--line);padding:27px 0 42px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between}
+dialog{width:min(700px,calc(100vw - 30px));max-height:85vh;border:0;padding:0;background:var(--paper2);color:var(--ink);box-shadow:0 30px 90px rgba(0,0,0,.28)}dialog::backdrop{background:rgba(22,27,24,.58);backdrop-filter:blur(4px)}
+.modal{padding:52px}.close{position:absolute;right:13px;top:9px;border:0;background:none;font-size:29px;cursor:pointer}.modal small{color:var(--sage);letter-spacing:.12em}.modal h2{font-family:var(--serif);font-size:40px;line-height:1.2;font-weight:500;margin:8px 0 18px}.modal p,.modal li{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:920px){
+ nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);padding:18px 24px 26px;flex-direction:column;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}
+ .hero{grid-template-columns:1fr;min-height:auto;gap:46px}.photo-shell img{height:min(760px,105vw)}.about-layout,.resume-grid{grid-template-columns:1fr}.about-title,.sidecard{position:static}.steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.cards{grid-template-columns:1fr 1fr}.results{grid-template-columns:1fr}.split{display:block}
+}
+@media(max-width:640px){
+ .wrap{padding-left:18px;padding-right:18px}section{padding:80px 0}.brand small{display:none}.hero h1{font-size:72px}.facts{gap:16px;justify-content:space-between}.photo-shell{padding:11px 11px 66px}.photo-shell img{height:115vw;max-height:620px}.photo-caption{left:28px;right:28px;display:block}.photo-caption strong{display:block;margin-top:3px}
+ .autobio{grid-template-columns:1fr}.values{grid-template-columns:1fr}.value,.value:not(:first-child){padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}.item{grid-template-columns:1fr;gap:5px}.steps{grid-template-columns:1fr}.step,.step:not(:first-child){min-height:auto;padding:23px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}.step h3{margin-top:20px}.cards{grid-template-columns:1fr}.notes{grid-template-columns:1fr}.note,.note:nth-child(even),.note:nth-child(odd){padding:24px 0;border-right:0}.gallery{grid-template-columns:1fr;grid-auto-rows:250px}.g.tall,.g.wide{grid-row:auto;grid-column:auto}.contactbox{padding:46px 22px}.modal{padding:46px 22px 30px}.foot{display:block}.foot a{display:inline-block;margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home"><span class="brandmark">M</span><span><strong>李明諭</strong><small>Mathematics Education</small></span></a>
+  <button class="menu" aria-label="開啟導覽" aria-expanded="false">☰</button>
+  <nav>
+   <a href="#about">自傳</a><a href="#resume">履歷</a><a href="#philosophy">教學理念</a><a href="#portfolio">作品</a><a href="#notes">札記</a><a href="#contact">聯絡</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section id="home">
+ <div class="wrap hero">
+  <div class="reveal">
+   <p class="eyebrow">MATHEMATICS EDUCATOR</p>
+   <h1>李明諭</h1>
+   <p class="hero-en">Teaching · Learning · Mathematics</p>
+   <p class="lead">用簡單的語言理解數學，從概念建立到解題能力，陪學生建立完整的學習脈絡。</p>
+   <div class="actions"><a class="btn primary" href="#portfolio">查看教學作品</a><a class="btn" href="#about">閱讀自傳</a></div>
+   <div class="facts">
+    <div class="fact"><small>BACKGROUND</small><strong>臺大數學</strong></div>
+    <div class="fact"><small>TEACHING</small><strong>家教約 5 年</strong></div>
+    <div class="fact"><small>LEVEL</small><strong>國小至高中</strong></div>
+   </div>
+  </div>
+  <div class="photo-shell reveal">
+   <img src="profile.jpg" alt="李明諭畢業袍個人照">
+   <div class="photo-caption"><span>PROFILE</span><strong>Mathematics · Education · Teaching</strong></div>
+  </div>
+ </div>
+</section>
+
+<section id="about" class="border-top">
+ <div class="wrap about-layout">
+  <div class="about-title heading reveal"><p class="eyebrow">AUTOBIOGRAPHY</p><h2>自傳</h2><p>沿用過往履歷的核心內容，改寫為適合網頁閱讀的版本。</p></div>
+  <div class="reveal">
+   <p class="autobio-intro">我希望學生學到的不只是某一題的做法，而是能真正理解觀念，並把抽象內容整理成<em>可理解、可練習、也可再次運用的系統。</em></p>
+   <div class="autobio">
+    <p>我以數學專業作為學習與教學的核心，並持續投入中等教育師資培育與教學實務。從自己的數學學習經驗中，我逐漸發現，我真正感興趣的不只是把答案算出來，而是理解一個概念如何被建立、不同知識之間如何連結，以及如何用更清楚的方式把這些想法說給別人理解。這也成為我持續投入數學教學與教材設計的重要原因。</p>
+    <p>過去的教學經驗涵蓋家教、補習班個別指導與團體班，以及高中教學實務，接觸的學生從國小到高中都有。不同學生遇到的困難往往不同：有些學生需要重新建立計算習慣，有些是前置概念出現斷層，也有些學生其實具備能力，卻尚未形成適合自己的思考與整理方式。因此，我會先找出學生真正卡住的位置，再決定要從計算、圖像、概念或題目切入。</p>
+    <p>我的課堂通常會從故事、情境或問題出發，先建立核心概念，再將觀念帶入解題；完成題目之後，會重新整理這一類問題背後的想法、公式與解法之間的關係。我希望學生逐漸知道「為什麼這樣做」，而不是只記住「老師剛才怎麼做」。對我而言，真正重要的是學生能在下一次遇到陌生問題時，仍有方法重新找到可以前進的方向。</p>
+    <p>教學對我而言也是持續學習的過程。除了數學內容本身，我也持續整理講義、設計題目與評量，並思考板書、簡報、數位筆跡與多媒體如何更貼近實際課堂節奏。我希望自己成為一位兼顧數學專業、學生理解與互動的教師，也透過這個網站留下教學作品、反思與專業成長的紀錄。</p>
+   </div>
+   <div class="values">
+    <div class="value"><span>01</span><strong>核心觀念</strong><small>Concept first</small></div>
+    <div class="value"><span>02</span><strong>解題邏輯</strong><small>Reasoning</small></div>
+    <div class="value"><span>03</span><strong>系統整理</strong><small>Structure</small></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="resume" class="border-top">
+ <div class="wrap">
+  <div class="heading reveal"><p class="eyebrow">RESUME</p><h2>教學履歷</h2><p>將學歷、師資培育與不同教學場域分開呈現，方便家長、學校或合作單位快速閱讀。</p></div>
+  <div class="resume-grid">
+   <div class="timeline reveal">
+    <article class="item"><div class="k">Education</div><div><h3>國立臺灣大學・數學系</h3><p>以數學專業訓練為基礎，並投入中等教育師資培育與教學實務。</p></div></article>
+    <article class="item"><div class="k">Teacher Education</div><div><h3>中等教育師資培育・高中教學實習</h3><p>累積教案設計、課堂觀察、教材準備、教學演示與班級互動經驗。</p></div></article>
+    <article class="item"><div class="k">Tutoring</div><div><h3>家教教學約 5 年</h3><p>年級涵蓋國小至高中，內容包括校內進度、段考、會考、學測、分科與數學能力建立。</p></div></article>
+    <article class="item"><div class="k">Institute</div><div><h3>補習班個別指導與團體班</h3><p>具有個別指導與團班授課經驗，也接觸升學複習、科學班與程度差異較大的學生。</p></div></article>
+    <article class="item"><div class="k">Additional</div><div><h3>多元教學經驗</h3><p>曾接觸特教扶弱與數理資優相關教學情境，持續累積不同學生需求的教學經驗。</p></div></article>
+   </div>
+   <aside class="sidecard reveal">
+    <p class="eyebrow">FOCUS</p><h3>目前教學重點</h3>
+    <ul><li>國高中數學核心概念</li><li>會考・學測・分科複習</li><li>數理資優／科學班延伸</li><li>教材與評量設計</li><li>iPad・數位筆跡教學</li></ul>
+   </aside>
+  </div>
+ </div>
+</section>
+
+<section id="philosophy" class="philosophy">
+ <div class="wrap">
+  <div class="heading reveal"><p class="eyebrow">TEACHING PHILOSOPHY</p><h2>情境引入，建立概念；用概念解題，再回頭整理成知識結構。</h2></div>
+  <div class="steps">
+   <article class="step reveal"><span>01</span><h3>故事／情境</h3><p>先讓學生理解為什麼會需要這個數學概念，而不是一開始只看到公式。</p></article>
+   <article class="step reveal"><span>02</span><h3>建立觀念</h3><p>用圖像、例子與簡單的語言把抽象概念具體化。</p></article>
+   <article class="step reveal"><span>03</span><h3>觀念解題</h3><p>由基本題進入變化題，練習選擇方法，而不是模仿固定步驟。</p></article>
+   <article class="step reveal"><span>04</span><h3>重點整理</h3><p>把公式、題型與想法重新接起來，形成之後能再次取用的學習脈絡。</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="portfolio">
+ <div class="wrap">
+  <div class="heading split reveal"><div><p class="eyebrow">PORTFOLIO</p><h2>教學作品</h2></div><p>目前先以課程主題呈現；之後可逐步加入講義 PDF、教案、考卷與示範影片。</p></div>
+  <div class="filters reveal"><button class="filter active" data-f="all">全部</button><button class="filter" data-f="junior">國中</button><button class="filter" data-f="senior">高中</button><button class="filter" data-f="exam">升學・科學班</button><button class="filter" data-f="digital">數位教學</button></div>
+  <div id="cards" class="cards"></div>
+ </div>
+</section>
+
+<section class="border-top">
+ <div class="wrap">
+  <div class="heading reveal"><p class="eyebrow">TEACHING RESULTS</p><h2>過往教學成果紀錄</h2><p>採客觀方式記錄學生學習成果，不以成果作為保證式宣傳。</p></div>
+  <div class="results">
+   <article class="result reveal"><small>國三升高中</small><h3>武陵高中・中壢高中・政大附中</h3><p>曾協助國三學生進行數學加強與升學準備，學生錄取上述學校。</p></article>
+   <article class="result reveal"><small>學測數學</small><h3>由較弱基礎逐步提升至均標</h3><p>曾由高一內容重新複習，協助學生補強核心概念、建立複習順序與考試策略。</p></article>
+   <article class="result reveal"><small>分科測驗</small><h3>錄取臺大材料相關科系</h3><p>曾協助學生進行分科數學複習與觀念補強，完成升學目標。</p></article>
+  </div>
+  <p class="disclaimer reveal">學習成果受學生原有程度、投入時間與學習狀況等因素影響，以上僅作為過往教學經驗紀錄。</p>
+ </div>
+</section>
+
+<section id="notes" class="notes-bg">
+ <div class="wrap">
+  <div class="heading split reveal"><div><p class="eyebrow">TEACHING NOTES</p><h2>教學札記</h2></div><p>未來可以把教學心得、數學文章、研習心得與數位教學紀錄放在這裡。</p></div>
+  <div id="notesgrid" class="notes"></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="heading reveal"><p class="eyebrow">MOMENTS</p><h2>照片與教學紀錄</h2><p>目前先保留版位，未來放入教學現場、板書、教材、研習或教學演示照片。</p></div>
+  <div class="gallery">
+   <div class="g tall reveal"><div class="art a1"></div><label><span>教學現場</span><strong>PHOTO</strong></label></div>
+   <div class="g reveal"><div class="art a2"></div><label><span>板書</span><strong>PHOTO</strong></label></div>
+   <div class="g reveal"><div class="art a3"></div><label><span>教材</span><strong>PHOTO</strong></label></div>
+   <div class="g wide reveal"><div class="art a4"></div><label><span>研習／教學演示</span><strong>PHOTO</strong></label></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap"><div class="contactbox reveal"><p class="eyebrow">CONTACT</p><h2>一起談談數學、教學與學習。</h2><p>若想討論教學、課程合作或數學教育相關議題，歡迎聯絡。</p><span class="btn">聯絡方式公開前補上</span></div></div>
+</section>
+</main>
+
+<footer><div class="wrap foot"><span>© 李明諭 · Mathematics Education</span><a href="#home">回到頁首 ↑</a></div></footer>
+<dialog id="dialog"><button class="close" aria-label="關閉">×</button><div class="modal" id="modal"></div></dialog>
+
+<script>
+const projects=[
+["乘法公式與多項式","junior","國中數學","國二","(a+b)²","從公式展開走向結構辨識與靈活運用。","不只練習展開，也加入逆推、比較與混合運算，讓學生在不同形式中辨認相同結構。"],
+["一元二次方程式","junior","國中數學","國三","ax²+bx+c","把方程式、根與情境放進同一個脈絡。","重視從文字條件建立方程式，並比較不同解法的適用時機。"],
+["二次函數","senior","高中數學","高一","y=a(x-h)²+k","在一般式、頂點式與因式式之間切換觀點。","以圖形觀察為入口，再逐步抽象成代數表示，讓不同形式各自提供有用資訊。"],
+["幾何與科學班訓練","exam","升學・科學班","國三進階","△ ○ ⟂","整合畢氏、餘弦、面積與幾何推理。","由基本定理逐步進入複合題型，訓練資訊較少時自行建立輔助線與解題策略。"],
+["矩陣","senior","高中數學","高中","[ a  b ]","用轉換的觀點理解矩陣，而不只做乘法。","以座標與圖形轉換驗證旋轉、鏡射等矩陣效果。"],
+["微分與切線","senior","高中數學","高二・高三","f′(x)","從變化率連回斜率，再進入切線與最值。","從割線逼近切線，搭配圖形與代數互相驗證。"],
+["二維數據分析","senior","高中數學","高一","r · R²","理解相關、擬合與模型解釋。","用資料情境閱讀散佈圖，區分相關與因果，並討論模型限制。"],
+["學測／分科複習","exam","升學・科學班","高三","∑ → ?","整合核心概念、題型辨識與時間策略。","依學生程度調整複習順序，搭配模擬題修正作答時間與優先順序。"],
+["筆跡式數位簡報","digital","數位教學","跨年級","✎ ▶","讓公式與推導按照課堂節奏逐步出現。","以 iPad 與手寫筆為主要操作情境，兼顧筆跡重現、即時註記與彈性播放。"]
+];
+const notes=[
+["教學反思","為什麼學生會卡在配方法？","配方法的困難往往不只是計算，而是學生沒有看見「補成完全平方」到底在做什麼。"],
+["數學文章","第一次學二次函數，真正重要的是什麼？","比起一開始記住所有公式，我更在意學生是否能說出圖形和參數之間的關係。"],
+["數位教學","從板書到數位筆跡：我如何思考課堂節奏","投影片太快、板書太慢時，筆跡動畫可能提供一個中間選項。"],
+["教師成長","解題之後，為什麼還要重新整理？","一題做對不代表知識已經成形；最後的整理，決定這個方法下次能不能被重新找到。"]
+];
+const cardbox=document.querySelector("#cards");
+function render(f="all"){let a=f==="all"?projects:projects.filter(x=>x[1]===f);cardbox.innerHTML=a.map((x)=>`<article class="card reveal visible" tabindex="0" data-title="${x[0]}"><div class="cardtop"><span>${x[2]}</span><span>${x[3]}</span></div><div class="symbol">${x[4]}</div><h3>${x[0]}</h3><p>${x[5]}</p><span class="more">查看設計重點 →</span></article>`).join("")}
+render();
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.f)});
+document.querySelector("#notesgrid").innerHTML=notes.map(x=>`<article class="note reveal visible" tabindex="0" data-note="${x[1]}"><small>${x[0]}</small><h3>${x[1]}</h3><p>${x[2]}</p></article>`).join("");
+const dlg=document.querySelector("#dialog"),modal=document.querySelector("#modal");
+document.addEventListener("click",e=>{
+ let c=e.target.closest("[data-title]"); if(c){let x=projects.find(p=>p[0]===c.dataset.title);modal.innerHTML=`<small>${x[2]} · ${x[3]}</small><h2>${x[0]}</h2><p>${x[5]}</p><h4>設計重點</h4><p>${x[6]}</p><h4>後續可加入</h4><p>講義 PDF、教案、學生工作紙、課後反思或示範影片。</p>`;dlg.showModal()}
+ let n=e.target.closest("[data-note]"); if(n){let x=notes.find(p=>p[1]===n.dataset.note);modal.innerHTML=`<small>${x[0]}</small><h2>${x[1]}</h2><p>${x[2]}</p><h4>文章狀態</h4><p>目前先建立文章入口，之後可逐篇加入完整內容與日期。</p>`;dlg.showModal()}
+});
+document.querySelector(".close").onclick=()=>dlg.close();
+const menu=document.querySelector(".menu"),nav=document.querySelector("nav");menu.onclick=()=>{nav.classList.toggle("open");menu.setAttribute("aria-expanded",nav.classList.contains("open"))};nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>

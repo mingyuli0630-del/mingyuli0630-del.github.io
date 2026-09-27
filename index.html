@@ -1014,6 +1014,17 @@ html,body{max-width:100%;overflow-x:hidden}
 .course-shell>* ,.feature>* ,.resume-grid>* ,.about-grid>* ,.home-intro-grid>* ,.resources-note>*{min-width:0}
 .pricebox{min-width:0;max-width:100%}
 </style>
+<style>
+/* V45 — keep course CTA visible on phones */
+@media (max-width:767px){
+  .nav-cta{display:inline-flex !important}
+}
+@media (max-width:420px){
+  .nav-right{gap:5px}
+  .nav-cta{min-height:34px;padding:0 8px;font-size:9.5px}
+  .nav-cta .arrow{display:none}
+}
+</style>
 </head>
 <body class="page-home">
 <header>

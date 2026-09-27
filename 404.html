@@ -965,6 +965,17 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 
 </style>
+<style>
+/* V45 — keep course CTA visible on phones */
+@media (max-width:767px){
+  .nav-cta{display:inline-flex !important}
+}
+@media (max-width:420px){
+  .nav-right{gap:5px}
+  .nav-cta{min-height:34px;padding:0 8px;font-size:9.5px}
+  .nav-cta .arrow{display:none}
+}
+</style>
 </head><body><header>
 <div class="wrap nav">
 <a class="brand" href="index.html"><span class="brandmark">M</span><span><strong>李明諭</strong><small>數學 × 教育 × 教學</small></span></a>

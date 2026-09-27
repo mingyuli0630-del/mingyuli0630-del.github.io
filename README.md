@@ -90,3 +90,8 @@ Tables on tablets/phones remain horizontally scrollable rather than compressing 
 - Move canonical / Open Graph / Twitter Card metadata to the beginning of `<head>`, immediately after the page description.
 - Use `og-cover-v44.png` to avoid stale social-preview image caches.
 - Validate all six HTML pages contain exactly one OG metadata set.
+
+
+## V45
+- 修正手機版導覽列「課程與收費」按鈕被早期 media query 隱藏的問題。
+- 767px 以下強制保留 CTA；420px 以下縮小按鈕並隱藏箭頭，避免擠壓品牌與選單按鈕。

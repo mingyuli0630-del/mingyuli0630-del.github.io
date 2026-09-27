@@ -953,3 +953,13 @@ footer{background:#EFE9DF;border-top-color:var(--line)}
 .portrait .photo::before{content:"M";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:clamp(72px,9vw,120px);color:rgba(139,35,40,.22);z-index:0}
 .portrait .photo img{position:relative;z-index:1;background:transparent}
 .g img{z-index:1}
+
+/* V45 — keep course CTA visible on phones */
+@media (max-width:767px){
+  .nav-cta{display:inline-flex !important}
+}
+@media (max-width:420px){
+  .nav-right{gap:5px}
+  .nav-cta{min-height:34px;padding:0 8px;font-size:9.5px}
+  .nav-cta .arrow{display:none}
+}

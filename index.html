@@ -4,14 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>李明諭｜Mathematics · Education · Teaching</title>
-<meta name="description" content="李明諭的個人網站：數學、教育、教學作品、專業成長與履歷。">
+<meta name="description" content="李明諭｜非典型的數學教師。關於數學、教育、教學實踐、公開教材與教學歷程。">
 <style>
 :root{
-  --paper:#f4f0e7; --paper2:#fbf9f4; --ink:#1f2522; --muted:#68706b;
-  --sage:#52675b; --sage2:#36483f; --line:#d9d4ca; --warm:#9a694f;
-  --serif:"Iowan Old Style","Palatino Linotype","Noto Serif TC","Songti TC",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
-  --max:1180px;
+  --paper:#F9F7F2;
+  --paper2:#FFFDF9;
+  --ink:#303431;
+  --muted:#74756F;
+  --sage:#B87255;
+  --sage2:#46524B;
+  --line:#E3E0D8;
+  --warm:#87917C;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Inter","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -19,7 +24,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);l
 a{color:inherit;text-decoration:none}
 button{font:inherit}
 .wrap{max-width:var(--max);margin:auto;padding:0 24px}
-header{position:sticky;top:0;z-index:50;background:rgba(244,240,231,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,212,202,.9)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,212,202,.9)}
 .nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;gap:11px}
 .brandmark{width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px}
@@ -48,11 +53,11 @@ section{padding:108px 0}
 .btn:hover{background:var(--paper2)}
 .btn.primary:hover{background:var(--sage2)}
 
-.portrait{position:relative;background:var(--paper2);border:1px solid var(--line);padding:16px 16px 70px;box-shadow:0 18px 50px rgba(31,37,34,.07);min-height:590px}
-.portrait:before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid rgba(82,103,91,.18);z-index:-1}
+.portrait{position:relative;background:var(--paper2);border:1px solid var(--line);padding:16px 16px 70px;box-shadow:0 18px 50px rgba(48,52,49,.065);min-height:590px}
+.portrait:before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid #B77B5C2E;z-index:-1}
 .portrait .photo{height:500px;background:
-radial-gradient(circle at 50% 34%,rgba(82,103,91,.18) 0 80px,transparent 81px),
-linear-gradient(145deg,#e6e1d7,#faf7f1);
+radial-gradient(circle at 50% 34%,#B77B5C2E 0 80px,transparent 81px),
+linear-gradient(145deg,#EFEAE2,#FFFDFC);
 display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-size:76px}
 .portrait .photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .portrait .caption{position:absolute;left:34px;right:34px;bottom:19px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:15px}
@@ -62,7 +67,7 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 .about-grid{display:grid;grid-template-columns:190px minmax(0,1fr);gap:64px}
 .sticky{position:sticky;top:100px;align-self:start}
 .about-intro{font-family:var(--serif);font-size:clamp(28px,3.4vw,43px);line-height:1.55;margin:0 0 34px}
-.about-copy{columns:2;column-gap:34px;color:#4d5752}
+.about-copy{columns:2;column-gap:34px;color:#626761}
 .about-copy p{break-inside:avoid;margin:0 0 20px}
 .about-story{max-width:980px;width:100%}
 .about-intro{padding:0 0 10px}
@@ -89,7 +94,7 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 .about-no{font-family:var(--serif);font-size:12px;letter-spacing:.22em;color:var(--sage);margin-bottom:10px;padding-top:0;font-variant-numeric:tabular-nums}
 .about-chapter h3{font-family:var(--serif);font-size:clamp(31px,3.4vw,44px);font-weight:500;line-height:1.18;margin:0;letter-spacing:-.025em}
 .about-deck{font-family:var(--serif);font-size:19px;line-height:1.7;color:var(--sage2);margin:11px 0 0;max-width:720px}
-.about-body{max-width:820px;margin-left:0;color:#4d5752;font-size:16px;line-height:1.9}
+.about-body{max-width:820px;margin-left:0;color:#626761;font-size:16px;line-height:1.9}
 .about-body p{margin:0 0 18px}
 .about-body strong{color:var(--ink)}
 .about-body h4{font-family:var(--serif);font-size:23px;font-weight:500;color:var(--ink);margin:38px 0 13px}
@@ -117,15 +122,15 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 .metric small{color:var(--muted)}
 
 .dark{background:var(--ink);color:var(--paper)}
-.dark .eyebrow{color:#b5c4bb}
-.dark .heading p{color:#cbd1cd}
+.dark .eyebrow{color:#E5DED6}
+.dark .heading p{color:#E5DED6}
 .framework{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.24)}
 .framework article{min-height:260px;padding:26px 24px 18px 0;border-right:1px solid rgba(255,255,255,.17)}
 .framework article:not(:first-child){padding-left:24px}
 .framework article:last-child{border-right:0}
-.framework span{font-family:var(--serif);color:#aec0b5}
+.framework span{font-family:var(--serif);color:#E5DED6}
 .framework h3{font-family:var(--serif);font-size:27px;font-weight:500;margin:44px 0 10px}
-.framework p{margin:0;color:#c9cfcb}
+.framework p{margin:0;color:#E5DED6}
 
 .resume-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:54px}
 .timeline{border-top:1px solid var(--ink)}
@@ -146,9 +151,9 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 .tags{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0}
 .tag{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px;color:var(--muted)}
 .preview{min-height:355px;background:
-repeating-linear-gradient(0deg,transparent 0 29px,rgba(82,103,91,.12) 30px 31px),
-radial-gradient(circle at 66% 34%,transparent 0 64px,rgba(82,103,91,.22) 65px 67px,transparent 68px),
-linear-gradient(135deg,#ece7dd,#faf7f1);
+repeating-linear-gradient(0deg,transparent 0 29px,#B77B5C1F 30px 31px),
+radial-gradient(circle at 66% 34%,transparent 0 64px,#B77B5C38 65px 67px,transparent 68px),
+linear-gradient(135deg,#ece7dd,#FFFDFC);
 display:flex;align-items:flex-end;padding:20px}
 .preview span{font-family:var(--serif);font-size:13px;background:rgba(251,249,244,.9);padding:8px 10px;color:var(--sage)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -158,14 +163,14 @@ display:flex;align-items:flex-end;padding:20px}
 .card p{color:var(--muted);margin:0}
 
 .gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-auto-rows:230px;gap:12px}
-.g{position:relative;border:1px solid var(--line);overflow:hidden;background:linear-gradient(145deg,#e7e3da,#faf7f1)}
+.g{position:relative;border:1px solid var(--line);overflow:hidden;background:linear-gradient(145deg,#e7e3da,#FFFDFC)}
 .g.big{grid-row:span 2}
 .g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
 .g:hover img{transform:scale(1.025)}
 .g.focus-top img{object-position:center 28%}
 .g.focus-right img{object-position:66% center}
-.g .p{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:56px;color:rgba(82,103,91,.36)}
-.g:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(20,25,22,.58))}
+.g .p{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:56px;color:#B77B5C5C}
+.g:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(39,48,43,.60))}
 .g label{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;padding-top:9px;border-top:1px solid rgba(255,255,255,.62);display:flex;justify-content:space-between;color:#fff;font-size:11px}
 /* Teaching Moments: six photos use one consistent visual scale */
 .teaching-gallery{
@@ -221,7 +226,7 @@ display:flex;align-items:flex-end;padding:20px}
 
 .contact{background:var(--sage2);color:var(--paper);padding:66px;text-align:center}
 .contact h2{font-family:var(--serif);font-size:clamp(40px,5vw,62px);font-weight:500;line-height:1.2;margin:7px auto 14px}
-.contact p{color:#d5ddd8}
+.contact p{color:#E5DED6}
 footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:11px}
 footer .wrap{display:flex;justify-content:space-between}
 
@@ -279,7 +284,7 @@ footer .wrap{display:flex;justify-content:space-between}
 .course-info small{color:var(--muted)}
 
 /* Resume builder */
-.resume-layer{position:fixed;inset:0;background:rgba(24,28,26,.62);backdrop-filter:blur(5px);z-index:100;display:none;overflow:auto;padding:24px}
+.resume-layer{position:fixed;inset:0;background:rgba(39,48,43,.64);backdrop-filter:blur(5px);z-index:100;display:none;overflow:auto;padding:24px}
 .resume-layer.open{display:block}
 .builder{max-width:1180px;margin:auto;display:grid;grid-template-columns:310px 1fr;gap:16px}
 .controls{background:var(--paper);padding:24px;position:sticky;top:0;align-self:start;max-height:calc(100vh - 48px);overflow:auto}
@@ -383,9 +388,9 @@ body.resume-en .en-only{display:block!important}
 .filter-btn.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .resource-card{background:var(--paper2);border:1px solid var(--line);display:flex;flex-direction:column;min-height:340px}
-.resource-cover{height:160px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:repeating-linear-gradient(0deg,transparent 0 28px,rgba(82,103,91,.09) 29px 30px),linear-gradient(145deg,#ece7dc,#faf7f1)}
-.resource-cover .symbol{position:absolute;right:18px;top:8px;font-family:var(--serif);font-size:72px;color:rgba(82,103,91,.26)}
-.resource-cover .level{position:absolute;left:16px;top:14px;border:1px solid rgba(31,37,34,.16);background:rgba(251,249,244,.75);border-radius:999px;padding:4px 8px;font-size:10px;color:var(--sage2)}
+.resource-cover{height:160px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:repeating-linear-gradient(0deg,transparent 0 28px,#B77B5C17 29px 30px),linear-gradient(145deg,#ece7dc,#FFFDFC)}
+.resource-cover .symbol{position:absolute;right:18px;top:8px;font-family:var(--serif);font-size:72px;color:#B77B5C42}
+.resource-cover .level{position:absolute;left:16px;top:14px;border:1px solid rgba(48,52,49,.13);background:rgba(251,249,244,.75);border-radius:999px;padding:4px 8px;font-size:10px;color:var(--sage2)}
 .resource-body{padding:20px;display:flex;flex-direction:column;flex:1}
 .resource-meta{display:flex;justify-content:space-between;gap:12px;font-size:10px;letter-spacing:.08em;color:var(--sage);text-transform:uppercase}
 .resource-card h3{font-family:var(--serif);font-weight:500;font-size:25px;line-height:1.3;margin:10px 0 8px}
@@ -401,7 +406,7 @@ body.resume-en .en-only{display:block!important}
 .resources-note>div{border-top:1px solid var(--ink);padding-top:18px}
 .resources-note h3{font-family:var(--serif);font-size:25px;font-weight:500;margin:0 0 7px}
 .resources-note p{font-size:12px;color:var(--muted);margin:0}
-.resource-modal{position:fixed;inset:0;z-index:120;background:rgba(20,25,22,.68);backdrop-filter:blur(6px);display:none;padding:24px;overflow:auto}
+.resource-modal{position:fixed;inset:0;z-index:120;background:rgba(39,48,43,.64);backdrop-filter:blur(6px);display:none;padding:24px;overflow:auto}
 .resource-modal.open{display:grid;place-items:center}
 .resource-modal-card{max-width:720px;width:100%;background:var(--paper2);border:1px solid var(--line);padding:30px;position:relative}
 .resource-modal-card h3{font-family:var(--serif);font-size:34px;font-weight:500;margin:4px 0 10px}
@@ -419,6 +424,76 @@ body.resume-en .en-only{display:block!important}
   .about-index{grid-template-columns:1fr}
   .about-index a{border-right:0;border-bottom:1px solid var(--line);margin-right:0;padding:12px 0}
   .about-index a:last-child{border-bottom:0}
+}
+
+
+
+
+
+
+
+
+/* V14 — Apricot × Olive */
+body{
+  background:
+    radial-gradient(circle at 88% 7%, rgba(184,114,85,.045), transparent 27%),
+    radial-gradient(circle at 7% 58%, rgba(135,145,124,.035), transparent 24%),
+    var(--paper);
+}
+.eyebrow{color:#A96549}
+.btn.primary{
+  background:var(--sage2);
+  border-color:var(--sage2);
+}
+.btn.primary:hover{
+  background:#39443F;
+  border-color:#39443F;
+}
+.btn.ghost:hover{
+  border-color:#CBC7BE;
+  background:rgba(255,253,249,.76);
+}
+.enrollment-notice{
+  border-top-color:#C98B6D;
+  background:linear-gradient(90deg,rgba(184,114,85,.045),transparent 66%);
+}
+.enrollment-notice small{color:#A96549}
+
+/* Keep warm orange as an accent; use olive for structural cues. */
+.timeline-dot{background:var(--warm)}
+.step-no{background:var(--sage)}
+.about-detail summary::after{color:var(--warm)}
+.resource-cover{
+  background:linear-gradient(145deg,#EFEAE2,#FFFDF9);
+}
+
+/* Softer dark blocks: less brown, more neutral teacher-portfolio tone. */
+.sidecard,.contact{
+  background:var(--sage2);
+}
+.sidecard p,.contact p{
+  color:rgba(249,247,242,.78);
+}
+
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid #B87255;
+  outline-offset:3px;
+}
+
+
+.hero-identity{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#A96549;
+  letter-spacing:.12em;
+}
+.hero-identity::before{
+  content:"";
+  width:22px;
+  height:1px;
+  background:currentColor;
+  opacity:.72;
 }
 
 </style>
@@ -442,7 +517,7 @@ body.resume-en .en-only{display:block!important}
 <section id="home">
   <div class="wrap hero">
     <div>
-      <p class="eyebrow">MATHEMATICS EDUCATOR</p>
+      <p class="eyebrow hero-identity">非典型的數學教師</p>
       <h1>李明諭</h1>
       <p class="hero-en">Mathematics · Education · Teaching</p>
       <p class="lead">用簡單的語言理解數學，從概念建立到解題能力，陪學生建立完整的學習脈絡。</p>
@@ -650,7 +725,7 @@ body.resume-en .en-only{display:block!important}
     <div class="resume-grid">
       <div class="timeline" id="siteExperience"></div>
       <aside class="sidecard">
-        <p class="eyebrow" style="color:#cbd4ce">FOCUS</p>
+        <p class="eyebrow" style="color:#E5DED6">FOCUS</p>
         <h3>目前關注</h3>
         <ul>
           <li>國高中數學核心概念</li>

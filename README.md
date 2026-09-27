@@ -73,3 +73,14 @@ Tables on tablets/phones remain horizontally scrollable rather than compressing 
 - 導覽、按鈕、標題、卡片、表格與手機版同步重設。
 - 首頁主文案改為「用數學，陪學生走好每一步學習路。」並加入家教課程／公開教材／教師職涯參考三個入口。
 - 保留 V40 Open Graph 與課程表格左右滑動修正。
+
+
+## V42
+- 調整「關於我」頁面開場文字，使語氣更正式、凝練。
+
+
+## V43 真正可用的 Open Graph
+- 修正先前 og-cover.png 為 0 bytes 的問題。
+- 新增實際 1200×630 PNG：og-cover-v43.png。
+- 全站 og:image / twitter:image 改指向新檔名以避開社群平台舊快取。
+- 補上 og:image:secure_url 與 og:image:type。

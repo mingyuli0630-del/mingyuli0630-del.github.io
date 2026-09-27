@@ -370,11 +370,8 @@ body.resume-en .en-only{display:block!important}
     <nav>
       <a href="#about">關於</a>
       <a href="#teaching">教學</a>
-      <a href="#portfolio">作品</a>
       <a href="#resources">教材</a>
-      <a href="#growth">成長</a>
       <a href="#courses">課程</a>
-      <a href="#notes">札記</a>
       <button class="navbtn" onclick="openResume()">CV / Resume</button>
     </nav>
   </div>
@@ -395,7 +392,7 @@ body.resume-en .en-only{display:block!important}
         <span class="chip">Digital Education</span>
       </div>
       <div class="actions">
-        <a class="btn primary" href="#portfolio">查看教學作品</a>
+        <a class="btn primary" href="#resources">查看公開教材</a>
         <a class="btn" href="#about">關於我</a>
         <button class="btn" onclick="openResume()">產生履歷 / CV</button>
       </div>
@@ -606,30 +603,6 @@ body.resume-en .en-only{display:block!important}
   </div>
 </section>
 
-<section id="portfolio" class="border-top">
-  <div class="wrap">
-    <div class="heading">
-      <p class="eyebrow">SELECTED WORK</p>
-      <h2>精選教學作品</h2>
-      <p>不再把所有主題排成一樣大小的卡片，而是突出一個完整案例，再搭配其他作品。</p>
-    </div>
-    <article class="feature">
-      <div class="featurecopy">
-        <p class="eyebrow">FEATURED CASE STUDY</p>
-        <h3>幾何與科學班課程設計</h3>
-        <p>以課程目標、內容排序、評量設計、教材與課後反思構成一個完整教學案例。未來申請學校或工作時，可以直接把這個案例作為 portfolio 證據。</p>
-        <div class="tags"><span class="tag">Geometry</span><span class="tag">Curriculum</span><span class="tag">Assessment</span><span class="tag">Reflection</span></div>
-        <a class="btn" href="#">查看案例 →</a>
-      </div>
-      <div class="preview"><span>教材／考卷預覽區</span></div>
-    </article>
-    <div class="cards">
-      <article class="card"><small>ASSESSMENT</small><h3>數學評量與試題設計</h3><p>展示考卷、題型設計、資訊量控制與難度調整的思考。</p></article>
-      <article class="card"><small>DIGITAL TEACHING</small><h3>筆跡式數位教學</h3><p>探索板書、筆跡動畫、即時註記與課堂節奏。</p></article>
-      <article class="card"><small>LEARNING DESIGN</small><h3>概念導向教材</h3><p>從情境、圖像到代數表示，呈現不同年級的學習鷹架。</p></article>
-    </div>
-  </div>
-</section>
 
 
 <section id="resources" class="border-top">
@@ -637,26 +610,10 @@ body.resume-en .en-only{display:block!important}
     <div class="heading">
       <p class="eyebrow">PUBLIC RESOURCES</p>
       <h2>公開教材</h2>
-      <p>將課堂中使用的講義、考卷、數學整理與資料逐步公開，提供學生自主學習與教師教學參考。每份教材保留適用對象與版本日期，之後可直接加入 PDF 線上閱讀與下載。</p>
-    </div>
-    <div class="resources-toolbar">
-      <div class="resource-search"><input id="resourceSearch" type="search" placeholder="搜尋教材：例如 因式分解、幾何、學測…"></div>
-      <div class="resource-filters" id="resourceFilters">
-        <button class="filter-btn active" data-filter="all">全部</button>
-        <button class="filter-btn" data-filter="elementary">國小</button>
-        <button class="filter-btn" data-filter="junior">國中</button>
-        <button class="filter-btn" data-filter="senior">高中</button>
-        <button class="filter-btn" data-filter="advanced">進階／科學班</button>
-        <button class="filter-btn" data-filter="assessment">考卷／評量</button>
-        <button class="filter-btn" data-filter="data">公開資料</button>
-      </div>
+      <p>收錄目前已完成並公開的教材；其他內容待整理完成後再陸續加入。</p>
     </div>
     <div class="resource-count" id="resourceCount"></div>
     <div class="resource-grid" id="resourceGrid"></div>
-    <div class="resources-note">
-      <div><p class="eyebrow">HOW TO USE</p><h3>學生版公開，詳解依教材用途決定。</h3><p>適合自學的教材可同時提供學生版與詳解；仍會用於小考、模考或課堂評量的題目，則可只公開學生版。</p></div>
-      <div><p class="eyebrow">USAGE</p><h3>公開使用原則</h3><p>建議以「個人學習及非營利教學可使用，請保留作者與來源；重新發布、改作或商業使用請先聯絡」作為目前說明。</p></div>
-    </div>
   </div>
 </section>
 
@@ -665,7 +622,7 @@ body.resume-en .en-only{display:block!important}
     <div class="heading">
       <p class="eyebrow">TEACHING MOMENTS</p>
       <h2>課堂紀錄</h2>
-      <p>這裡之後直接換成你的真實課堂照片，搭配一句教學情境，而不是單純相簿。</p>
+      <p>記錄不同教學情境中的課堂互動、板書、討論與個別指導。</p>
     </div>
     <div class="gallery teaching-gallery">
       <figure class="g big">
@@ -696,20 +653,6 @@ body.resume-en .en-only{display:block!important}
   </div>
 </section>
 
-<section id="growth" class="border-top">
-  <div class="wrap">
-    <div class="heading">
-      <p class="eyebrow">PROFESSIONAL GROWTH</p>
-      <h2>專業成長</h2>
-      <p>研習、認證、課程、教學實驗與未來進修，都放在這裡持續累積。</p>
-    </div>
-    <div class="growth">
-      <article class="grow"><small>TRAINING</small><h3>教師研習與課程</h3><p>記錄參與過的教育、特教、課輔與數位教學研習。</p></article>
-      <article class="grow"><small>CERTIFICATION</small><h3>認證與專業資格</h3><p>未來完成認證後，可直接新增到網站資料。</p></article>
-      <article class="grow"><small>EXPLORATION</small><h3>持續探索</h3><p>數學教育、學習科學、教育科技與教材設計。</p></article>
-    </div>
-  </div>
-</section>
 
 
 <section id="courses" class="border-top">
@@ -790,21 +733,6 @@ body.resume-en .en-only{display:block!important}
   </div>
 </section>
 
-<section id="notes">
-  <div class="wrap">
-    <div class="heading">
-      <p class="eyebrow">NOTES</p>
-      <h2>教學札記</h2>
-      <p>讓網站不是一次做完的履歷，而是會持續累積的個人專業紀錄。</p>
-    </div>
-    <div class="notes">
-      <article class="note"><small>教學反思</small><h3>為什麼學生會卡在配方法？</h3><p>從「補成完全平方」背後的概念重新理解學生常見困難。</p></article>
-      <article class="note"><small>數位教學</small><h3>從板書到數位筆跡</h3><p>思考投影片、板書與筆跡動畫之間的課堂節奏。</p></article>
-      <article class="note"><small>數學文章</small><h3>第一次學二次函數，真正重要的是什麼？</h3><p>比起一次記完公式，更重要的是圖形與參數之間的關係。</p></article>
-      <article class="note"><small>教師成長</small><h3>解題之後，為什麼還要重新整理？</h3><p>一題做對不代表知識已經成形；整理決定下次能不能重新找到方法。</p></article>
-    </div>
-  </div>
-</section>
 
 <section class="border-top">
   <div class="wrap">
@@ -819,16 +747,6 @@ body.resume-en .en-only{display:block!important}
   </div>
 </section>
 
-<section id="contact">
-  <div class="wrap">
-    <div class="contact">
-      <p class="eyebrow" style="color:#cad5cf">CONTACT</p>
-      <h2>數學、教育與學習。</h2>
-      <p>未來可放公開 Email、LinkedIn、GitHub，或學術／教學合作聯絡方式。</p>
-      <span class="btn" style="color:#fff;border-color:#8fa197;margin-top:12px">Contact</span>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer><div class="wrap"><span>© 李明諭 · Personal Teaching Portfolio</span><span>Built from one shared profile dataset</span></div></footer>
@@ -876,9 +794,7 @@ body.resume-en .en-only{display:block!important}
 
       <div class="controlrow"><label><input type="checkbox" checked data-toggle="education"> 學歷 Education</label></div>
       <div class="controlrow"><label><input type="checkbox" checked data-toggle="teaching"> 教學經歷 Teaching</label></div>
-      <div class="controlrow"><label><input type="checkbox" checked data-toggle="projects"> 精選作品 Projects</label></div>
-      <div class="controlrow"><label><input type="checkbox" checked data-toggle="growth"> 專業成長 Growth</label></div>
-      <div class="controlrow"><label><input type="checkbox" checked data-toggle="skills"> 專長 Skills</label></div>
+                  <div class="controlrow"><label><input type="checkbox" checked data-toggle="skills"> 專長 Skills</label></div>
 <div class="controlrow"><label><input type="checkbox" data-toggle="services"> 課程服務 Teaching Services</label></div>
 
       <div class="ctrl-actions">
@@ -897,8 +813,6 @@ body.resume-en .en-only{display:block!important}
           <div class="sub en-only">Mathematics · Education · Teaching & Learning Design</div>
         </div>
         <div class="r-contact">
-          <div>Email: your-email@example.com</div>
-          <div>Website: your-domain.com</div>
           <div>GitHub: mingyuli0630-del</div>
         </div>
       </div>
@@ -919,24 +833,6 @@ body.resume-en .en-only{display:block!important}
       <section class="r-section" data-section="teaching">
         <h2 class="zh-only">教學經歷</h2><h2 class="en-only">Teaching Experience</h2>
         <div id="resumeTeaching"></div>
-      </section>
-
-      <section class="r-section" data-section="projects">
-        <h2 class="zh-only">精選作品</h2><h2 class="en-only">Selected Projects</h2>
-        <div class="r-item"><div class="r-date">Curriculum</div><div><h3 class="zh-only">幾何與科學班課程設計</h3><h3 class="en-only">Geometry & Advanced Mathematics Curriculum</h3><p class="zh-only">整合課程目標、教材、評量與教學反思。</p><p class="en-only">Integrated curriculum goals, instructional materials, assessment, and reflective practice.</p></div></div>
-        <div class="r-item"><div class="r-date">Digital</div><div><h3 class="zh-only">筆跡式數位教學</h3><h3 class="en-only">Digital Ink Teaching</h3><p class="zh-only">探索筆跡重現、即時註記與彈性課堂流程。</p><p class="en-only">Exploration of handwriting playback, live annotation, and flexible classroom sequencing.</p></div></div>
-      </section>
-
-      <section class="r-section" data-section="growth">
-        <h2 class="zh-only">專業成長</h2><h2 class="en-only">Professional Development</h2>
-        <ul class="r-list zh-only">
-          <li>教師研習、課輔認證與教學專業課程</li>
-          <li>數位教學、特教知能與學習設計持續進修</li>
-        </ul>
-        <ul class="r-list en-only">
-          <li>Teacher workshops, tutoring certification, and professional coursework</li>
-          <li>Continued development in digital teaching, special education, and learning design</li>
-        </ul>
       </section>
 
       <section class="r-section" data-section="skills">
@@ -992,7 +888,7 @@ const profileData = {
       enTitle:"Private Mathematics Tutoring",
       zhRole:"國小至高中數學",
       enRole:"Elementary to Senior High School Mathematics",
-      zh:"持續進行個別化數學教學，依學生程度與目標安排校內進度、升學複習、學習診斷與教材。",
+      zh:"2021 年起持續從事個別家教，授課範圍涵蓋國小至高中數學。",
       en:"Individualized mathematics instruction across elementary to senior high school, including school curriculum, exam preparation, learning diagnosis, and tailored materials."
     },
     {
@@ -1003,7 +899,7 @@ const profileData = {
       enTitle:"Meiko Individualized Learning Center",
       zhRole:"數學科個別指導教師",
       enRole:"Individual Mathematics Instructor",
-      zh:"以個別指導形式進行數學教學，依學生學習狀況調整講解、練習與進度。",
+      zh:"於明光義塾擔任數學科個別指導教師。",
       en:"Provided individualized mathematics instruction with pacing, explanations, and practice adapted to each student's learning needs."
     },
     {
@@ -1014,7 +910,7 @@ const profileData = {
       enTitle:"Taipei First Girls High School",
       zhRole:"數學科教育實習｜114-1",
       enRole:"Mathematics Teaching Practicum",
-      zh:"參與高中數學科教育實習，累積觀課、教材準備、教學設計、課堂實作與學校教育現場經驗。",
+      zh:"114-1 學期於臺北市立第一女子高級中學進行數學科教育實習。",
       en:"Completed a secondary mathematics teaching practicum involving classroom observation, lesson planning, instructional materials, teaching practice, and school-based experience."
     },
     {
@@ -1025,7 +921,7 @@ const profileData = {
       enTitle:"Chih Ping Senior High School",
       zhRole:"數學科兼課教師｜114-2",
       enRole:"Part-time Mathematics Teacher",
-      zh:"實際負責高中數學課程教學，在班級授課中累積課程進度安排、講解與課堂互動經驗。",
+      zh:"114-2 學期於治平高級中等學校擔任數學科兼課教師。",
       en:"Taught senior high school mathematics courses, with experience in course pacing, classroom instruction, and student interaction."
     },
     {
@@ -1036,7 +932,7 @@ const profileData = {
       enTitle:"Xingru Cram School",
       zhRole:"數學科團班教師",
       enRole:"Group Mathematics Instructor",
-      zh:"進行國中數學團班與進階課程教學，並持續參與科學班相關課程、教材與評量設計。",
+      zh:"2026 年 4 月起於興儒補習班擔任數學科團班教師。",
       en:"Teach junior high group mathematics and advanced courses, including science-program preparation, instructional materials, and assessment design."
     }
   ]
@@ -1106,12 +1002,7 @@ document.getElementById("resumeLayer").addEventListener("click",e=>{
 });
 
 const resourceData=[
-{id:"factorization",title:"因式分解與高次方程式",level:"國三進階／科學班",categories:["junior","advanced"],type:"講義",symbol:"x³",version:"2026.09",description:"從因式分解延伸至高次方程式，採例題—類題結構，搭配重點整理與進階練習。",tags:["因式分解","高次方程式","科學班"],contents:"例題、類題、重點整理",files:"學生版／詳解版",student:"",solution:""},
-{id:"amgm",title:"從指數到算幾不等式",level:"國三進階／高一",categories:["junior","senior","advanced"],type:"講義",symbol:"√ab",version:"2026.09",description:"由指數與根號銜接算術平均、幾何平均與 AM-GM，包含代數與幾何證明及應用題。",tags:["AM-GM","不等式","指數"],contents:"觀念、證明、例題、應用",files:"學生版／詳解版",student:"",solution:""},
-{id:"triangle-area",title:"三角形面積與面積比",level:"國三科學班",categories:["junior","advanced"],type:"幾何專題講義",symbol:"△",version:"2026.09",description:"從三角形面積基本公式出發，整理作高、海龍公式、內點切割、等高、等底、全等、相似，並延伸至平面與空間的綜合問題。",tags:["國三","科學班","幾何","面積比"],contents:"22 個例題、六大核心關係、延伸綜合與一頁總整理",files:"18 頁學生版 PDF",page:"resources/triangle-area/",student:"resources/triangle-area/triangle-area-student.pdf",solution:""},
-{id:"quadratic",title:"二次函數與圖形理解",level:"高中",categories:["senior"],type:"講義／題組",symbol:"x²",version:"2026",description:"從一般式、頂點式與因式分解式之間的轉換，建立圖形、參數與方程式的連結。",tags:["二次函數","圖形","題組"],contents:"閱讀素材、題組、進階問題",files:"學生版",student:"",solution:""},
-{id:"identities",title:"乘法公式與多項式",level:"國二",categories:["junior","assessment"],type:"小考／練習",symbol:"(a+b)²",version:"2026",description:"以乘法公式與多項式運算為核心，從基本運算進入變化題與綜合題。",tags:["乘法公式","多項式","小考"],contents:"練習題、綜合題、評量",files:"題本",student:"",solution:""},
-{id:"gsat-data",title:"學測近十年級距與選考人數",level:"公開資料",categories:["data"],type:"資料整理",symbol:"Σ",version:"更新中",description:"整理近年學測各科級距、考生人數與選考人數，未來可加入互動圖表與原始資料下載。",tags:["學測","級距","資料"],contents:"年度資料、選考人數、趨勢",files:"表格／資料檔",student:"",solution:""}
+{id:"triangle-area",title:"三角形面積與面積比",level:"國三科學班",categories:["junior","advanced"],type:"幾何專題講義",symbol:"△",version:"2026.09",description:"從三角形面積基本公式出發，整理作高、海龍公式、內點切割、等高、等底、全等、相似，並延伸至平面與空間的綜合問題。",tags:["國三","科學班","幾何","面積比"],contents:"22 個例題、六大核心關係、延伸綜合與一頁總整理",files:"18 頁學生版 PDF",page:"resources/triangle-area/",student:"resources/triangle-area/triangle-area-student.pdf",solution:""}
 ];
 let currentResourceFilter="all";
 function renderResources(){

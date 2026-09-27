@@ -84,3 +84,9 @@ Tables on tablets/phones remain horizontally scrollable rather than compressing 
 - 新增實際 1200×630 PNG：og-cover-v43.png。
 - 全站 og:image / twitter:image 改指向新檔名以避開社群平台舊快取。
 - 補上 og:image:secure_url 與 og:image:type。
+
+
+## V44
+- Move canonical / Open Graph / Twitter Card metadata to the beginning of `<head>`, immediately after the page description.
+- Use `og-cover-v44.png` to avoid stale social-preview image caches.
+- Validate all six HTML pages contain exactly one OG metadata set.

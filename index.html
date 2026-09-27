@@ -64,6 +64,19 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 .about-intro{font-family:var(--serif);font-size:clamp(28px,3.4vw,43px);line-height:1.55;margin:0 0 34px}
 .about-copy{columns:2;column-gap:34px;color:#4d5752}
 .about-copy p{break-inside:avoid;margin:0 0 20px}
+.about-story{max-width:860px}
+.about-lead{font-family:var(--serif);font-size:clamp(27px,3.2vw,42px);line-height:1.55;margin:0 0 52px}
+.about-chapter{padding:52px 0;border-top:1px solid var(--line)}
+.about-chapter:first-of-type{padding-top:0;border-top:0}
+.about-chapter-head{display:grid;grid-template-columns:120px 1fr;gap:28px;align-items:start;margin-bottom:28px}
+.about-no{font-family:var(--serif);font-size:15px;letter-spacing:.12em;color:var(--sage)}
+.about-chapter h3{font-family:var(--serif);font-size:clamp(31px,4vw,48px);font-weight:500;line-height:1.2;margin:0}
+.about-chapter h4{font-family:var(--serif);font-size:25px;font-weight:500;margin:38px 0 12px}
+.about-body{max-width:760px;margin-left:148px;color:#4d5752}
+.about-body p{margin:0 0 20px}
+.about-body strong{color:var(--ink)}
+.about-quote{font-family:var(--serif);font-size:clamp(24px,2.7vw,34px);line-height:1.55;color:var(--ink);margin:34px 0;padding:4px 0 4px 24px;border-left:2px solid var(--sage)}
+.about-subquote{font-family:var(--serif);font-size:21px;line-height:1.65;color:var(--sage2);margin:28px 0}
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-top:38px}
 .metric{padding:18px 18px 18px 0;border-right:1px solid var(--line)}
 .metric:not(:first-child){padding-left:18px}
@@ -229,6 +242,9 @@ body.resume-en .en-only{display:block!important}
   .portrait{min-height:470px}
   .portrait .photo{height:385px}
   .about-copy{columns:1}
+  .about-chapter-head{grid-template-columns:1fr;gap:6px}
+  .about-body{margin-left:0}
+  .about-chapter{padding:40px 0}
   .metrics,.framework,.cards,.growth,.notes,.gallery{grid-template-columns:1fr}
   .metric,.metric:not(:first-child){padding:14px 0;border-right:0;border-bottom:1px solid var(--line)}
   .framework article,.framework article:not(:first-child){min-height:auto;padding:22px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}
@@ -346,15 +362,86 @@ body.resume-en .en-only{display:block!important}
     <div class="heading sticky">
       <p class="eyebrow">ABOUT</p>
       <h2>關於我</h2>
-      <p>網站主體保留個人敘事，不因特定申請用途而改變。</p>
+      <p>從自己的成長、教育觀，到現在正在走的路。</p>
     </div>
-    <div>
-      <p class="about-intro">我希望學生學到的不只是某一題的做法，而是能真正理解觀念，並把抽象內容整理成可理解、可練習、也可再次運用的系統。</p>
-      <div class="about-copy">
-        <p>我以數學專業作為學習與教學的核心，並持續投入中等教育、教材設計與教學實務。對我而言，真正有趣的不只是把答案算出來，而是理解一個概念如何被建立、不同知識如何連結，以及如何用更清楚的方式說明這些想法。</p>
-        <p>不同學生遇到的困難往往不同：有些需要重新建立計算習慣，有些是前置概念出現斷層，也有些其實具備能力，卻尚未形成適合自己的思考方式。因此，我會先找出真正卡住的位置，再決定從計算、圖像、概念或題目切入。</p>
-        <p>我的課堂通常從故事、情境或問題出發，先建立核心概念，再將觀念帶入解題；完成題目後，再重新整理公式、方法與想法之間的關係。</p>
-      </div>
+
+    <div class="about-story">
+      <p class="about-lead">數學、教育與棒球，構成了現在的我。我希望教育能替學生創造更多選擇，也希望自己持續在不同的教學現場裡學習，成為一位更好的老師。</p>
+
+      <article class="about-chapter">
+        <div class="about-chapter-head"><div class="about-no">01</div><h3>我是誰</h3></div>
+        <div class="about-body">
+          <p>哈囉！我是李明諭，畢業於<strong>國立臺灣大學數學系</strong>。</p>
+          <p>高中時，我對數學這門困難的學科一直抱著一份敬畏。也正因如此，我把臺大數學系設為自己的第一目標，朝著這個目標努力，最後在應屆指考錄取臺大數學系。</p>
+          <p>進入大學後，我從大二開始修習教育學程。起初只是對「教育」這條路抱有興趣，但從參與史懷哲教育服務，到後來修習教材教法課程，再到真正進入學校實習，我愈來愈喜歡教學這件事，也在過程中有了很大的成長。</p>
+          <p>這一路上，我也認識了許多同樣走在教育路上的夥伴，看著大家逐漸成為一位位優秀的老師，也讓我更加確定：<strong>教師會是我希望持續走下去的職業。</strong></p>
+
+          <h4>除了數學與教育，我也很喜歡棒球。</h4>
+          <p>大學期間，我加入數學系系棒，並在大二、大三擔任系棒隊長。我喜歡棒球，因為這項運動裡幾乎沒有不重要的環節——守備、投球、打擊、跑壘、戰術，每一個細節都可能影響一場比賽。</p>
+          <p><strong>例如打擊。</strong>在棒球裡，打擊本來就是一件失敗機率很高的事情。即使到了職業層級，十次打擊能成功三次左右，就已經是相當出色的表現。因此，打者必須學會接受揮空與出局，並在一次次沒有成功之後重新調整，再準備下一個打席。</p>
+          <div class="about-quote">失敗本身並不可怕，真正重要的是能不能從失敗中找到下一次可以做得更好的地方。</div>
+          <p>這樣的想法，也慢慢影響了我面對學習與教學的方式。</p>
+          <p>我的學習與工作一直圍繞著<strong>數學與教育</strong>。從個別家教、補習班團體授課，到高中教育實習與學校教學，我接觸過不同年齡、程度與學習需求的學生，也在一次次實際教學的過程中，逐漸建立自己對數學教學的理解。</p>
+        </div>
+      </article>
+
+      <article class="about-chapter">
+        <div class="about-chapter-head"><div class="about-no">02</div><h3>教學觀</h3></div>
+        <div class="about-body">
+          <div class="about-quote">教育，是讓一個人擁有更多選擇。</div>
+          <p>對我而言，<strong>教育的本質，是讓仍在迷惘中的學生逐漸找到自己的人生方向，並為他創造更多選擇的可能。</strong></p>
+          <p>我希望教育能讓一個人未來擁有更多條可以走的路，而不是在成長的過程中，一條一條地替他把路關上。當教育資源能真正被需要的孩子取得時，我也相信教育有機會成為促進社會流動、改變人生處境的重要力量。</p>
+          <p>小時候的我其實有過很多夢想。我想過成為律師、法官、歷史學家，也想過成為科學家。那時候對未來的想像很單純，看到一件有趣的事情，就會想：「如果有一天可以做這個，好像也很好。」</p>
+          <p>但開始進入以考試與成績為主的學習環境後，我逐漸發現，我們很容易開始用分數定義一個學生。考得好不好、排名第幾、能進哪一所學校，慢慢成為成長過程中非常重要的事情。久而久之，我們可能很擅長回答考卷上的問題，卻不一定還能回答：「我喜歡什麼？」、「我想成為什麼樣的人？」、「我希望自己的人生往哪裡走？」</p>
+          <p>我並不否定考試與成績的價值。它們在現實的升學制度裡確實重要，也可能成為學生取得更多機會的工具；但我不希望它們最後反過來成為教育的目的。</p>
+          <div class="about-subquote">成績應該幫助一個人增加選擇，而不是替一個人決定選擇。</div>
+
+          <h4>成為老師，也是我重新選擇自己的過程</h4>
+          <p>後來，當我逐漸發現自己真的對教育有興趣時，我也曾經聽過不同的聲音。但最後，我還是決定把「成為老師」當成自己認真想走的一條路。</p>
+          <p>對我而言，這不只是一份職業選擇，也是我重新學著回答「自己究竟想做什麼」的過程。因此，我很珍惜自己仍然願意為一件真正想做的事情努力，也希望未來不會因為沒有嘗試過而後悔。</p>
+          <p>這段經歷也影響了我怎麼看學生。當一個孩子對未來感到迷惘時，我認為那並不是一件需要急著被解決的事情。找到自己想走的路，本來就需要時間。</p>
+          <p><strong>每個人的人生最終都屬於自己。</strong>老師、家長可以分享經驗、提供資訊、陪著分析不同選擇可能帶來的結果，卻很難替另一個人承擔他人生最後的責任。</p>
+          <p>所以比起急著告訴學生「你應該成為什麼」，我更希望教育能讓他多看一些、多嘗試一些，也多保留一些未來的可能。</p>
+          <div class="about-subquote">如果有一天，學生能夠自己告訴我：「老師，我想做這件事。」那麼接下來，我希望自己能做的，就是盡我所能，幫助他朝那個方向再往前走一點。</div>
+
+          <h4>那麼，為什麼還要學數學？</h4>
+          <p>我是一名數學老師，但我並不認為每一個人都必須把數學學到同樣的程度，更不認為數學成績可以定義一個人的能力。</p>
+          <p>對我而言，中學階段的數學，其中一項重要價值是提供一套相對嚴謹的<strong>邏輯推理訓練</strong>。我們學習如何從已知條件推導結果、如何分情況討論、如何判斷一個論述是否合理；而數量、比例、函數、機率與統計等概念，也可能在未來面對生活決策、資料判讀甚至個人理財時，成為理解問題的工具。</p>
+          <p>但這並不代表每個學生未來都需要高深的數學。我之所以仍然希望持續精進自己的數學能力與數學教學，是因為我希望：<strong>當一個學生終於找到自己想走的方向，而那條路恰好需要數學時，我有能力幫助他。</strong></p>
+          <p>也許他的目標需要面對會考、學測或分科測驗；也許他未來想進入理工、資訊、商管或其他需要數學基礎的領域。到了那個時候，我希望數學不是迫使他放棄夢想的那一道門檻，而是我能陪著他一起跨過去的一道關卡。</p>
+
+          <h4>理解概念，也需要足夠的練習</h4>
+          <p>至於「怎麼把中學數學學好」，從自己的學習經驗與這些年的教學經驗來看，我愈來愈重視兩件事情：<strong>學習的脈絡，以及足夠而持續的練習。</strong></p>
+          <p>數學知識並不是一個個彼此獨立的單元。學生今天學習的因式分解，可能成為未來解方程式的工具；國中的比例與相似，會繼續出現在高中幾何；對函數的理解，也會一路影響之後更進階的數學學習。</p>
+          <p>因此，有些學生現在遇到的困難，不一定真的發生在「現在這一章」。可能是更早以前的一個概念沒有真正理解，也可能是曾經學會了，卻因為缺乏後續使用與練習而逐漸遺忘。當這些缺口不斷累積，新的知識又繼續建立在舊知識之上，就很容易產生連鎖性的學習困難。</p>
+          <p>所以我的教學會特別重視<strong>學習的脈絡性</strong>。我希望學生知道現在正在學什麼、為什麼要學，以及它和以前學過的東西有什麼關係，而不只是記住「看到這種題目就套這個公式」。</p>
+          <p>但理解概念之後，仍然需要練習。對國小、國中到高中階段的數學而言，很多能力都需要透過反覆使用才能逐漸熟練。計算、代數操作、圖形辨識與解題策略，都不是理解一次就會永遠留下來。</p>
+          <div class="about-subquote">理解讓練習有方向，練習則讓理解逐漸穩固。</div>
+          <p>我也不傾向把學生數學學不好簡單歸因於「沒有天分」。比起急著替學生貼上擅長或不擅長數學的標籤，我更在意的是：他的概念從哪裡開始出現缺口？練習量是否足夠？哪些內容還沒有真正穩固？又能不能重新把前後的知識連接起來？</p>
+          <div class="about-quote">不是要求每一個學生都喜歡數學，而是當他需要數學的時候，能有方法、有能力，也有機會繼續往自己想去的地方前進。</div>
+        </div>
+      </article>
+
+      <article class="about-chapter">
+        <div class="about-chapter-head"><div class="about-no">03</div><h3>我正在做的事</h3></div>
+        <div class="about-body">
+          <p>目前，我以<strong>家教與補習班講師</strong>作為主要的教學工作。</p>
+          <p>現階段的我，還在持續累積不同形式的教學經驗。我希望自己不要太早侷限在單一的教學環境，而是有機會實際走進教育現場中的不同位置。</p>
+          <p>從個別家教、補習班講師、學習扶助與補救教學，到學校兼課、代理教師、私立學校教師；甚至是函授與線上課程、講義編寫、教案與教材設計等，都是我有興趣進一步接觸的工作。</p>
+          <p>這些工作雖然都與「教育」有關，實際面對的學生、工作方式與需要承擔的責任卻不盡相同。家教讓我能長時間觀察一位學生的學習歷程；團體授課需要思考如何掌握整個班級的學習節奏；進入學校之後，除了教學，也會接觸導師、行政與班級經營；而教材與課程設計，則需要把原本存在腦中的教學想法，轉化成其他人也能理解與使用的內容。</p>
+          <p>我希望透過實際體驗這些不同的教育工作，看見各種教學環境的優點與限制，也更了解自己適合什麼、還缺少什麼。對現在的我而言，這些嘗試並不是繞遠路，而是我認識教育、也認識自己的一種方式。</p>
+
+          <h4>現階段的目標</h4>
+          <p>我的其中一個短期目標，是逐步建立一套屬於自己的、從<strong>國小到高中的數學教學脈絡</strong>。</p>
+          <p>我希望自己不只是熟悉單一冊次或某幾個章節，而是能真正理解一個學生從國小、國中一路到高中，數學概念是如何逐步建立的：前面的哪些概念會成為後面的基礎？學生通常會在哪裡開始出現斷點？同一個數學概念，在不同學習階段又應該如何重新理解？</p>
+          <p>在這個過程中，我也會持續整理與編寫自己的講義、題目與教學素材，把實際上課得到的經驗一次次放回教材中修正。未來如果累積得足夠完整，我希望能進一步整理成一系列自己的教材，甚至嘗試正式出版。</p>
+          <p>另一方面，我也希望進入不同的公立學校擔任代理教師。除了數學科教學之外，我想實際體驗<strong>班級導師、班級經營與學校行政</strong>等不同角色，更完整地理解一所學校是如何運作的。</p>
+          <p>代理教師的另一個有趣之處，是有機會前往不同的學校與地區生活。對我來說，這不只是工作的轉換，也是認識不同地方、不同學生與不同教育環境的一種方式。</p>
+          <p>我現在還不急著替未來的自己設定唯一的樣子。比起很早就決定「我這輩子只要成為哪一種老師」，我更希望趁現在多看、多做、多體驗，在每一次教學中累積一些東西，也在一次次嘗試之後，更清楚自己真正想走的方向。</p>
+          <div class="about-quote">我希望自己一直都還在學習怎麼成為一位更好的老師。</div>
+        </div>
+      </article>
+
       <div class="metrics">
         <div class="metric"><strong>數學</strong><small>Academic foundation</small></div>
         <div class="metric"><strong>教育</strong><small>Teacher education</small></div>

@@ -129,10 +129,11 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 
 .resume-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:54px}
 .timeline{border-top:1px solid var(--ink)}
-.timeline article{display:grid;grid-template-columns:132px 1fr;gap:25px;padding:25px 0;border-bottom:1px solid var(--line)}
-.timeline .k{font-family:var(--serif);font-size:13px;color:var(--sage)}
-.timeline h3{margin:0 0 7px;font-size:19px}
-.timeline p{margin:0;color:var(--muted)}
+.timeline article{display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}
+.timeline .k{font-family:var(--serif);font-size:12px;line-height:1.55;letter-spacing:.04em;color:var(--sage);font-variant-numeric:tabular-nums}
+.timeline h3{margin:0 0 5px;font-family:var(--serif);font-size:21px;font-weight:500}
+.timeline .role{margin:0 0 9px;font-size:13px;letter-spacing:.05em;color:var(--sage2)}
+.timeline p{margin:0;color:var(--muted);line-height:1.75}
 .sidecard{background:var(--sage2);color:var(--paper);padding:30px;align-self:start}
 .sidecard h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:0 0 18px}
 .sidecard ul{list-style:none;padding:0;margin:0}
@@ -585,8 +586,8 @@ body.resume-en .en-only{display:block!important}
   <div class="wrap">
     <div class="heading">
       <p class="eyebrow">EXPERIENCE</p>
-      <h2>教學與專業經歷</h2>
-      <p>網站用較敘事的方式呈現；同一批資料會同步提供給履歷產生器。</p>
+      <h2>教學經歷</h2>
+      <p>從個別教學、教育實習到高中與補習班課堂，持續在不同的教育現場累積教學經驗。</p>
     </div>
     <div class="resume-grid">
       <div class="timeline" id="siteExperience"></div>
@@ -984,32 +985,59 @@ body.resume-en .en-only{display:block!important}
 const profileData = {
   experience: [
     {
-      type:"Teacher Education",
-      zhTitle:"中等教育師資培育與高中教學實務",
-      enTitle:"Secondary Teacher Education & Classroom Practice",
-      zh:"累積教案設計、課堂觀察、教材準備、教學演示與班級互動經驗。",
-      en:"Experience in lesson planning, classroom observation, instructional materials, teaching demonstrations, and student interaction."
-    },
-    {
-      type:"Tutoring",
-      zhTitle:"家教教學約 5 年",
+      period:"2021.09 — PRESENT",
+      schoolTerm:"",
+      type:"Private Tutoring",
+      zhTitle:"個別家教",
       enTitle:"Private Mathematics Tutoring",
-      zh:"涵蓋國小至高中，包含校內進度、段考、會考、學測、分科與數學能力建立。",
-      en:"Mathematics tutoring across elementary to high school levels, including school curriculum, examinations, and conceptual development."
+      zhRole:"國小至高中數學",
+      enRole:"Elementary to Senior High School Mathematics",
+      zh:"持續進行個別化數學教學，依學生程度與目標安排校內進度、升學複習、學習診斷與教材。",
+      en:"Individualized mathematics instruction across elementary to senior high school, including school curriculum, exam preparation, learning diagnosis, and tailored materials."
     },
     {
-      type:"Institute",
-      zhTitle:"補習班個別指導與團體班",
-      enTitle:"Individual & Group Instruction",
-      zh:"具有個別指導與團班授課經驗，接觸升學複習、科學班與不同程度學生。",
-      en:"Experience in both one-on-one and group instruction, including exam preparation and advanced mathematics."
+      period:"2024.01 — 2025.02",
+      schoolTerm:"",
+      type:"Individual Instruction",
+      zhTitle:"明光義塾",
+      enTitle:"Meiko Individualized Learning Center",
+      zhRole:"數學科個別指導教師",
+      enRole:"Individual Mathematics Instructor",
+      zh:"以個別指導形式進行數學教學，依學生學習狀況調整講解、練習與進度。",
+      en:"Provided individualized mathematics instruction with pacing, explanations, and practice adapted to each student's learning needs."
     },
     {
-      type:"Learning Support",
-      zhTitle:"多元教學經驗",
-      enTitle:"Diverse Learning Contexts",
-      zh:"曾接觸扶弱與數理資優相關教學情境，持續累積不同學生需求的教學經驗。",
-      en:"Exposure to learning support and advanced mathematics contexts, with attention to diverse student needs."
+      period:"2025.08 — 2026.01",
+      schoolTerm:"114-1",
+      type:"Teaching Practicum",
+      zhTitle:"臺北市立第一女子高級中學",
+      enTitle:"Taipei First Girls High School",
+      zhRole:"數學科教育實習｜114-1",
+      enRole:"Mathematics Teaching Practicum",
+      zh:"參與高中數學科教育實習，累積觀課、教材準備、教學設計、課堂實作與學校教育現場經驗。",
+      en:"Completed a secondary mathematics teaching practicum involving classroom observation, lesson planning, instructional materials, teaching practice, and school-based experience."
+    },
+    {
+      period:"2026.02 — 2026.05",
+      schoolTerm:"114-2",
+      type:"High School Teaching",
+      zhTitle:"治平高級中等學校",
+      enTitle:"Chih Ping Senior High School",
+      zhRole:"數學科兼課教師｜114-2",
+      enRole:"Part-time Mathematics Teacher",
+      zh:"實際負責高中數學課程教學，在班級授課中累積課程進度安排、講解與課堂互動經驗。",
+      en:"Taught senior high school mathematics courses, with experience in course pacing, classroom instruction, and student interaction."
+    },
+    {
+      period:"2026.04 — PRESENT",
+      schoolTerm:"",
+      type:"Group Instruction",
+      zhTitle:"興儒補習班",
+      enTitle:"Xingru Cram School",
+      zhRole:"數學科團班教師",
+      enRole:"Group Mathematics Instructor",
+      zh:"進行國中數學團班與進階課程教學，並持續參與科學班相關課程、教材與評量設計。",
+      en:"Teach junior high group mathematics and advanced courses, including science-program preparation, instructional materials, and assessment design."
     }
   ]
 };
@@ -1017,20 +1045,24 @@ const profileData = {
 const siteExperience=document.querySelector("#siteExperience");
 siteExperience.innerHTML=profileData.experience.map(x=>`
   <article>
-    <div class="k">${x.type}</div>
-    <div><h3>${x.zhTitle}</h3><p>${x.zh}</p></div>
+    <div class="k">${x.period}</div>
+    <div>
+      <h3>${x.zhTitle}</h3>
+      <div class="role">${x.zhRole}</div>
+      <p>${x.zh}</p>
+    </div>
   </article>
 `).join("");
 
 const resumeTeaching=document.querySelector("#resumeTeaching");
 resumeTeaching.innerHTML=profileData.experience.map(x=>`
   <div class="r-item">
-    <div class="r-date">${x.type}</div>
+    <div class="r-date">${x.period}</div>
     <div>
       <h3 class="zh-only">${x.zhTitle}</h3>
       <h3 class="en-only">${x.enTitle}</h3>
-      <p class="zh-only">${x.zh}</p>
-      <p class="en-only">${x.en}</p>
+      <p class="zh-only"><strong>${x.zhRole}</strong><br>${x.zh}</p>
+      <p class="en-only"><strong>${x.enRole}</strong><br>${x.en}</p>
     </div>
   </div>
 `).join("");

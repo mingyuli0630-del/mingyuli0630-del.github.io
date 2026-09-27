@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"/>
@@ -25,16 +26,24 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);l
 a{color:inherit;text-decoration:none}
 button{font:inherit}
 .wrap{max-width:var(--max);margin:auto;padding:0 24px}
-header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,212,202,.9)}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:11px}
-.brandmark{width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px}
-.brand strong{display:block;font-size:14px;letter-spacing:.08em}
-.brand small{display:block;font-family:var(--serif);font-size:11px;color:var(--muted)}
-nav{display:flex;align-items:center;gap:18px;font-size:13px}
-nav a{padding:6px 0;border-bottom:1px solid transparent}
-nav a:hover{border-color:var(--ink)}
-.navbtn{border:1px solid var(--ink);border-radius:999px;padding:7px 12px;background:transparent;cursor:pointer;font-size:12px;font-weight:650}
+header{position:sticky;top:0;z-index:50;background:rgba(249,247,242,.97);backdrop-filter:blur(14px);border-top:3px solid var(--sage);border-bottom:1px solid rgba(217,212,202,.9);box-shadow:0 7px 22px rgba(48,52,49,.035)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brandmark{width:42px;height:42px;border:1px solid var(--ink);border-radius:2px;display:grid;place-items:center;font-family:var(--serif);font-size:21px;transition:.2s ease}
+.brand:hover .brandmark{background:var(--ink);color:var(--paper)}
+.brand strong{display:block;font-size:14px;letter-spacing:.09em;line-height:1.35}
+.brand small{display:block;font-family:var(--serif);font-size:10px;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:22px;margin-left:auto}
+nav{display:flex;align-items:center;gap:5px;font-size:13px}
+nav a{position:relative;padding:10px 13px;border:0;border-radius:2px;color:var(--muted);transition:.18s ease;white-space:nowrap}
+nav a:hover{background:rgba(184,114,85,.07);color:var(--ink)}
+nav a.active{background:rgba(184,114,85,.10);color:var(--ink);font-weight:700}
+nav a.active:after{content:"";position:absolute;left:13px;right:13px;bottom:6px;height:1px;background:var(--sage)}
+.nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:0 17px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-size:12px;font-weight:700;letter-spacing:.04em;white-space:nowrap;transition:.18s ease}
+.nav-cta:hover{background:var(--sage2);border-color:var(--sage2);transform:translateY(-1px)}
+.nav-cta.active{background:var(--sage);border-color:var(--sage)}
+.nav-cta .arrow{font-size:15px;line-height:1}
+.menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:18px;cursor:pointer}
 section{padding:108px 0}
 .border-top{border-top:1px solid var(--line)}
 .eyebrow{font-size:11px;letter-spacing:.23em;color:var(--sage);font-weight:700;margin:0 0 10px}
@@ -315,7 +324,14 @@ body.resume-en .zh-only{display:none!important}
 body.resume-en .en-only{display:block!important}
 
 @media(max-width:920px){
-  nav a{display:none}
+  .nav{min-height:70px;gap:12px}
+  .brand small{display:none}
+  .nav-right{gap:8px}
+  .nav-right nav{display:none;position:absolute;top:73px;left:0;right:0;background:var(--paper2);border-bottom:1px solid var(--line);padding:10px 20px 16px;box-shadow:0 14px 28px rgba(48,52,49,.08)}
+  .nav-right nav.open{display:grid;grid-template-columns:1fr 1fr}
+  .nav-right nav a{display:block;padding:11px 12px}
+  .nav-cta{min-height:40px;padding:0 12px;font-size:11px}
+  .menu-toggle{display:grid;place-items:center}
   .about-side-nav,.about-side-note{display:none}
   .about-intro{padding-left:0}
   .about-index{display:grid;margin-left:0}
@@ -575,7 +591,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 
 
 /* V28 — true multi-page structure */
-nav a.active{border-color:var(--ink);font-weight:700}
+
 .page-career #career{padding:72px 0 108px}
 .page-career .career-details{border-top:0}
 .page-career .career-details summary{cursor:default;pointer-events:none;padding-top:10px}
@@ -594,13 +610,52 @@ nav a.active{border-color:var(--ink);font-weight:700}
 
 /* V32: let short prose use the available width; wrap only when the viewport really requires it. */
 .heading,.lead,.about-story,.about-lead,.about-deck,.career-intro,.cvpromo p{max-width:none}
+
+/* V33 — concise homepage */
+.home-intro{padding:88px 0}
+.home-intro-grid{display:grid;grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);gap:72px;align-items:start}
+.home-intro-heading{margin:0}
+.home-intro-heading h2{font-size:clamp(36px,4.2vw,54px);margin-bottom:0}
+.home-intro-copy{max-width:850px}
+.home-intro-lead{font-family:var(--serif);font-size:clamp(24px,2.8vw,34px);line-height:1.55;margin:0 0 18px}
+.home-intro-copy>p:not(.home-intro-lead){color:var(--muted);margin:0 0 30px}
+.home-feature-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 24px}
+.home-feature-row>div{padding:20px 18px 20px 0;display:flex;flex-direction:column;gap:3px}
+.home-feature-row>div+div{border-left:1px solid var(--line);padding-left:18px}
+.home-feature-row small,.home-links small{font-size:10px;letter-spacing:.14em;color:var(--sage);font-weight:700}
+.home-feature-row strong{font-family:var(--serif);font-size:20px;font-weight:500}
+.home-feature-row span{font-size:12px;color:var(--muted)}
+.text-link{display:inline-block;font-size:13px;font-weight:700;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.home-explore{padding:78px 0}
+.home-explore-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:28px}
+.home-explore-head h2{font-family:var(--serif);font-size:clamp(34px,4vw,50px);font-weight:500;margin:0}
+.home-explore-head>p{max-width:570px;color:var(--muted);margin:0}
+.home-links{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.home-links a{position:relative;min-height:160px;padding:24px 46px 24px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:7px}
+.home-links a+a{border-left:1px solid var(--line);padding-left:24px}
+.home-links strong{font-family:var(--serif);font-size:25px;font-weight:500}
+.home-links span{font-size:13px;color:var(--muted)}
+.home-links b{position:absolute;right:14px;top:24px;font-weight:400;font-size:20px}
+@media(max-width:820px){
+  .home-intro-grid{grid-template-columns:1fr;gap:26px}
+  .home-feature-row{grid-template-columns:1fr}
+  .home-feature-row>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  .home-explore-head{display:block}
+  .home-explore-head>p{margin-top:12px}
+  .home-links{grid-template-columns:1fr}
+  .home-links a+a{border-left:0;padding-left:0}
+}
 </style>
 </head>
 <body class="page-home">
 <header>
 <div class="wrap nav">
 <a class="brand" href="index.html"><span class="brandmark">M</span><span><strong>李明諭</strong><small>Mathematics · Education · Teaching</small></span></a>
-<nav><a class="active" href="index.html">首頁</a><a href="about.html">關於</a><a href="resources.html">教材</a><a href="career.html">職涯</a><a href="courses.html">課程</a></nav>
+<div class="nav-right">
+<nav id="siteNav"><a class="active" href="index.html">首頁</a><a href="about.html">關於我</a><a href="resources.html">公開教材</a><a href="career.html">教師職涯參考</a></nav>
+<a class="nav-cta" href="courses.html">課程與收費 <span class="arrow">↗</span></a>
+<button class="menu-toggle" type="button" aria-label="開啟選單" aria-controls="siteNav" aria-expanded="false">☰</button>
+</div>
 </div>
 </header>
 <main>
@@ -610,7 +665,7 @@ nav a.active{border-color:var(--ink);font-weight:700}
 <p class="eyebrow hero-identity">不只一種答案，也不只一種老師。</p>
 <h1>李明諭</h1>
 <p class="hero-en">Mathematics · Education · Teaching</p>
-<p class="lead">用簡單的語言理解數學，從概念建立到解題能力，陪學生建立完整的學習脈絡。</p>
+<p class="lead">用簡單的語言理解數學，重視概念、脈絡與持續練習；也持續在不同的教育現場裡學習。</p>
 <div class="chips">
 <span class="chip">Mathematics</span>
 <span class="chip">Teaching</span>
@@ -629,53 +684,46 @@ nav a.active{border-color:var(--ink);font-weight:700}
 </div>
 </div>
 </section>
-
-<section class="dark" id="teaching">
-<div class="wrap">
-<div class="heading">
-<p class="eyebrow">TEACHING FRAMEWORK</p>
-<h2>從情境到結構的學習歷程</h2>
-<p>從情境建立理解，再把觀念、解題與整理連成可以反覆取用的學習脈絡。</p>
+<section class="home-intro border-top" id="intro">
+<div class="wrap home-intro-grid">
+<div class="heading home-intro-heading">
+<p class="eyebrow">ABOUT</p>
+<h2>數學、教育與教學</h2>
 </div>
-<div class="framework">
-<article><span>01 · CONTEXT</span><h3>故事／情境</h3><p>先理解為什麼需要這個數學概念，而不是一開始只看到公式。</p></article>
-<article><span>02 · CONCEPT</span><h3>建立觀念</h3><p>用圖像、例子與簡單語言把抽象內容具體化。</p></article>
-<article><span>03 · REASONING</span><h3>觀念解題</h3><p>由基本題進入變化題，練習選擇方法，而不是模仿固定步驟。</p></article>
-<article><span>04 · STRUCTURE</span><h3>重點整理</h3><p>把公式、題型與想法重新接起來，形成可以再次取用的學習脈絡。</p></article>
+<div class="home-intro-copy">
+<p class="home-intro-lead">我希望把抽象的數學說得更清楚，也希望教育能替學生保留更多未來的選擇。</p>
+<p>從個別家教、補習班團體授課，到高中教育實習與學校教學，我持續在不同的教學現場累積經驗，也把課堂中的觀察重新放回教材與教學設計裡。</p>
+<div class="home-feature-row">
+<div><small>LEARNING</small><strong>理解脈絡</strong><span>把前後概念重新連起來</span></div>
+<div><small>TEACHING</small><strong>不同現場</strong><span>個別、團班與學校教學</span></div>
+<div><small>DESIGN</small><strong>教材設計</strong><span>從實際課堂持續修正</span></div>
 </div>
-</div>
-</section>
-<section class="border-top">
-<div class="wrap">
-<div class="heading">
-<p class="eyebrow">EXPERIENCE</p>
-<h2>教學經歷</h2>
-<p>從個別教學、教育實習到高中與補習班課堂，持續在不同的教育現場累積教學經驗。</p>
-</div>
-<div class="resume-grid">
-<div class="timeline" id="siteExperience"></div>
-<aside class="sidecard">
-<p class="eyebrow" style="color:#E5DED6">FOCUS</p>
-<h3>目前關注</h3>
-<ul>
-<li>國高中數學核心概念</li>
-<li>會考・學測・分科複習</li>
-<li>科學班與進階數學</li>
-<li>教材與評量設計</li>
-<li>數位筆跡與多媒體教學</li>
-</ul>
-</aside>
+<a class="text-link" href="about.html">深入認識我 →</a>
 </div>
 </div>
 </section>
-
-
+<section class="home-explore border-top">
+<div class="wrap">
+<div class="home-explore-head">
+<div>
+<p class="eyebrow">EXPLORE</p>
+<h2>想多看一點</h2>
+</div>
+<p>完整的個人經歷與教學觀放在「關於我」；教材與課程資訊則各自獨立整理。</p>
+</div>
+<div class="home-links">
+<a href="about.html"><small>01 · ABOUT</small><strong>關於我</strong><span>成長、教學觀、教學方法與經歷</span><b>→</b></a>
+<a href="resources.html"><small>02 · RESOURCES</small><strong>公開教材</strong><span>講義、試題與教學素材</span><b>→</b></a>
+<a href="courses.html"><small>03 · COURSES</small><strong>課程資訊</strong><span>授課內容、方式與收費說明</span><b>→</b></a>
+</div>
+</div>
+</section>
 <section id="moments">
 <div class="wrap">
 <div class="heading">
 <p class="eyebrow">TEACHING MOMENTS</p>
 <h2>課堂紀錄</h2>
-<p>記錄不同教學情境中的課堂互動、板書、討論與個別指導。</p>
+<p>一些實際課堂中的板書、討論、巡堂與個別指導紀錄。</p>
 </div>
 <div class="gallery teaching-gallery">
 <figure class="g big">
@@ -705,14 +753,9 @@ nav a.active{border-color:var(--ink);font-weight:700}
 </div>
 </div>
 </section>
-
-
 </main>
 <footer><div class="wrap"><span>© 李明諭 · Personal Teaching Portfolio</span><span>Mathematics · Education · Teaching</span></div></footer>
 <!-- Resume Builder -->
-
-
-
 <script>
 
 /*
@@ -875,5 +918,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 
-</script></body>
+</script>
+<script>
+(()=>{const b=document.querySelector('.menu-toggle'),n=document.getElementById('siteNav');if(!b||!n)return;b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'×':'☰';});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}));})();
+</script>
+</body>
 </html>

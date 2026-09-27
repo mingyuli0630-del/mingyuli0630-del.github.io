@@ -167,6 +167,40 @@ display:flex;align-items:flex-end;padding:20px}
 .g .p{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:56px;color:rgba(82,103,91,.36)}
 .g:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(20,25,22,.58))}
 .g label{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;padding-top:9px;border-top:1px solid rgba(255,255,255,.62);display:flex;justify-content:space-between;color:#fff;font-size:11px}
+/* Teaching Moments: six photos use one consistent visual scale */
+.teaching-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-auto-rows:auto;
+  gap:16px;
+}
+.teaching-gallery .g{
+  margin:0;
+  aspect-ratio:4 / 3;
+  min-width:0;
+}
+.teaching-gallery .g.big{
+  grid-row:auto;
+  grid-column:auto;
+}
+.teaching-gallery .g label{
+  left:14px;
+  right:14px;
+  bottom:12px;
+  gap:12px;
+  align-items:flex-end;
+}
+.teaching-gallery .g label span{
+  font-size:12px;
+  line-height:1.45;
+}
+.teaching-gallery .g label strong{
+  flex:0 0 auto;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.08em;
+}
+
 
 .growth{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .grow{border-top:2px solid var(--sage);padding-top:20px}
@@ -273,6 +307,10 @@ body.resume-en .en-only{display:block!important}
   .controls{position:static;max-height:none}
   .course-shell{grid-template-columns:1fr}.course-intro{position:static}.course-types{grid-template-columns:1fr 1fr}.course-info{grid-template-columns:1fr 1fr}
 }
+@media(max-width:920px){
+  .teaching-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .teaching-gallery .g.big{grid-column:auto;grid-row:auto}
+}
 @media(max-width:640px){
   .wrap{padding:0 18px}
   section{padding:80px 0}
@@ -294,6 +332,8 @@ body.resume-en .en-only{display:block!important}
   .timeline article{grid-template-columns:1fr;gap:5px}
   .note,.note:nth-child(even),.note:nth-child(odd){padding:23px 0;border-right:0}
   .g.big{grid-column:auto}
+  .teaching-gallery{grid-template-columns:1fr;gap:14px}
+  .teaching-gallery .g{aspect-ratio:4 / 3}
   .cvpromo{grid-template-columns:1fr}
   .contact{padding:46px 22px}
   footer .wrap{display:block}

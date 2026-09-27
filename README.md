@@ -51,3 +51,25 @@ V32：短標語、引言與說明文字取消不必要的固定最大寬度，�
 - Very small phone refinements: <=420px
 
 Tables on tablets/phones remain horizontally scrollable rather than compressing text.
+
+
+## V39
+- 將聯絡方式整合至「課程與收費」頁底部，不另增獨立導覽頁。
+- 電話：0905-539-601（可直接點擊撥號）
+- Gmail：mingyuli0630@gmail.com（可直接點擊寄信）
+- 手機／iPad／電腦皆採響應式聯絡卡片。
+
+
+## V40
+- Added Open Graph / Twitter Card metadata to all HTML pages.
+- Added `og-cover.png` (1200 × 630) as the social sharing preview image.
+- Fixed the course pricing table so it has a dedicated touch horizontal scroller on iPad and phones.
+- Added a visible horizontal-swipe hint below the pricing table on screens below 1024px.
+
+
+## V41 — Editorial Burgundy redesign
+- 全站視覺改為米白、炭黑、酒紅的編輯式教育品牌配色。
+- Logo 改為酒紅 serif M 字標＋李明諭＋「數學 × 教育 × 教學」。
+- 導覽、按鈕、標題、卡片、表格與手機版同步重設。
+- 首頁主文案改為「用數學，陪學生走好每一步學習路。」並加入家教課程／公開教材／教師職涯參考三個入口。
+- 保留 V40 Open Graph 與課程表格左右滑動修正。

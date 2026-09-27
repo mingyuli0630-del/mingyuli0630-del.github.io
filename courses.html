@@ -94,7 +94,7 @@ display:grid;place-items:center;color:var(--sage);font-family:var(--serif);font-
 .about-chapter-head{display:block;margin-bottom:30px;padding-left:0}
 .about-no{font-family:var(--serif);font-size:12px;letter-spacing:.22em;color:var(--sage);margin-bottom:10px;padding-top:0;font-variant-numeric:tabular-nums}
 .about-chapter h3{font-family:var(--serif);font-size:clamp(31px,3.4vw,44px);font-weight:500;line-height:1.18;margin:0;letter-spacing:-.025em}
-.about-deck{font-family:var(--serif);font-size:19px;line-height:1.7;color:var(--sage2);margin:11px 0 0;max-width:720px}
+.about-deck{font-family:var(--serif);font-size:19px;line-height:1.7;color:var(--sage2);margin:11px 0 0;max-width:none}
 .about-body{max-width:820px;margin-left:0;color:#626761;font-size:16px;line-height:1.9}
 .about-body p{margin:0 0 18px}
 .about-body strong{color:var(--ink)}
@@ -591,6 +591,9 @@ nav a.active{border-color:var(--ink);font-weight:700}
 .page-link p{font-size:13px;color:var(--muted);margin:7px 0 0}
 @media(max-width:760px){.page-links{grid-template-columns:1fr}.page-career #career,.page-courses #courses,.page-resources #resources,.page-about #about{padding-top:48px}}
 
+
+/* V32: let short prose use the available width; wrap only when the viewport really requires it. */
+.heading,.lead,.about-story,.about-lead,.about-deck,.career-intro,.cvpromo p{max-width:none}
 </style>
 </head>
 <body class="page-courses">
@@ -622,7 +625,7 @@ nav a.active{border-color:var(--ink);font-weight:700}
 <div class="course-shell">
 <div class="course-intro">
 <p class="eyebrow">TUITION POLICY</p>
-<div class="price-lead">同一套收費標準，<br/>依上課人數調整。</div>
+<div class="price-lead">同一套收費標準，依上課人數調整。</div>
 <p>所有課程不因年級或課程名稱另外加價。多人班適合程度、版本、進度與學習目標接近的學生。</p>
 <div class="course-badges">
 <span class="course-badge">試教＝正式課程費用</span>

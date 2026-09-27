@@ -582,3 +582,162 @@ nav a.active{border-color:var(--ink);font-weight:700}
 .page-link strong{font-family:var(--serif);font-size:19px;font-weight:500}
 .page-link p{font-size:13px;color:var(--muted);margin:7px 0 0}
 @media(max-width:760px){.page-links{grid-template-columns:1fr}.page-career #career,.page-courses #courses,.page-resources #resources,.page-about #about{padding-top:48px}}
+
+
+/* V38 — Responsive layout system: phone / iPad / desktop */
+:root{--max:1280px}
+img,svg,video{max-width:100%;height:auto}
+html,body{max-width:100%;overflow-x:hidden}
+.wrap{width:min(100%,var(--max));margin-inline:auto}
+
+/* Desktop — 1200px and above */
+@media (min-width:1200px){
+  .wrap{padding-inline:36px}
+  section{padding-block:104px}
+  .hero{min-height:calc(100svh - 81px);grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);gap:72px;padding-top:64px;padding-bottom:64px}
+  .portrait{min-height:570px}
+  .portrait .photo{height:500px}
+  .home-intro-grid{gap:76px}
+  .career-table-wrap,.price-table-wrap{scrollbar-width:thin}
+}
+
+/* Header switches to compact navigation before iPad gets crowded */
+@media (max-width:1100px){
+  .nav{min-height:70px;gap:12px}
+  .brand small{display:none}
+  .nav-right{gap:8px}
+  .nav-right nav{display:none;position:absolute;top:73px;left:0;right:0;background:var(--paper2);border-bottom:1px solid var(--line);padding:12px 28px 18px;box-shadow:0 14px 28px rgba(48,52,49,.08);z-index:60}
+  .nav-right nav.open{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .nav-right nav a{display:block;padding:12px 14px}
+  .menu-toggle{display:grid;place-items:center}
+  .nav-cta{min-height:40px;padding:0 13px;font-size:11px}
+}
+
+/* iPad landscape — 1024–1199px */
+@media (min-width:1024px) and (max-width:1199px){
+  .wrap{padding-inline:32px}
+  section{padding-block:88px}
+  .hero{min-height:auto;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);gap:42px;padding-top:54px;padding-bottom:58px}
+  .hero h1{font-size:clamp(72px,8.8vw,96px)}
+  .lead{font-size:20px}
+  .portrait{min-height:500px;padding:14px 14px 64px}
+  .portrait .photo{height:430px}
+  .about-grid{grid-template-columns:150px minmax(0,1fr);gap:40px}
+  .about-grid>.heading{max-width:150px}
+  .cards,.growth{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery,.teaching-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .career-table{min-width:1040px}
+}
+
+/* iPad portrait / small tablets — 768–1023px */
+@media (min-width:768px) and (max-width:1023px){
+  .wrap{padding-inline:30px}
+  section{padding-block:82px}
+  .heading{margin-bottom:36px}
+  .heading h2{font-size:clamp(40px,6vw,54px)}
+  .hero{min-height:auto;grid-template-columns:1fr;gap:42px;padding-top:58px;padding-bottom:66px}
+  .hero>div:first-child{max-width:720px}
+  .hero h1{font-size:clamp(76px,12vw,104px)}
+  .lead{max-width:720px;font-size:21px}
+  .portrait{width:min(72vw,620px);min-height:auto;padding:14px 14px 66px;margin-left:auto;margin-right:0}
+  .portrait .photo{height:auto;aspect-ratio:4/4.6}
+  .about-grid,.resume-grid,.feature,.course-shell{grid-template-columns:1fr}
+  .sticky,.course-intro{position:static}
+  .about-grid>.heading{max-width:none}
+  .about-grid>.heading h2{white-space:normal}
+  .about-copy{columns:1}
+  .metrics,.framework,.course-info{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards,.growth,.course-types,.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery,.teaching-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .g.big,.teaching-gallery .g.big{grid-column:auto;grid-row:auto}
+  .home-intro-grid{grid-template-columns:1fr;gap:30px}
+  .home-feature-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .home-explore-head{display:block}
+  .home-explore-head>p{margin-top:12px;max-width:680px}
+  .home-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .home-links a{min-height:150px;padding-right:38px}
+  .career-table-wrap,.price-table-wrap{margin-right:-30px;padding-right:30px;overscroll-behavior-inline:contain}
+  .career-table-wrap:after,.price-table-wrap:after{content:"左右滑動查看完整表格 →";display:block;padding:9px 0 2px;color:var(--muted);font-size:10px;letter-spacing:.04em}
+  .cvpromo{grid-template-columns:1fr auto}
+}
+
+/* Phone — up to 767px */
+@media (max-width:767px){
+  .wrap{padding-inline:18px}
+  header{border-top-width:2px}
+  .nav{min-height:64px}
+  .brand{gap:9px}
+  .brandmark{width:36px;height:36px;font-size:18px}
+  .brand strong{font-size:13px}
+  .nav-right{gap:6px}
+  .nav-cta{min-height:36px;padding:0 10px;font-size:10px;letter-spacing:0}
+  .nav-cta .arrow{font-size:12px}
+  .menu-toggle{width:36px;height:36px;font-size:16px}
+  .nav-right nav{top:66px;padding:10px 18px 16px}
+  .nav-right nav.open{grid-template-columns:1fr}
+  .nav-right nav a{padding:11px 10px}
+  section{padding-block:64px}
+  .heading{margin-bottom:28px}
+  .heading h2{font-size:clamp(34px,11vw,46px);line-height:1.16}
+  .heading p{font-size:14px}
+  .hero{display:grid;grid-template-columns:1fr;gap:34px;min-height:auto;padding-top:42px;padding-bottom:54px}
+  .hero h1{font-size:clamp(58px,19vw,78px);line-height:.96;letter-spacing:-.055em}
+  .hero-en{font-size:19px;margin-bottom:20px}
+  .lead{font-size:18px;line-height:1.7;margin-bottom:24px}
+  .chips{margin-bottom:22px}
+  .chip{font-size:11px;padding:6px 9px}
+  .actions{display:grid;grid-template-columns:1fr;gap:8px}
+  .btn{width:100%;min-height:46px}
+  .portrait{width:100%;min-height:auto;padding:10px 10px 58px;margin:0}
+  .portrait:before{inset:8px -7px -7px 8px}
+  .portrait .photo{height:auto;aspect-ratio:4/4.7}
+  .portrait .caption{left:22px;right:22px;bottom:15px;gap:8px}
+  .caption span{font-size:9px;letter-spacing:.08em}
+  .about-grid,.resume-grid,.feature,.course-shell,.resources-note{grid-template-columns:1fr}
+  .sticky,.course-intro{position:static}
+  .about-grid{gap:28px}
+  .about-grid>.heading{max-width:none}
+  .about-grid>.heading h2{white-space:normal}
+  .about-copy{columns:1}
+  .about-index{grid-template-columns:1fr}
+  .about-index a{padding:14px 0}
+  .about-principles,.about-status,.metrics,.framework,.cards,.growth,.notes,.gallery,.course-types,.course-info,.resource-grid,.resource-modal-list{grid-template-columns:1fr}
+  .home-intro{padding-block:64px}
+  .home-intro-grid{grid-template-columns:1fr;gap:24px}
+  .home-intro-copy{font-size:clamp(26px,8vw,36px)}
+  .home-feature-row{grid-template-columns:1fr}
+  .home-feature-row>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  .home-explore{padding-block:58px}
+  .home-explore-head{display:block;margin-bottom:20px}
+  .home-explore-head h2{font-size:clamp(30px,9vw,40px)}
+  .home-explore-head>p{margin-top:10px}
+  .home-links{grid-template-columns:1fr}
+  .home-links a{min-height:auto;padding:20px 38px 20px 0}
+  .home-links a+a{border-left:0;padding-left:0}
+  .teaching-gallery{grid-template-columns:1fr;gap:12px}
+  .teaching-gallery .g{aspect-ratio:4/3}
+  .timeline article{grid-template-columns:1fr;gap:5px}
+  .cvpromo{grid-template-columns:1fr;padding:26px 20px}
+  .contact{padding:36px 18px}
+  .career-compact{padding:28px 0}
+  .career-details summary{align-items:flex-start;gap:14px;padding:18px 0}
+  .career-summary-copy h2{font-size:28px}
+  .career-table-wrap,.price-table-wrap{margin-right:-18px;padding-right:18px;overscroll-behavior-inline:contain}
+  .career-table{min-width:980px}
+  .price-table{min-width:620px}
+  .career-table-wrap:after,.price-table-wrap:after{content:"左右滑動查看完整表格 →";display:block;padding:9px 0 2px;color:var(--muted);font-size:10px;letter-spacing:.04em}
+  footer .wrap{display:block}
+}
+
+/* Very small phones */
+@media (max-width:420px){
+  .wrap{padding-inline:16px}
+  .brandmark{width:34px;height:34px}
+  .nav-cta{padding-inline:8px}
+  .hero h1{font-size:clamp(54px,18vw,68px)}
+  .portrait .caption{display:block}
+  .caption strong{display:block;margin-top:3px}
+  .career-table-wrap,.price-table-wrap{margin-right:-16px;padding-right:16px}
+}
+

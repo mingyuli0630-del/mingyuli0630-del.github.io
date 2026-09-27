@@ -41,3 +41,13 @@ V32：短標語、引言與說明文字取消不必要的固定最大寬度，�
 - 左側品牌、右側主選單，課程與收費獨立為深色 CTA。
 - 目前頁面以淡色底與細線提示，不使用厚重膠囊按鈕。
 - 手機版新增可展開選單。
+
+
+## V38 Responsive layout
+- Desktop: 1200px+
+- iPad landscape: 1024–1199px
+- iPad portrait / small tablet: 768–1023px
+- Phone: <=767px
+- Very small phone refinements: <=420px
+
+Tables on tablets/phones remain horizontally scrollable rather than compressing text.

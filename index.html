@@ -227,6 +227,27 @@ footer .wrap{display:flex;justify-content:space-between}
 
 
 /* Courses & Tuition */
+.enrollment-notice{
+  display:flex;
+  gap:18px;
+  align-items:baseline;
+  margin:-8px 0 34px;
+  padding:15px 0;
+  border-top:1px solid var(--sage);
+  border-bottom:1px solid var(--line);
+}
+.enrollment-notice small{
+  flex:0 0 auto;
+  font-size:10px;
+  letter-spacing:.16em;
+  color:var(--sage);
+}
+.enrollment-notice strong{
+  font-family:var(--serif);
+  font-size:17px;
+  font-weight:500;
+  color:var(--ink);
+}
 .course-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}
 .course-intro{position:sticky;top:96px}
 .course-intro .price-lead{font-family:var(--serif);font-size:34px;line-height:1.35;margin:7px 0 16px}
@@ -703,6 +724,11 @@ body.resume-en .en-only{display:block!important}
       <p>課程依學生程度、學校版本與目標考試規劃；網站公開統一收費原則，實際上課內容再依需求調整。</p>
     </div>
 
+    <div class="enrollment-notice" role="status">
+      <small>ENROLLMENT STATUS</small>
+      <strong>目前至 116 學測前暫不招收新學生。</strong>
+    </div>
+
     <div class="course-shell">
       <div class="course-intro">
         <p class="eyebrow">TUITION POLICY</p>
@@ -743,7 +769,6 @@ body.resume-en .en-only{display:block!important}
         <details open><summary>課內進度與學習輔導</summary><p>小三～小六。基礎觀念、計算能力、課內進度、作業檢討與段考準備。</p></details>
         <details><summary>升私中數學準備</summary><p>小五～小六。依目標學校題型強化計算、應用題、邏輯推理、答題速度與模擬測驗。</p></details>
         <details><summary>升國中銜接與先修</summary><p>小六。分數、比例、數線、代數運算與基礎幾何，建立國中數學先備能力。</p></details>
-        <details><summary>資優數學與思考訓練</summary><p>小四～小六。數感、邏輯推理、圖形思考、計數與非例行問題。</p></details>
       </article>
 
       <article class="course-group">

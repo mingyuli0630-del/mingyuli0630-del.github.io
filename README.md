@@ -113,3 +113,18 @@ Tables on tablets/phones remain horizontally scrollable rather than compressing 
 - Added first-learning pacing, context → concept → problem solving → summary, and teacher–student mutual adjustment.
 - Added a clearer teaching-experience arc and current material-development goals.
 - Preserved the three-chapter structure and baseball section; no fourth "teaching practice" chapter was added.
+
+
+## V48 — Homepage hierarchy & layout polish
+- Simplified homepage hero: removed duplicated course/resource/career links and the three-button action row.
+- Kept one clear navigation block on the homepage, plus the global course CTA in the header.
+- Normalized card/grid padding and alignment across homepage, resources, courses, career, and footer.
+- Standardized site content width to 1240px and retained V46 responsive breakpoints.
+- Restored favicon.svg in the deployment package.
+- Preserved V47 About content and V46 OG/responsive fixes.
+
+
+## V49 mobile alignment
+- Reset inherited desktop padding/borders when four-column information grids stack on phones.
+- Normalize 2-column grid padding and dividers on iPad portrait.
+- Checked About metrics and Courses info rows for consistent left alignment.

@@ -158,3 +158,8 @@ document.addEventListener("DOMContentLoaded",()=>{
  document.getElementById("resourceModal")?.addEventListener("click",e=>{if(e.target.id==="resourceModal")closeResource();});
 });
 
+
+
+
+
+(()=>{const b=document.querySelector('.menu-toggle'),n=document.getElementById('siteNav');if(!b||!n)return;b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'×':'☰';});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}));})();

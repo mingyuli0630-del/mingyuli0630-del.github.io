@@ -95,3 +95,21 @@ Tables on tablets/phones remain horizontally scrollable rather than compressing 
 ## V45
 - 修正手機版導覽列「課程與收費」按鈕被早期 media query 隱藏的問題。
 - 767px 以下強制保留 CTA；420px 以下縮小按鈕並隱藏箭頭，避免擠壓品牌與選單按鈕。
+
+
+## V46 — Front-end cleanup & QA
+- Consolidated each page to one CSS block and one responsive system.
+- Removed accumulated V38/V41/V45 media-query conflicts.
+- Course CTA remains visible on phone, tablet and desktop.
+- Preserved self-contained HTML previews while also mirroring shared CSS/JS.
+- Kept dedicated horizontal scrolling for tuition/career tables.
+- Moved/kept OG metadata near the top of `<head>` and bumped image to `og-cover-v46.png`.
+- Restored `favicon.svg` to the deployment package.
+- Added image loading/decoding hints and mobile overflow safeguards.
+
+## V47 — About content revision
+- Reworked About page for consistency, tone, and completeness.
+- Clarified the role of grades: not the goal of education, but a practical requirement when tied to a student's chosen path.
+- Added first-learning pacing, context → concept → problem solving → summary, and teacher–student mutual adjustment.
+- Added a clearer teaching-experience arc and current material-development goals.
+- Preserved the three-chapter structure and baseball section; no fourth "teaching practice" chapter was added.

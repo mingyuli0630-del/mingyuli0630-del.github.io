@@ -904,7 +904,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <div class="wrap nav">
 <a class="brand" href="index.html"><span class="brandmark">M</span><span><strong>李明諭</strong><small>數學 × 教育 × 教學</small></span></a>
 <div class="nav-right">
-<nav id="siteNav"><a href="index.html">首頁</a><a href="about.html">關於我</a><a class="active" href="resources.html">公開教材</a><a href="career.html">教師職涯參考</a></nav>
+<nav id="siteNav"><a href="index.html">首頁</a><a href="about.html">關於我</a><a class="active" href="resources.html">公開教材</a><a href="science.html">數學科普</a><a href="career.html">教師職涯參考</a></nav>
 <a class="nav-cta" href="courses.html">課程與收費 <span class="arrow">↗</span></a>
 <button aria-controls="siteNav" aria-expanded="false" aria-label="開啟選單" class="menu-toggle" type="button">☰</button>
 </div>
@@ -916,9 +916,9 @@ html,body{max-width:100%;overflow-x:hidden}
 <div class="heading">
 <p class="eyebrow">PUBLIC RESOURCES</p>
 <h2>公開教材</h2>
-<p>收錄目前已完成並公開的教材；其他內容待整理完成後再陸續加入。</p>
+<p>這裡收錄教學講義與練習資源；如果想閱讀生活中的數學故事，也可以前往獨立的「數學科普」專區。</p>
 </div>
-<div class="resource-count" id="resourceCount"></div>
+<p style="margin:8px 0 28px"><a href="science.html" style="color:var(--sage);font-weight:700;text-decoration:underline;text-underline-offset:5px">前往數學科普專區 ↗</a></p><div class="resource-count" id="resourceCount"></div>
 <div class="resource-grid" id="resourceGrid"></div>
 </div>
 </section>
@@ -1070,6 +1070,7 @@ document.getElementById("resumeLayer")?.addEventListener("click",e=>{
 });
 
 const resourceData=[
+{id:"rule-72",title:"財富加速器：資產翻倍的「72 法則」",level:"一般讀者／高中以上",categories:["popular"],type:"數學科普文章",symbol:"72",version:"2026.10",description:"從單利與複利的差別出發，介紹如何利用 72 法則估算資產翻倍時間，並討論估算的準確度、數學推導與實際使用限制。",tags:["數學科普","72 法則","複利","理財數學"],contents:"單利與複利、翻倍時間、近似誤差、對數推導與應用限制",files:"2 頁完整文章 PDF",page:"science.html",student:"",solution:""},
 {id:"triangle-area",title:"三角形面積與面積比",level:"國三科學班",categories:["junior","advanced"],type:"幾何專題講義",symbol:"△",version:"2026.09",description:"從三角形面積基本公式出發，整理作高、海龍公式、內點切割、等高、等底、全等、相似，並延伸至平面與空間的綜合問題。",tags:["國三","科學班","幾何","面積比"],contents:"22 個例題、六大核心關係、延伸綜合與一頁總整理",files:"18 頁學生版 PDF",page:"resources/triangle-area/",student:"resources/triangle-area/triangle-area-student.pdf",solution:""}
 ];
 let currentResourceFilter="all";
@@ -1077,8 +1078,8 @@ function renderResources(){
  const grid=document.getElementById("resourceGrid"); if(!grid)return;
  const q=(document.getElementById("resourceSearch")?.value||"").trim().toLowerCase();
  const items=resourceData.filter(r=>{const f=currentResourceFilter==="all"||r.categories.includes(currentResourceFilter);const hay=[r.title,r.level,r.type,r.description,...r.tags].join(" ").toLowerCase();return f&&(!q||hay.includes(q));});
- grid.innerHTML=items.map(r=>`<article class="resource-card"><div class="resource-cover"><span class="level">${r.level}</span><span class="symbol">${r.symbol}</span></div><div class="resource-body"><div class="resource-meta"><span>${r.type}</span><span>${r.version}</span></div><h3>${r.title}</h3><p>${r.description}</p><div class="resource-tags">${r.tags.map(t=>`<span class="resource-tag">${t}</span>`).join("")}</div><div class="resource-actions">${r.page?`<a class="resource-link primary" href="${r.page}">查看教材</a>`:`<button class="resource-link primary" onclick="openResource('${r.id}')">查看教材</button>`}<a class="resource-link ${r.student?'':'disabled'}" ${r.student?`href="${r.student}" target="_blank"`:""}>學生版 PDF</a><a class="resource-link ${r.solution?'':'disabled'}" ${r.solution?`href="${r.solution}" target="_blank"`:""}>詳解版</a></div></div></article>`).join("");
- document.getElementById("resourceCount").textContent=`目前顯示 ${items.length} 份教材／資料`;
+ grid.innerHTML=items.map(r=>`<article class="resource-card"><div class="resource-cover"><span class="level">${r.level}</span><span class="symbol">${r.symbol}</span></div><div class="resource-body"><div class="resource-meta"><span>${r.type}</span><span>${r.version}</span></div><h3>${r.title}</h3><p>${r.description}</p><div class="resource-tags">${r.tags.map(t=>`<span class="resource-tag">${t}</span>`).join("")}</div><div class="resource-actions">${r.page?`<a class="resource-link primary" href="${r.page}" ${r.id==="rule-72"?'target="_blank" rel="noopener"':""}>${r.id==="rule-72"?"查看文章專區":"查看教材"}</a>`:`<button class="resource-link primary" onclick="openResource('${r.id}')">查看教材</button>`}${r.id==="rule-72"?`<a class="resource-link" href="articles/72_rule_final.pdf" target="_blank" rel="noopener">閱讀 PDF ↗</a>`:`<a class="resource-link ${r.student?'':'disabled'}" ${r.student?`href="${r.student}" target="_blank"`:""}>學生版 PDF</a><a class="resource-link ${r.solution?'':'disabled'}" ${r.solution?`href="${r.solution}" target="_blank"`:""}>詳解版</a>`}</div></div></article>`).join("");
+ document.getElementById("resourceCount").textContent=`目前顯示 ${items.length} 份教材／文章`;
 }
 function openResource(id){
  const r=resourceData.find(x=>x.id===id); if(!r)return;

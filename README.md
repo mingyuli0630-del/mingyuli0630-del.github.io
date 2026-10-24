@@ -28,3 +28,9 @@
 - teaching-01.jpg ～ teaching-06.jpg
 
 若你是「新增與覆蓋檔案」，照片會保留並正常顯示；若你是先清空 repository 再重傳，請先自行備份上述七張照片。
+
+
+V51：公開教材新增數學科普文章〈財富加速器：資產翻倍的「72 法則」〉；PDF 位於 articles/72_rule_final.pdf。上傳時保留 GitHub 原有照片及 resources/triangle-area/ 子目錄。
+
+
+V52 新增 science.html 數學科普專區；首篇文章 articles/72_rule_final.pdf；首頁與公開教材頁已加入入口。請保留 GitHub 既有 profile.jpg、teaching-*.jpg 等照片。

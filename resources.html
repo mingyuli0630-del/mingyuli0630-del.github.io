@@ -898,6 +898,14 @@ html,body{max-width:100%;overflow-x:hidden}
   .portrait .caption{display:block}
   .caption strong{display:block;margin-top:3px}
 }
+
+/* V53 content catalog */
+.catalog-search{display:flex;flex-direction:column;gap:9px;margin:20px 0 18px;max-width:500px}
+.catalog-search label{font-size:13px;font-weight:650;color:var(--ink)}
+.catalog-search input{width:100%;border:1px solid var(--line);background:var(--paper2);border-radius:4px;padding:13px 15px;font:inherit;font-size:15px;color:var(--ink);outline-offset:3px}
+.catalog-search input:focus{outline:2px solid var(--sage)}
+.catalog-count{font-size:13px;color:var(--muted);margin:0 0 10px}
+.catalog-empty{color:var(--muted);padding:24px 0}
 </style></head>
 <body class="page-resources">
 <header>
@@ -918,7 +926,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <h2>公開教材</h2>
 <p>這裡收錄教學講義與練習資源；如果想閱讀生活中的數學故事，也可以前往獨立的「數學科普」專區。</p>
 </div>
-<p style="margin:8px 0 28px"><a href="science.html" style="color:var(--sage);font-weight:700;text-decoration:underline;text-underline-offset:5px">前往數學科普專區 ↗</a></p><div class="resource-count" id="resourceCount"></div>
+<p style="margin:8px 0 28px"><a href="science.html" style="color:var(--sage);font-weight:700;text-decoration:underline;text-underline-offset:5px">前往數學科普專區 ↗</a></p><div class="catalog-search"><label for="resourceSearch">搜尋公開教材</label><input id="resourceSearch" type="search" placeholder="輸入主題、年級或關鍵字" autocomplete="off"></div><div class="resource-count" id="resourceCount"></div>
 <div class="resource-grid" id="resourceGrid"></div>
 </div>
 </section>
@@ -1069,42 +1077,8 @@ document.getElementById("resumeLayer")?.addEventListener("click",e=>{
   if(e.target.id==="resumeLayer") closeResume();
 });
 
-const resourceData=[
-{id:"rule-72",title:"財富加速器：資產翻倍的「72 法則」",level:"一般讀者／高中以上",categories:["popular"],type:"數學科普文章",symbol:"72",version:"2026.10",description:"從單利與複利的差別出發，介紹如何利用 72 法則估算資產翻倍時間，並討論估算的準確度、數學推導與實際使用限制。",tags:["數學科普","72 法則","複利","理財數學"],contents:"單利與複利、翻倍時間、近似誤差、對數推導與應用限制",files:"2 頁完整文章 PDF",page:"science.html",student:"",solution:""},
-{id:"triangle-area",title:"三角形面積與面積比",level:"國三科學班",categories:["junior","advanced"],type:"幾何專題講義",symbol:"△",version:"2026.09",description:"從三角形面積基本公式出發，整理作高、海龍公式、內點切割、等高、等底、全等、相似，並延伸至平面與空間的綜合問題。",tags:["國三","科學班","幾何","面積比"],contents:"22 個例題、六大核心關係、延伸綜合與一頁總整理",files:"18 頁學生版 PDF",page:"resources/triangle-area/",student:"resources/triangle-area/triangle-area-student.pdf",solution:""}
-];
-let currentResourceFilter="all";
-function renderResources(){
- const grid=document.getElementById("resourceGrid"); if(!grid)return;
- const q=(document.getElementById("resourceSearch")?.value||"").trim().toLowerCase();
- const items=resourceData.filter(r=>{const f=currentResourceFilter==="all"||r.categories.includes(currentResourceFilter);const hay=[r.title,r.level,r.type,r.description,...r.tags].join(" ").toLowerCase();return f&&(!q||hay.includes(q));});
- grid.innerHTML=items.map(r=>`<article class="resource-card"><div class="resource-cover"><span class="level">${r.level}</span><span class="symbol">${r.symbol}</span></div><div class="resource-body"><div class="resource-meta"><span>${r.type}</span><span>${r.version}</span></div><h3>${r.title}</h3><p>${r.description}</p><div class="resource-tags">${r.tags.map(t=>`<span class="resource-tag">${t}</span>`).join("")}</div><div class="resource-actions">${r.page?`<a class="resource-link primary" href="${r.page}" ${r.id==="rule-72"?'target="_blank" rel="noopener"':""}>${r.id==="rule-72"?"查看文章專區":"查看教材"}</a>`:`<button class="resource-link primary" onclick="openResource('${r.id}')">查看教材</button>`}${r.id==="rule-72"?`<a class="resource-link" href="articles/72_rule_final.pdf" target="_blank" rel="noopener">閱讀 PDF ↗</a>`:`<a class="resource-link ${r.student?'':'disabled'}" ${r.student?`href="${r.student}" target="_blank"`:""}>學生版 PDF</a><a class="resource-link ${r.solution?'':'disabled'}" ${r.solution?`href="${r.solution}" target="_blank"`:""}>詳解版</a>`}</div></div></article>`).join("");
- document.getElementById("resourceCount").textContent=`目前顯示 ${items.length} 份教材／文章`;
-}
-function openResource(id){
- const r=resourceData.find(x=>x.id===id); if(!r)return;
- document.getElementById("resourceModalType").textContent=`${r.type} · ${r.version}`;
- document.getElementById("resourceModalTitle").textContent=r.title;
- document.getElementById("resourceModalDesc").textContent=r.description;
- document.getElementById("resourceModalLevel").textContent=r.level;
- document.getElementById("resourceModalVersion").textContent=r.version;
- document.getElementById("resourceModalContents").textContent=r.contents;
- document.getElementById("resourceModalFiles").textContent=r.files;
- document.getElementById("resourceModal").classList.add("open");
- document.body.style.overflow="hidden";
-}
-function closeResource(){document.getElementById("resourceModal")?.classList.remove("open");document.body.style.overflow="";}
-document.addEventListener("DOMContentLoaded",()=>{
- renderResources();
- document.getElementById("resourceSearch")?.addEventListener("input",renderResources);
- document.querySelectorAll("#resourceFilters .filter-btn").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("#resourceFilters .filter-btn").forEach(x=>x.classList.remove("active"));btn.classList.add("active");currentResourceFilter=btn.dataset.filter;renderResources();}));
- document.getElementById("resourceModal")?.addEventListener("click",e=>{if(e.target.id==="resourceModal")closeResource();});
-});
-
-
-
-
-
 (()=>{const b=document.querySelector('.menu-toggle'),n=document.getElementById('siteNav');if(!b||!n)return;b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'×':'☰';});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}));})();
-</script></body>
+</script><script src="content.js"></script>
+<script src="catalog.js"></script>
+</body>
 </html>

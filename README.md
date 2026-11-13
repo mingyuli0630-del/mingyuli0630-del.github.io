@@ -34,3 +34,11 @@ V51：公開教材新增數學科普文章〈財富加速器：資產翻倍的�
 
 
 V52 新增 science.html 數學科普專區；首篇文章 articles/72_rule_final.pdf；首頁與公開教材頁已加入入口。請保留 GitHub 既有 profile.jpg、teaching-*.jpg 等照片。
+
+
+## V53 作品資料架構
+
+新增 `content.js` 與 `catalog.js`，讓公開教材與科普文章由同一份資料管理；詳細步驟請看 `PUBLISHING_GUIDE.md`。
+
+
+V54：首頁新增「最新公開作品」區塊，自動顯示 content.js 中最新 3 筆講義／科普文章；現有 2 筆則顯示 2 筆。

@@ -43,7 +43,7 @@ window.siteContent = {
       date: "2026.11",
       description: "高鐵座椅安排與數論的關係。",
       tags: ["數學科普", "數論"],
-      pdf: "articles/HSR_friends_article_v2.pdf"
+      pdf: "articles/HSR_friends_article.pdf"
     }
     // 新文章請加在這裡；前一筆的結尾需要逗號。
   ]

@@ -40,7 +40,7 @@ window.siteContent = {
       number: "002",
       title: "高鐵座椅的數學",
       category: "生活數學 · 高鐵 · 數論",
-      date: "2026.10",
+      date: "2026.11",
       description: "高鐵座椅安排與數論的關係。",
       tags: ["數學科普", "數論"],
       pdf: "articles/HSR_friends_articles_v2.pdf"

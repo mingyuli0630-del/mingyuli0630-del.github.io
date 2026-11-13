@@ -34,6 +34,16 @@ window.siteContent = {
       description: "如果一筆資產以固定報酬率成長，大約多久能翻倍？從單利與複利的差異出發，認識 72 法則如何快速估算翻倍時間，並了解它的數學推導、近似誤差與使用限制。",
       tags: ["數學科普", "72 法則", "複利", "理財數學"],
       pdf: "articles/72_rule_final.pdf"
+    },
+    {
+      id: "HSR",
+      number: "002",
+      title: "高鐵座椅的數學",
+      category: "生活數學 · 高鐵 · 數論",
+      date: "2026.10",
+      description: "高鐵座椅安排與數論的關係。",
+      tags: ["數學科普", "數論"],
+      pdf: "articles/HSR_friends_articles_v2.pdf"
     }
     // 新文章請加在這裡；前一筆的結尾需要逗號。
   ]
